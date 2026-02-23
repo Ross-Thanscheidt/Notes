@@ -1,7 +1,7 @@
 site_name: Ross Notes
-site_url: https://Ross-Thanscheidt.github.io/ross-notes
-repo_url: https://github.com/Ross-Thanscheidt/ross-notes
-repo_name: Ross-Thanscheidt/ross-notes
+site_url: https://projects.ross.thanscheidt.dev/Notes
+repo_url: https://github.com/Ross-Thanscheidt/Notes
+repo_name: Ross-Thanscheidt/Notes
 
 validation:
   links:
