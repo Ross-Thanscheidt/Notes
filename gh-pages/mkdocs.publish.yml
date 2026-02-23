@@ -1,0 +1,11 @@
+INHERIT: mkdocs.yml
+
+plugins:
+  git-committers:
+    enabled: true
+    repository: Ross-Thanscheidt/ross-notes
+    branch: main
+    api_version: v3
+    token: !ENV ["GH_TOKEN_MKDOCS"]
+  git-revision-date-localized:
+    enable_creation_date: true

@@ -1,0 +1,10 @@
+truststore
+mkdocs-material
+mkdocs-panzoom-plugin
+mkdocs-exclude
+mkdocs-snippets
+mkdocs-awesome-pages-plugin
+mkdocs-git-committers-plugin-2
+mkdocs-markdownextradata-plugin
+markdown-exec[ansi]
+mkdocs-git-revision-date-localized-plugin
