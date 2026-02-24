@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://projects.ross.thanscheidt.dev/Notes/</loc>
+         <loc>https://ross-thanscheidt.github.io/Notes/</loc>
          <lastmod>2026-02-24</lastmod>
     </url>
     <url>
-         <loc>https://projects.ross.thanscheidt.dev/Notes/aspnet-core/</loc>
+         <loc>https://ross-thanscheidt.github.io/Notes/aspnet-core/</loc>
          <lastmod>2026-02-24</lastmod>
     </url>
     <url>
-         <loc>https://projects.ross.thanscheidt.dev/Notes/dependency-injection/</loc>
+         <loc>https://ross-thanscheidt.github.io/Notes/dependency-injection/</loc>
          <lastmod>2026-02-24</lastmod>
     </url>
     <url>
-         <loc>https://projects.ross.thanscheidt.dev/Notes/dotnet/</loc>
+         <loc>https://ross-thanscheidt.github.io/Notes/dotnet/</loc>
          <lastmod>2026-02-24</lastmod>
     </url>
     <url>
-         <loc>https://projects.ross.thanscheidt.dev/Notes/sql-server/</loc>
+         <loc>https://ross-thanscheidt.github.io/Notes/sql-server/</loc>
          <lastmod>2026-02-24</lastmod>
     </url>
     <url>
-         <loc>https://projects.ross.thanscheidt.dev/Notes/vim/</loc>
+         <loc>https://ross-thanscheidt.github.io/Notes/vim/</loc>
          <lastmod>2026-02-24</lastmod>
     </url>
     <url>
-         <loc>https://projects.ross.thanscheidt.dev/Notes/visual-studio/</loc>
+         <loc>https://ross-thanscheidt.github.io/Notes/visual-studio/</loc>
          <lastmod>2026-02-24</lastmod>
     </url>
 </urlset>
