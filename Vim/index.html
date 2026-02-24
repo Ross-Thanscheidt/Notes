@@ -8,10 +8,10 @@
       
       
       
-        <link rel="canonical" href="https://projects.ross.thanscheidt.dev/Notes/Vim%20Notes/">
+        <link rel="canonical" href="https://projects.ross.thanscheidt.dev/Notes/Vim/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../SQL%20Server/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Vim Notes - Ross Notes</title>
+        <title>Vim - Ross Notes</title>
       
     
     
@@ -64,7 +64,7 @@
     
     
   <meta name="panzoom-theme" content="material">
-<meta name="panzoom-data" content='{"selectors": [".mermaid", ".d2"], "initial_zoom_level": 1.0}'> </head>
+<meta name="panzoom-data" content='{"selectors": [".d2", ".mermaid"], "initial_zoom_level": 1.0}'> </head>
   
   
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vim-notes" class="md-skip">
+        <a href="#vim" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Vim Notes
+              Vim
             
           </span>
         </div>
@@ -272,7 +272,34 @@
   <span class="md-ellipsis">
     
   
-    Welcome to Ross Notes
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SQL%20Server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQL Server
   
 
     
@@ -308,7 +335,7 @@
   <span class="md-ellipsis">
     
   
-    Vim Notes
+    Vim
   
 
     
@@ -326,7 +353,7 @@
   <span class="md-ellipsis">
     
   
-    Vim Notes
+    Vim
   
 
     
@@ -363,10 +390,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#copy-and-paste-within-vim" class="md-nav__link">
+  <a href="#copypaste-within-vim" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Copy and Paste within Vim
+        Copy/Paste within Vim
       
     </span>
   </a>
@@ -374,10 +401,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#copy-and-paste-tofrom-the-clipboard" class="md-nav__link">
+  <a href="#copypaste-to-the-clipboard" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Copy and Paste to/from the Clipboard
+        Copy/Paste to the Clipboard
       
     </span>
   </a>
@@ -639,10 +666,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#copy-and-paste-within-vim" class="md-nav__link">
+  <a href="#copypaste-within-vim" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Copy and Paste within Vim
+        Copy/Paste within Vim
       
     </span>
   </a>
@@ -650,10 +677,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#copy-and-paste-tofrom-the-clipboard" class="md-nav__link">
+  <a href="#copypaste-to-the-clipboard" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Copy and Paste to/from the Clipboard
+        Copy/Paste to the Clipboard
       
     </span>
   </a>
@@ -889,7 +916,7 @@
   
 
 
-<h1 id="vim-notes">Vim Notes<a class="headerlink" href="#vim-notes" title="Permanent link">&para;</a></h1>
+<h1 id="vim">Vim<a class="headerlink" href="#vim" title="Permanent link">&para;</a></h1>
 <h2 id="current-line-left-right-motions">Current Line (Left-Right) Motions<a class="headerlink" href="#current-line-left-right-motions" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>f{char}</code> - move the cursor to the <code>{char}</code> to the right</li>
@@ -899,7 +926,7 @@
 <li><code>;</code> - repeat the latest <code>f</code>, <code>F</code>, <code>t</code>, or <code>T</code> move</li>
 <li><code>,</code> - repeat the latest <code>f</code>, <code>F</code>, <code>t</code>, or <code>T</code> move in the opposite direction</li>
 </ul>
-<h2 id="copy-and-paste-within-vim">Copy and Paste within Vim<a class="headerlink" href="#copy-and-paste-within-vim" title="Permanent link">&para;</a></h2>
+<h2 id="copypaste-within-vim">Copy/Paste within Vim<a class="headerlink" href="#copypaste-within-vim" title="Permanent link">&para;</a></h2>
 <p>Pasting the word once</p>
 <ul>
 <li><code>yiw</code> - Yank the current word</li>
@@ -910,7 +937,7 @@
 <li><code>yiw</code> - Yank the current word</li>
 <li><code>cw&lt;C-r&gt;0&lt;ESC&gt;</code> - Paste the word in Insert Mode using <code>&lt;C-r&gt;0</code></li>
 </ul>
-<h2 id="copy-and-paste-tofrom-the-clipboard">Copy and Paste to/from the Clipboard<a class="headerlink" href="#copy-and-paste-tofrom-the-clipboard" title="Permanent link">&para;</a></h2>
+<h2 id="copypaste-to-the-clipboard">Copy/Paste to the Clipboard<a class="headerlink" href="#copypaste-to-the-clipboard" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>"+yiw</code> - Yank the current word to the Clipboard - <code>"</code> register <code>+</code> clipboard <code>y</code>ank <code>i</code>nner <code>w</code>ord</li>
 <li><code>"+p</code> - Paste from the Clipboard - <code>"</code> register <code>+</code> clipboard <code>p</code>ut</li>
