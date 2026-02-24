@@ -55,6 +55,12 @@ Pasting the same word multiple times (does not work in VsVim)
 - `<Esc>` - Switch to Normal mode
 - `<C-[>` - Switch to Normal mode (does not work in VsVim)
 - `<C-o>` - Switch to Insert Normal mode for a single command (does not work in VsVim)
+- `<C-r>{register}` - Paste text from register (does not work in VsVim)
+- `<C-r><C-p>{register}` - Paste text from register & fix any unintended indentation (!VsVim)
+- `<C-r>={expression}<CR>` - Paste result of expression (does not work in VsVim)
+
+### Digraphs
+
 - `<C-k>{char}{char}` - Insert character using a digraph (`:digraphs` to list digraphs) (!VsVim)
     - `12` for ½
     - `.P`, `.M`, `Ob`, `0m`, `sB`, `Db`, `Dw`, `*2`, `*1` for ⋅ · ∘ ○ ▪ ◆ ◇ ★ ☆
@@ -67,9 +73,7 @@ Pasting the same word multiple times (does not work in VsVim)
     - `<=`, `=>`, `==` for ⇐ ⇒ ⇔
     - `UT`, `Dt`, `PR`, `PL` for ▲ ▼ ▶ ◀
     - `uT`, `dT`, `Tr`, `Tl` for △ ▽ ▷ ◁
-- `<C-r>{register}` - Paste text from register (does not work in VsVim)
-- `<C-r><C-p>{register}` - Paste text from register & fix any unintended indentation (!VsVim)
-- `<C-r>={expression}<CR>` - Paste result of expression (does not work in VsVim)
+- [Vim Digraphs Cheatsheet](https://devhints.io/vim-digraphs)
 
 ## Formatting
 - `:set expandtab` - Insert space characters whenever the tab key is pressed  
