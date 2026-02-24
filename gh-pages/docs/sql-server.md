@@ -1,4 +1,4 @@
-# SQL Server
+# SQL Server Notes
 
 ## CURSOR Example
 

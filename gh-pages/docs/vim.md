@@ -1,4 +1,4 @@
-# Vim
+# Vim Notes
 
 ## Current Line (Left-Right) Motions
 - `f{char}` - move the cursor to the `{char}` to the right

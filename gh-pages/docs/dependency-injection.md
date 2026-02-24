@@ -1,4 +1,4 @@
-# Dependency Injection
+# Dependency Injection Notes
 
 ## Service Registration Methods
 
