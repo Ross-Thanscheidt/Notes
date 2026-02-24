@@ -1,0 +1,145 @@
+# SQL Server
+
+## CURSOR Example
+
+```tsql
+USE [master];
+
+DECLARE @name VARCHAR(200);
+DECLARE @SQL AS VARCHAR(1000);
+
+DECLARE dbCursor CURSOR FOR SELECT [name] FROM [sys].[databases] WHERE NAME LIKE 'Temp-%';
+
+OPEN dbCursor;
+
+FETCH NEXT FROM dbCursor INTO @name;
+
+WHILE @@FETCH_STATUS = 0
+BEGIN
+    PRINT @name;
+    SET @SQL = 'DROP DATABASE [' + @name + ']';
+    EXECUTE (@SQL);
+
+    FETCH NEXT FROM dbCursor INTO @name;
+END
+
+CLOSE dbCursor;
+
+DEALLOCATE dbCursor;
+```
+
+## Foreign Key Dependencies
+
+List the columns that have foreign key references to the `[PersonId]` column of the `[Organization].[Person]` table:
+
+```tsql
+SELECT
+    OBJECT_SCHEMA_NAME(fk.parent_object_id) AS parentSchema,
+    OBJECT_NAME(fk.parent_object_id) AS parentTable,
+    pc.name AS parentColumn,
+    OBJECT_SCHEMA_NAME(fk.referenced_object_id) AS referencedSchema,
+    OBJECT_NAME(fk.referenced_object_id) AS referencedTable,
+    rc.name AS referencedColumn
+FROM sys.foreign_keys fk
+    INNER JOIN sys.foreign_key_columns fkc
+        ON fkc.parent_object_id = fk.parent_object_id
+        AND fkc.constraint_object_id = fk.object_id
+    INNER JOIN sys.columns pc
+        ON pc.column_id = fkc.parent_column_id
+        AND pc.object_id = fk.parent_object_id
+    INNER JOIN sys.columns rc
+        ON rc.column_id = fkc.referenced_column_id
+        AND rc.object_id = fk.referenced_object_id
+WHERE OBJECT_SCHEMA_NAME(fk.referenced_object_id) = 'Organization'
+    AND OBJECT_NAME(fk.referenced_object_id) = 'Person'
+    AND rc.name = 'PersonId'
+```
+
+Source: [Stack Overflow](https://stackoverflow.com/questions/11769172/find-column-dependency)
+
+## MERGE Statement
+
+```tsql
+SET @handleId = ISNULL(@handleId, newid());
+  
+MERGE INTO [Token].[Handle] AS targetTable
+USING (
+	VALUES (@handleId, @typeId, @formatId)
+) AS sourceTable([HandleId], [TypeId], [FormatId])
+ON targetTable.[HandleId] = sourceTable.[HandleId]
+WHEN NOT MATCHED BY TARGET THEN
+	INSERT ([HandleId], [TypeId], [FormatId])
+	VALUES ([HandleId], [TypeId], [FormatId])
+WHEN MATCHED THEN
+	UPDATE
+	SET [TypeId] = sourceTable.[TypeId], 
+		[FormatId] = sourceTable.[FormatId];
+
+EXEC [TokenHandleRepository].[usp_GetToken] @handleId;
+```
+
+## MERGE Statement over UPSERT
+
+```tsql
+CREATE PROCEDURE [TypeRepository].[usp_SaveTypePattern]
+    @typePatternId uniqueidentifier,
+    @typeId uniqueidentifier,
+    @displayName varchar(250),
+    @regexValue varchar(150),
+    @description varchar(250)
+AS
+    SET @typePatternId = ISNULL(@typePatternId, newid());
+
+    MERGE INTO [DocSearch].[TypePattern] AS targetTable
+    USING (
+        SELECT TOP(1) @typePatternId, gt.[TypeId], @displayName, @regexValue, @description
+        FROM [DocSearch].[Type] gt
+        WHERE gt.[TypeId] = @typeId
+            AND gt.[DeletedDateTime] IS NULL
+    ) AS sourceTable([TypePatternId], [TypeId], [DisplayName], [RegexValue], [Description])
+    ON targetTable.[TypePatternId] = sourceTable.[TypePatternId]
+    WHEN NOT MATCHED BY TARGET THEN
+        INSERT ([TypePatternId], [TypeId], [DisplayName], [RegexValue], [Description])
+        VALUES ([TypePatternId], [TypeId], [DisplayName], [RegexValue], [Description])
+    WHEN MATCHED THEN
+        UPDATE
+            SET [TypeId] = sourceTable.[TypeId],
+                [DisplayName] = sourceTable.[DisplayName],
+                [RegexValue] = sourceTable.[RegexValue],
+                [Description] = sourceTable.[Description];
+
+    EXEC [TypeRepository].[usp_GetTypePattern] @typeId, @typePatternId;
+GO
+```
+
+## Set Identity Seed
+
+Get current Identity Seed value for a table:
+
+```tsql
+DBCC CHECKIDENT ('Article', RESEED);
+```
+
+Set current Identity Seed value for a table:
+
+```tsql
+DBCC CHECKIDENT ('Article', RESEED, 107);
+```
+
+Set current Identity Seed value for a table using existing data in table:
+
+```tsql
+DECLARE @maxValue int;
+SET @maxValue = (SELECT MAX(ArticleId) FROM Article);
+DBCC CHECKIDENT ('Article', RESEED, @maxValue);
+```
+
+## SSMS Connection Color
+
+When connecting to a Database Engine in SQL Server Management Studio  
+go to `Options >> Connection Properties` to select a custom color  
+to be the background color of the status bar when connected to that database server.
+
+For example, you could use green for Development, yellow for QA, and red for Production.
+
+Source: [SQLShack](https://www.sqlshack.com/how-to-set-custom-colors-in-the-ssms-status-bar/)

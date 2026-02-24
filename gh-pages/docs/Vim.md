@@ -1,4 +1,4 @@
-# Vim Notes
+# Vim
 
 ## Current Line (Left-Right) Motions
 - `f{char}` - move the cursor to the `{char}` to the right
@@ -8,7 +8,7 @@
 - `;` - repeat the latest `f`, `F`, `t`, or `T` move
 - `,` - repeat the latest `f`, `F`, `t`, or `T` move in the opposite direction
 
-## Copy and Paste within Vim
+## Copy/Paste within Vim
 
 Pasting the word once
 
@@ -20,7 +20,7 @@ Pasting the same word multiple times (does not work in VsVim)
 - `yiw` - Yank the current word
 - `cw<C-r>0<ESC>` - Paste the word in Insert Mode using `<C-r>0`
 
-## Copy and Paste to/from the Clipboard
+## Copy/Paste to the Clipboard
 
 - `"+yiw` - Yank the current word to the Clipboard - `"` register `+` clipboard `y`ank `i`nner `w`ord
 - `"+p` - Paste from the Clipboard - `"` register `+` clipboard `p`ut

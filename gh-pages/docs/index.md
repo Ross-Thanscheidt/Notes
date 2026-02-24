@@ -1,3 +1,7 @@
+---
+title: Welcome
+---
+
 # Welcome to Ross Notes
 
 These are my notes to help me organize and remember technical information.  
