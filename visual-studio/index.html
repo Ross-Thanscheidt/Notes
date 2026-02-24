@@ -1,0 +1,1203 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://projects.ross.thanscheidt.dev/Notes/visual-studio/">
+      
+      
+        <link rel="prev" href="../vim/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Visual Studio Notes - Ross Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_markdown_exec_pyodide.css">
+    
+      <link rel="stylesheet" href="../assets/_markdown_exec_ansi.css">
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/panzoom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <meta name="panzoom-theme" content="material">
+<meta name="panzoom-data" content='{"selectors": [".mermaid", ".d2"], "initial_zoom_level": 1.0}'> </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#visual-studio-notes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Ross Notes" class="md-header__button md-logo" aria-label="Ross Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ross Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Visual Studio Notes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Ross-Thanscheidt/Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Ross-Thanscheidt/Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Ross Notes" class="md-nav__button md-logo" aria-label="Ross Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Ross Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Ross-Thanscheidt/Notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Ross-Thanscheidt/Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    .NET
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aspnet-core/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ASP.NET Core
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dependency-injection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dependency Injection
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vim/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visual Studio Notes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visual Studio Notes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adding-color-to-bracket-pairs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding Color to Bracket Pairs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#breaking-for-clr-exceptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Breaking for CLR Exceptions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detect-dead-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detect Dead Code
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-visual-studio-windows-title" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Visual Studio Windows Title
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enclose-text-in-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enclose Text in Statement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-undo-last-local-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git - Undo Last Local Commit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-re-enter-credentials-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub - Re-Enter Credentials Issue
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go-to-the-next-error-search-result-or-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Go to the Next Error, Search Result, or Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keyboard-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keyboard Shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-visual-studio-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My Visual Studio Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-color-tabs-by-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option - Color Tabs by Project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-sort-using-statements-with-system-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option - Sort using Statements with System First
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-track-active-document-in-solution-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option - Track Active Document in Solution Explorer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regular-expressions-for-find" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regular Expressions for Find
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-winmerge-as-diffmerge-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use WinMerge as Diff/Merge Tool
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adding-color-to-bracket-pairs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding Color to Bracket Pairs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#breaking-for-clr-exceptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Breaking for CLR Exceptions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detect-dead-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detect Dead Code
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-visual-studio-windows-title" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Visual Studio Windows Title
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enclose-text-in-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enclose Text in Statement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-undo-last-local-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git - Undo Last Local Commit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-re-enter-credentials-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub - Re-Enter Credentials Issue
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go-to-the-next-error-search-result-or-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Go to the Next Error, Search Result, or Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keyboard-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keyboard Shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-visual-studio-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My Visual Studio Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-color-tabs-by-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option - Color Tabs by Project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-sort-using-statements-with-system-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option - Sort using Statements with System First
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-track-active-document-in-solution-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option - Track Active Document in Solution Explorer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regular-expressions-for-find" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regular Expressions for Find
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-winmerge-as-diffmerge-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use WinMerge as Diff/Merge Tool
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="visual-studio-notes">Visual Studio Notes<a class="headerlink" href="#visual-studio-notes" title="Permanent link">&para;</a></h1>
+<h2 id="adding-color-to-bracket-pairs">Adding Color to Bracket Pairs<a class="headerlink" href="#adding-color-to-bracket-pairs" title="Permanent link">&para;</a></h2>
+<p>Mads Kristensen wrote a <a href="https://devblogs.microsoft.com/visualstudio/adding-color-to-bracket-pairs/">Visual Studio Blog article</a> to announce his <a href="https://marketplace.visualstudio.com/items?itemName=MadsKristensen.RainbowBraces">Rainbow Braces Visual Studio extension</a> that cycles through 4 unique customizable colors for matching curly brackets, square brackets, and parentheses.  He also mentioned the <a href="https://marketplace.visualstudio.com/items?itemName=TomasRestrepo.Viasfora">Viasfora Visual Studio extension</a> also provides this feature, although it does it in a different way and may provide additional features and options.</p>
+<h2 id="breaking-for-clr-exceptions">Breaking for CLR Exceptions<a class="headerlink" href="#breaking-for-clr-exceptions" title="Permanent link">&para;</a></h2>
+<p>If you see exceptions in the Output &gt; Debug window in Visual Studio when debugging an application, you can go to Debug &gt; Windows &gt; Exception Settings and check the box next to <strong>Common Language Runtime Exceptions</strong> so that it will break when any CLR exception is thrown.  By default the only <strong>Common Language Runtime Exceptions</strong> checked are:</p>
+<ul>
+<li>Microsoft.UI.Xaml.Markup.XamlParseException</li>
+<li>System.NullReferenceException</li>
+<li>System.Reflection.MissingMetadataException</li>
+<li>System.Reflection.MissingRuntimeArtifactException</li>
+<li>System.Windows.Markup.XamlParseException</li>
+</ul>
+<h2 id="detect-dead-code">Detect Dead Code<a class="headerlink" href="#detect-dead-code" title="Permanent link">&para;</a></h2>
+<p>Use <code>.editorconfig</code> (Solution &gt; Add &gt; New EditorConfig) to define Code Analysis rules to detect dead code when building (<a href="https://stackoverflow.com/questions/30974433/get-list-of-zero-reference-codes-in-visual-studio">link</a>).</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[*.cs]
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>dotnet_diagnostic.CA1801.severity = warning  # Unused parameters
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>dotnet_diagnostic.CA1804.severity = warning  # Unused local variables
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>dotnet_diagnostic.CA1811.severity = warning  # Private methods that are not called from any other code
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>dotnet_diagnostic.CA1812.severity = warning  # Internal classes that are not instantiated from any other code
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>dotnet_diagnostic.CA1823.severity = warning  # Unused private fields
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>dotnet_diagnostic.C6259.severity = warning   # Dead code in bitwise-OR limited switch
+</span></code></pre></div>
+<h2 id="custom-visual-studio-windows-title">Custom Visual Studio Windows Title<a class="headerlink" href="#custom-visual-studio-windows-title" title="Permanent link">&para;</a></h2>
+<p>Install the <a href="https://github.com/mayerwin/vs-customize-window-title">Customize Visual Studio Window Title</a> extension to be able to customize the Window Title that shows up at the top of the Visual Studio windows and on the taskbar.  There are a number of special tags that can be used, including solution file parent directory name, git branch name, git repository name, and environment variable values.</p>
+<ul>
+<li>Install the extension in <a href="https://marketplace.visualstudio.com/items?itemName=mayerwin.RenameVisualStudioWindowTitle">Visual Studio 2019</a> or <a href="https://github.com/mayerwin/vs-customize-window-title/releases/tag/5.0.1">Visual Studio 2022</a></li>
+<li>Go to <strong>Tools &gt; Options &gt; Environment &gt; General</strong> and check <strong>Use compact menu and search bar (requires restart)</strong></li>
+<li>Go to <strong>Tools &gt; Options &gt; Customize VS Window Title &gt; Global rules</strong></li>
+<li>Solution in break mode: <strong>[gitRepositoryName] (Debugging) - [ideName]</strong></li>
+<li>Solution in design mode: <strong>[gitRepositoryName] - [ideName]</strong></li>
+<li>Solution in running mode: <strong>[gitRepositoryName] (Running) - [ideName]</strong></li>
+<li>Go to <strong>Tools &gt; Options &gt; Customize VS Window Title &gt; Solution-specific overrides</strong><ul>
+<li>Enable solution-specific overrides: <strong>True</strong></li>
+</ul>
+</li>
+</ul>
+<p>So now when I open <code>C:\Users\username\Code\MySampleSolution.READONLY\MySampleSolution.sln</code> my Visual Studio window has <strong>MySampleSolution.READONLY</strong> as its Windows Title.</p>
+<p>If the VS solution is not in a GIT repository, the Windows title will be blank since <code>gitRepositoryName</code> is blank.  If you want a non-blank Windows title, then create a <em>SolutionName</em>.sln.rn.xml file in the same directory as the <em>SolutionName</em>.sln file with this content:</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;CustomizeVSWindowTitle&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&lt;SettingsSet</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="na">PatternIfBreakMode=</span><span class="s">&quot;[parentPath] (Debugging) - [ideName]&quot;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="na">PatternIfDesignMode=</span><span class="s">&quot;[parentPath] - [ideName]&quot;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="na">PatternIfRunningMode=</span><span class="s">&quot;[parentPath] (Running) - [ideName]&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nt">&lt;/CustomizeVSWindowTitle&gt;</span>
+</span></code></pre></div>
+<h2 id="enclose-text-in-statement">Enclose Text in Statement<a class="headerlink" href="#enclose-text-in-statement" title="Permanent link">&para;</a></h2>
+<p>Enclose the selected text in a block surrounded by curly braces in an if/while/for statement.</p>
+<ul>
+<li>Select lines of text</li>
+<li>Type <strong>Ctrl-K Ctrl-S</strong> (Edit &gt; IntelliSense &gt; Surround With...)</li>
+<li>Select <strong>if</strong> (or whichever statement is desired)</li>
+</ul>
+<h2 id="git-undo-last-local-commit">Git - Undo Last Local Commit<a class="headerlink" href="#git-undo-last-local-commit" title="Permanent link">&para;</a></h2>
+<p>If you entered a Git Commit message and then forgot to stage any changed files before clicking on the Commit button,
+thereby accidentally clicking on <strong>Commit All</strong> instead of <strong>Commit Staged</strong>, and you want to undo the last local commit
+(<strong>local</strong> meaning that the commit has not been Pushed and is still listed under <strong>Outgoing</strong> in the <strong>Git Repository</strong> window):</p>
+<ul>
+<li>Go to <strong>View &gt; Git Repository</strong></li>
+<li>Right-click on the the latest commit that you want to keep (either in <strong>Outgoing</strong> or the top commit in <strong>Local History</strong>)</li>
+<li>Click on <strong>Reset</strong> &gt; <strong>Keep Changes (--mixed)</strong></li>
+</ul>
+<p>This will delete any commits under <strong>Outgoing</strong> that were committed after the selected commit
+and will show the files with their changes from the deleted local commits under <strong>Changes</strong> in the <strong>Git Changes</strong> window.</p>
+<p>Use <strong>Reset</strong> &gt; <strong>Delete Changes (--hard)</strong> if you want to delete the local commits and discard their changes.</p>
+<p><strong>Moral:</strong> Never click on <strong>Commit All</strong> (only <strong>Commit Staged</strong>)</p>
+<h2 id="github-re-enter-credentials-issue">GitHub - Re-Enter Credentials Issue<a class="headerlink" href="#github-re-enter-credentials-issue" title="Permanent link">&para;</a></h2>
+<p>After clicking on <strong>Re-Enter Credentials</strong> when trying to clone a repository from GitHub, a browser window opens up trying to open a port on localhost resulting in an error page that says <strong>localhost refused to connect</strong>:</p>
+<ul>
+<li>Browse to chrome://net-internals/#hsts</li>
+<li>Enter <strong>localhost</strong> for Domain under <strong>Delete domain security policies</strong></li>
+<li>Click the <strong>Delete</strong> button next to it</li>
+<li>Try clicking on <strong>Re-Enter Credentials</strong> again</li>
+</ul>
+<p>Reference: <a href="https://stackoverflow.com/questions/37352603/localhost-refused-to-connect-error-in-visual-studio">Stack Overflow - localhost refused to connect Error in visual studio</a></p>
+<h2 id="go-to-the-next-error-search-result-or-reference">Go to the Next Error, Search Result, or Reference<a class="headerlink" href="#go-to-the-next-error-search-result-or-reference" title="Permanent link">&para;</a></h2>
+<p>Use <strong>F8</strong> and <strong>Shift-F8</strong> to navigate errors, warnings, and messages in the <strong>Error List</strong> window (Edit.GoToNextLocation).
+Select the <strong>Current Document</strong> filter in the <strong>Error List</strong> window if you only want to navigate within the current document.
+<strong>F8</strong> and <strong>Shift-F8</strong> also work for <strong>Search Results</strong> and <strong>Find All References</strong>.
+<strong>Ctrl-Shift-F12</strong> can also be used to view the next error (View.NextError).</p>
+<p>See Tools &gt; Options &gt; Environment &gt; Keyboard to map commands to keyboard shortcuts.</p>
+<h2 id="keyboard-shortcuts">Keyboard Shortcuts<a class="headerlink" href="#keyboard-shortcuts" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Keyboard Shortcut</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>Ctrl</code> + <code>D</code></td>
+<td style="text-align: left;">Duplicate Lines</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Shift</code> + <code>Alt</code> + <code>E</code></td>
+<td style="text-align: left;">Select Whole Line</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Alt</code> + <code>Up</code><br /> <code>Alt</code> + <code>Down</code></td>
+<td style="text-align: left;">Move Selected Lines Up<br />Move Selected Lines Down</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Ctrl</code> + <code>Shift</code> + <code>L</code></td>
+<td style="text-align: left;">Delete Whole Line</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Ctrl</code> + <code>Shift</code> + <code>U</code><br /> <code>Ctrl</code> + <code>U</code></td>
+<td style="text-align: left;">Make Uppercase<br />Make Lowercase</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Shift</code> + <code>Alt</code> + <code>.</code></td>
+<td style="text-align: left;">Select Next Occurrence</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Shift</code> + <code>Alt</code> + <code>Up</code><br /> <code>Shift</code> + <code>Alt</code> + <code>Down</code></td>
+<td style="text-align: left;">Vertical (box) Selection Up<br /> Vertical (box) Selection Down</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Ctrl</code> + <code>Alt</code> + <em>mouse-click</em></td>
+<td style="text-align: left;">Insert Multiple Cursors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Shift</code> + <code>Alt</code> + <code>-</code><br /> <code>Shift</code> + <code>Alt</code> + <code>=</code></td>
+<td style="text-align: left;">Contract Selection<br />Expand Selection</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Ctrl</code> + <code>R</code>,<br /> <code>Ctrl</code> + <code>W</code></td>
+<td style="text-align: left;">View / Hide White Space</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Shift</code> + <code>Alt</code> + <code>L</code>,<br /> <code>Shift</code> + <code>Alt</code> + <code>S</code></td>
+<td style="text-align: left;">Lines Sort</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Shift</code> + <code>Alt</code> + <code>L</code>,<br /> <code>Shift</code> + <code>Alt</code> + <code>J</code></td>
+<td style="text-align: left;">Lines Join</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Ctrl</code> + <code>M</code>, <code>Ctrl</code> + <code>E</code><br /><code>Ctrl</code> + <code>M</code>, <code>Ctrl</code> + <code>S</code></td>
+<td style="text-align: left;">Expand Current Region<br />Collapse Current Region</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Ctrl</code> + <code>M</code>, <code>Ctrl</code> + <code>L</code><br /><code>Ctrl</code> + <code>M</code>, <code>Ctrl</code> + <code>O</code></td>
+<td style="text-align: left;">Expand All<br />Collapse All</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Ctrl</code> + <code>M</code>, <code>Ctrl</code> + <code>M</code></td>
+<td style="text-align: left;">Toggle Outlining Expansion - Expand/Collapse Current Section</td>
+</tr>
+</tbody>
+</table>
+<p>Source: <a href="https://devblogs.microsoft.com/visualstudio/the-visual-studio-editor-can-do-that/">Visual Studio Blog</a><br />
+See also <a href="https://learn.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio">Visual Studio Keyboard Shortcuts</a></p>
+<h2 id="my-visual-studio-configuration">My Visual Studio Configuration<a class="headerlink" href="#my-visual-studio-configuration" title="Permanent link">&para;</a></h2>
+<p>These are my configuration tasks after installing or repairing Visual Studio 2022:</p>
+<ul>
+<li><strong>Tools &gt; Import and Export Settings &gt; Import selected environment settings</strong></li>
+<li>\\server\userfiles\<em>username</em>\Backups\Visual Studio\team-settings.vssettings</li>
+<li>Check <strong>Colorize document tabs by Project</strong> in <strong>Tools &gt; Options &gt; Environment &gt; Tabs and Windows</strong></li>
+<li>Check <strong>Place 'System' directives first when sorting usings</strong> in <strong>Tools &gt; Options &gt; Text Editor &gt; C# &gt; Advanced</strong></li>
+<li>Install Extensions:</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=MadsKristensen.AddNewFile64">Add New File (64-bit)</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=MadsKristensen.ExtensibilityEssentials2022">Extensibility Essentials 2022</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=MadsKristensen.FileDiffer">File Differ</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor2">Markdown Editor v2</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=MadsKristensen.RainbowBraces">Rainbow Braces</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=josefpihrt.Roslynator2022">Roslynator 2022</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2022">SonarLint for Visual Studio 2022</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=MikeWard-AnnArbor.VSColorOutput64">VSColorOutput64</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=idex.colorthemedesigner2022">Visual Studio Color Theme Designer 2022</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=mayerwin.RenameVisualStudioWindowTitle">Customize Visual Studio Window Title</a><ul>
+<li>Check <strong>Use compact menu and search bar (requires restart)</strong> in <strong>Tools &gt; Options &gt; Environment &gt; General</strong></li>
+<li>Go to <strong>Tools &gt; Options &gt; Customize VS Window Title &gt; Global rules</strong></li>
+<li>Solution in break mode: <strong>[gitRepositoryName] (Debugging) - [ideName]</strong></li>
+<li>Solution in design mode: <strong>[gitRepositoryName] - [ideName]</strong></li>
+<li>Solution in running mode: <strong>[gitRepositoryName] (Running) - [ideName]</strong></li>
+<li>Go to <strong>Tools &gt; Options &gt; Customize VS Window Title &gt; Solution-specific overrides</strong></li>
+<li>Enable solution-specific overrides: <strong>True</strong></li>
+</ul>
+</li>
+<li>Install Themes:</li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=GuvenSezginKurt.marvel239">Marvel Theme</a></li>
+<li><a href="https://githubserver/username/MarvelFixed">MarvelFixed</a><ul>
+<li>Build and run <strong>bin\Debug\MarvelFixed.vsix</strong></li>
+</ul>
+</li>
+<li><strong>Tools &gt; Import and Export Settings &gt; Export selected environment settings</strong></li>
+<li>\\server\userfiles\<em>username</em>\Backups\Visual Studio\2022-10-19-Export.vssettings</li>
+</ul>
+<h2 id="option-color-tabs-by-project">Option - Color Tabs by Project<a class="headerlink" href="#option-color-tabs-by-project" title="Permanent link">&para;</a></h2>
+<p>When checked, each document open has a tab with a color indicating its project.</p>
+<ul>
+<li>Tools &gt; Options &gt; Environment &gt; Tabs and Windows</li>
+<li>Check <strong>Colorize document tabs by project</strong></li>
+</ul>
+<h2 id="option-sort-using-statements-with-system-first">Option - Sort using Statements with System First<a class="headerlink" href="#option-sort-using-statements-with-system-first" title="Permanent link">&para;</a></h2>
+<p>When checked, the using statements will be sorted with System first when sorting usings with Edit &gt; IntelliSense &gt; Sort Using (Ctrl-K Ctrl-E).</p>
+<ul>
+<li>Tools &gt; Options &gt; Text Editor &gt; C# &gt; Advanced</li>
+<li>Check <strong>Place 'System' directives first when sorting usings</strong> in the <strong>Using Directives</strong> section</li>
+</ul>
+<h2 id="option-track-active-document-in-solution-explorer">Option - Track Active Document in Solution Explorer<a class="headerlink" href="#option-track-active-document-in-solution-explorer" title="Permanent link">&para;</a></h2>
+<p>When checked, Solution Explorer will show the location (project/folder) of the currently viewed document and will change as different documents are viewed.</p>
+<ul>
+<li>Tools &gt; Options &gt; Projects and Solutions &gt; General</li>
+<li>Check <strong>Track Active Item in Solution Explorer</strong></li>
+</ul>
+<h2 id="regular-expressions-for-find">Regular Expressions for Find<a class="headerlink" href="#regular-expressions-for-find" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Regular Expression</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>(^\|[^:/])//[^/]</code></td>
+<td style="text-align: left;">Find commented line</td>
+</tr>
+</tbody>
+</table>
+<h2 id="use-winmerge-as-diffmerge-tool">Use WinMerge as Diff/Merge Tool<a class="headerlink" href="#use-winmerge-as-diffmerge-tool" title="Permanent link">&para;</a></h2>
+<p>This is how you configure Git in Windows to use <a href="https://winmerge.org/">WinMerge</a> as your Diff/Merge tool.</p>
+<ul>
+<li>Download and install <a href="https://winmerge.org/downloads/?lang=en">WinMerge</a></li>
+<li>Edit the global .gitconfig (typically in %USERPROFILE%\.gitconfig aka C:\Users\username\.gitconfig)</li>
+<li>Use this command to find the location of the global .gitconfig:</li>
+<li><code>git config --global --list --show-origin --show-scope</code></li>
+<li>Use this command to edit the global .gitconfig wherever it is:</li>
+<li><code>git config --global --edit</code></li>
+<li>(Warning: If you end up in the VIM text editor, use <code>:q!</code> to exit without saving)</li>
+<li>Add these sections:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[difftool &quot;winmerge&quot;]
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    name = WinMerge
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    trustExitCode = true
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    cmd = \&quot;C:\\Program Files\\WinMerge\\WinMergeU.exe\&quot; /e /u /wl /wr /dl \&quot;$LOCAL\&quot; /dr \&quot;$REMOTE\&quot; $LOCAL $REMOTE
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>[mergetool &quot;winmerge&quot;]
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    name = WinMerge
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    trustExitCode = true
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    cmd = \&quot;C:\\Program Files\\WinMerge\\WinMergeU.exe\&quot; /e /u /wl /dl \&quot;Incoming: $LOCAL\&quot; /dr \&quot;Current $REMOTE\&quot; $LOCAL $REMOTE /o $MERGED
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>[mergetool]
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    keepBackup = false
+</span></code></pre></div></li>
+<li>Update these sections:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>[diff]
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    tool = WinMerge
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>[merge]
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    tool = WinMerge
+</span></code></pre></div></li>
+<li>When merging, make changes to the right side and save when done.</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 24, 2026 19:56:41 UTC">February 24, 2026</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 24, 2026 19:56:41 UTC">February 24, 2026</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "navigation.top", "navigation.indexes"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../assets/_markdown_exec_pyodide.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/javascripts/panzoom.min.js"></script>
+      
+        <script src="../assets/javascripts/zoompan.js"></script>
+      
+    
+  </body>
+</html>
