@@ -127,33 +127,33 @@ See also [Visual Studio Keyboard Shortcuts](https://learn.microsoft.com/en-us/vi
 These are my configuration tasks after installing or repairing Visual Studio 2022:
 
 * **Tools > Import and Export Settings > Import selected environment settings**
-  * \\\\server\\userfiles\\*username*\\Backups\\Visual Studio\\team-settings.vssettings
+    * \\\\server\\userfiles\\*username*\\Backups\\Visual Studio\\team-settings.vssettings
 * Check **Colorize document tabs by Project** in **Tools > Options > Environment > Tabs and Windows**
 * Check **Place 'System' directives first when sorting usings** in **Tools > Options > Text Editor > C# > Advanced**
 * Install Extensions:
-  * [Add New File (64-bit)](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.AddNewFile64)
-  * [Extensibility Essentials 2022](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.ExtensibilityEssentials2022)
-  * [File Differ](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.FileDiffer)
-  * [Markdown Editor v2](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor2)
-  * [Rainbow Braces](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.RainbowBraces)
-  * [Roslynator 2022](https://marketplace.visualstudio.com/items?itemName=josefpihrt.Roslynator2022)
-  * [SonarLint for Visual Studio 2022](https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2022)
-  * [VSColorOutput64](https://marketplace.visualstudio.com/items?itemName=MikeWard-AnnArbor.VSColorOutput64)
-  * [Visual Studio Color Theme Designer 2022](https://marketplace.visualstudio.com/items?itemName=idex.colorthemedesigner2022)
-  * [Customize Visual Studio Window Title](https://marketplace.visualstudio.com/items?itemName=mayerwin.RenameVisualStudioWindowTitle)
-    * Check **Use compact menu and search bar (requires restart)** in **Tools > Options > Environment > General**
-    * Go to **Tools > Options > Customize VS Window Title > Global rules**
-      * Solution in break mode: **[gitRepositoryName] (Debugging) - [ideName]**
-      * Solution in design mode: **[gitRepositoryName] - [ideName]**
-      * Solution in running mode: **[gitRepositoryName] (Running) - [ideName]**
-    * Go to **Tools > Options > Customize VS Window Title > Solution-specific overrides**
-      * Enable solution-specific overrides: **True**
+    * [Add New File (64-bit)](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.AddNewFile64)
+    * [Extensibility Essentials 2022](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.ExtensibilityEssentials2022)
+    * [File Differ](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.FileDiffer)
+    * [Markdown Editor v2](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor2)
+    * [Rainbow Braces](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.RainbowBraces)
+    * [Roslynator 2022](https://marketplace.visualstudio.com/items?itemName=josefpihrt.Roslynator2022)
+    * [SonarLint for Visual Studio 2022](https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2022)
+    * [VSColorOutput64](https://marketplace.visualstudio.com/items?itemName=MikeWard-AnnArbor.VSColorOutput64)
+    * [Visual Studio Color Theme Designer 2022](https://marketplace.visualstudio.com/items?itemName=idex.colorthemedesigner2022)
+    * [Customize Visual Studio Window Title](https://marketplace.visualstudio.com/items?itemName=mayerwin.RenameVisualStudioWindowTitle)
+        * Check **Use compact menu and search bar (requires restart)** in **Tools > Options > Environment > General**
+        * Go to **Tools > Options > Customize VS Window Title > Global rules**
+            * Solution in break mode: **[gitRepositoryName] (Debugging) - [ideName]**
+            * Solution in design mode: **[gitRepositoryName] - [ideName]**
+            * Solution in running mode: **[gitRepositoryName] (Running) - [ideName]**
+        * Go to **Tools > Options > Customize VS Window Title > Solution-specific overrides**
+            * Enable solution-specific overrides: **True**
 * Install Themes:
-  * [Marvel Theme](https://marketplace.visualstudio.com/items?itemName=GuvenSezginKurt.marvel239)
-  * [MarvelFixed](https://githubserver/username/MarvelFixed)
-    * Build and run **bin\Debug\MarvelFixed.vsix**
+    * [Marvel Theme](https://marketplace.visualstudio.com/items?itemName=GuvenSezginKurt.marvel239)
+    * [MarvelFixed](https://githubserver/username/MarvelFixed)
+        * Build and run **bin\Debug\MarvelFixed.vsix**
 * **Tools > Import and Export Settings > Export selected environment settings**
-  * \\\\server\\userfiles\\*username*\\Backups\\Visual Studio\\2022-10-19-Export.vssettings
+    * \\\\server\\userfiles\\*username*\\Backups\\Visual Studio\\2022-10-19-Export.vssettings
 
 ## Option - Color Tabs by Project
 
