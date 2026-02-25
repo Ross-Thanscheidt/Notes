@@ -66,7 +66,7 @@
     
     
   <meta name="panzoom-theme" content="material">
-<meta name="panzoom-data" content='{"selectors": [".mermaid", ".d2"], "initial_zoom_level": 1.0}'> </head>
+<meta name="panzoom-data" content='{"selectors": [".d2", ".mermaid"], "initial_zoom_level": 1.0}'> </head>
   
   
     
@@ -898,13 +898,15 @@ if <code>endpoints.MapControllerRoute()</code> or <code>endpoints.MapAreaControl
 However, underscores and dashes are allowed (<code>company_logging_session-id</code>).</p>
 <p>Source: <a href="https://docs.microsoft.com/en-us/dotnet/core/compatibility/aspnet-core/5.0/security-cookie-name-encoding-removed">Security: Cookie name encoding removed</a></p>
 <h2 id="current-user">Current User<a class="headerlink" href="#current-user" title="Permanent link">&para;</a></h2>
-<p>In ASP.NET MVC and Web API, apps often refer to the current user using the <code>ClaimsPrincipal.Current</code> property. This property isn't set in ASP.NET Core, and any behavior in your app that depends on it will need to <a href="https://docs.microsoft.com/en-us/aspnet/core/migration/claimsprincipal-current">migrate from ClaimsPrincipal.Current</a> by using:
-* <code>ControllerBase.User</code>
-* <code>HttpContext.User</code>
-* Request the User as an argument
-* <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-context?view=aspnetcore-6.0">Request <code>IHttpContextAccessor</code> to get current <code>HttpContext</code> (if it exists)</a>
-  * <code>services.AddHttpContextAccessor()</code> to make <code>IHttpContextAccessor</code> available in the DI container
-  * Use <code>HttpContextAccessor.HttpContext?.User</code> to get the current user's <code>ClaimPrincipal</code></p>
+<p>In ASP.NET MVC and Web API, apps often refer to the current user using the <code>ClaimsPrincipal.Current</code> property. This property isn't set in ASP.NET Core, and any behavior in your app that depends on it will need to <a href="https://docs.microsoft.com/en-us/aspnet/core/migration/claimsprincipal-current">migrate from ClaimsPrincipal.Current</a> by using:</p>
+<ul>
+<li><code>ControllerBase.User</code></li>
+<li><code>HttpContext.User</code></li>
+<li>Request the User as an argument</li>
+<li><a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-context?view=aspnetcore-6.0">Request <code>IHttpContextAccessor</code> to get current <code>HttpContext</code> (if it exists)</a></li>
+<li><code>services.AddHttpContextAccessor()</code> to make <code>IHttpContextAccessor</code> available in the DI container</li>
+<li>Use <code>HttpContextAccessor.HttpContext?.User</code> to get the current user's <code>ClaimPrincipal</code></li>
+</ul>
 <p>Source: <a href="https://docs.microsoft.com/en-us/dotnet/architecture/porting-existing-aspnet-apps/authentication-differences">Compare authentication and authorization between ASP.NET MVC and ASP.NET Core</a></p>
 <h2 id="logging-notes">Logging Notes<a class="headerlink" href="#logging-notes" title="Permanent link">&para;</a></h2>
 <p>Add this to appsettings.json:</p>
@@ -1116,7 +1118,7 @@ However, underscores and dashes are allowed (<code>company_logging_session-id</c
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 24, 2026 21:29:27 UTC">February 24, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 25, 2026 19:26:48 UTC">February 25, 2026</span>
   </span>
 
     
