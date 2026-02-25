@@ -20,7 +20,7 @@
 
 - Windows Terminal settings (`profiles:defaults:font:face = "MesloLGM NerdFont"`)
 
-- Copy [.mytheme.omp.json](https://gist.github.com/Ross-Thanscheidt/746aee74abb715e037aaf2d99b9fb876#file-mytheme-omp-json) to `$env:UserProfile`
+- Copy [.mytheme.omp.json](https://github.com/Ross-Thanscheidt/Notes/blob/main/configurations/oh-my-posh/.mytheme.omp.json) to `$env:UserProfile`
     - Alternatively [ohmyposhv3_v2.json](https://gist.github.com/shanselman/1f69b28bfcc4f7716e49eb5bb34d7b2c?WT.mc_id=-blog-scottha) by Scott Hanselman
 
 - Add this line to `$env:UserProfile\Documents\PowerShell\profile.ps1`:
