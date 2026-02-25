@@ -160,21 +160,21 @@ These are my configuration tasks after installing or repairing Visual Studio 202
 When checked, each document open has a tab with a color indicating its project.
 
 * Tools > Options > Environment > Tabs and Windows
-  * Check **Colorize document tabs by project**
+    * Check **Colorize document tabs by project**
 
 ## Option - Sort using Statements with System First
 
 When checked, the using statements will be sorted with System first when sorting usings with Edit > IntelliSense > Sort Using (Ctrl-K Ctrl-E).
 
 * Tools > Options > Text Editor > C# > Advanced
-  * Check **Place 'System' directives first when sorting usings** in the **Using Directives** section
+    * Check **Place 'System' directives first when sorting usings** in the **Using Directives** section
 
 ## Option - Track Active Document in Solution Explorer
 
 When checked, Solution Explorer will show the location (project/folder) of the currently viewed document and will change as different documents are viewed.
 
 * Tools > Options > Projects and Solutions > General
-  * Check **Track Active Item in Solution Explorer**
+    * Check **Track Active Item in Solution Explorer**
 
 ## Regular Expressions for Find
 
@@ -189,10 +189,10 @@ This is how you configure Git in Windows to use [WinMerge](https://winmerge.org/
 * Download and install [WinMerge](https://winmerge.org/downloads/?lang=en)
 * Edit the global .gitconfig (typically in %USERPROFILE%\\.gitconfig aka C:\\Users\\username\\.gitconfig)
 * Use this command to find the location of the global .gitconfig:
-  * `git config --global --list --show-origin --show-scope`
+    * `git config --global --list --show-origin --show-scope`
 * Use this command to edit the global .gitconfig wherever it is:
-  * `git config --global --edit`
-  * (Warning: If you end up in the VIM text editor, use `:q!` to exit without saving)
+    * `git config --global --edit`
+    * (Warning: If you end up in the VIM text editor, use `:q!` to exit without saving)
 * Add these sections:
 ```
 [difftool "winmerge"]
