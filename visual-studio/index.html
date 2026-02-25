@@ -1134,11 +1134,13 @@ See also <a href="https://learn.microsoft.com/en-us/visualstudio/ide/default-key
 <h2 id="my-visual-studio-configuration">My Visual Studio Configuration<a class="headerlink" href="#my-visual-studio-configuration" title="Permanent link">&para;</a></h2>
 <p>These are my configuration tasks after installing or repairing Visual Studio 2022:</p>
 <ul>
-<li><strong>Tools &gt; Import and Export Settings &gt; Import selected environment settings</strong></li>
+<li><strong>Tools &gt; Import and Export Settings &gt; Import selected environment settings</strong><ul>
 <li>\\server\userfiles\<em>username</em>\Backups\Visual Studio\team-settings.vssettings</li>
+</ul>
+</li>
 <li>Check <strong>Colorize document tabs by Project</strong> in <strong>Tools &gt; Options &gt; Environment &gt; Tabs and Windows</strong></li>
 <li>Check <strong>Place 'System' directives first when sorting usings</strong> in <strong>Tools &gt; Options &gt; Text Editor &gt; C# &gt; Advanced</strong></li>
-<li>Install Extensions:</li>
+<li>Install Extensions:<ul>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=MadsKristensen.AddNewFile64">Add New File (64-bit)</a></li>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=MadsKristensen.ExtensibilityEssentials2022">Extensibility Essentials 2022</a></li>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=MadsKristensen.FileDiffer">File Differ</a></li>
@@ -1150,40 +1152,56 @@ See also <a href="https://learn.microsoft.com/en-us/visualstudio/ide/default-key
 <li><a href="https://marketplace.visualstudio.com/items?itemName=idex.colorthemedesigner2022">Visual Studio Color Theme Designer 2022</a></li>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=mayerwin.RenameVisualStudioWindowTitle">Customize Visual Studio Window Title</a><ul>
 <li>Check <strong>Use compact menu and search bar (requires restart)</strong> in <strong>Tools &gt; Options &gt; Environment &gt; General</strong></li>
-<li>Go to <strong>Tools &gt; Options &gt; Customize VS Window Title &gt; Global rules</strong></li>
+<li>Go to <strong>Tools &gt; Options &gt; Customize VS Window Title &gt; Global rules</strong><ul>
 <li>Solution in break mode: <strong>[gitRepositoryName] (Debugging) - [ideName]</strong></li>
 <li>Solution in design mode: <strong>[gitRepositoryName] - [ideName]</strong></li>
 <li>Solution in running mode: <strong>[gitRepositoryName] (Running) - [ideName]</strong></li>
-<li>Go to <strong>Tools &gt; Options &gt; Customize VS Window Title &gt; Solution-specific overrides</strong></li>
+</ul>
+</li>
+<li>Go to <strong>Tools &gt; Options &gt; Customize VS Window Title &gt; Solution-specific overrides</strong><ul>
 <li>Enable solution-specific overrides: <strong>True</strong></li>
 </ul>
 </li>
-<li>Install Themes:</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Install Themes:<ul>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=GuvenSezginKurt.marvel239">Marvel Theme</a></li>
 <li><a href="https://githubserver/username/MarvelFixed">MarvelFixed</a><ul>
 <li>Build and run <strong>bin\Debug\MarvelFixed.vsix</strong></li>
 </ul>
 </li>
-<li><strong>Tools &gt; Import and Export Settings &gt; Export selected environment settings</strong></li>
+</ul>
+</li>
+<li><strong>Tools &gt; Import and Export Settings &gt; Export selected environment settings</strong><ul>
 <li>\\server\userfiles\<em>username</em>\Backups\Visual Studio\2022-10-19-Export.vssettings</li>
+</ul>
+</li>
 </ul>
 <h2 id="option-color-tabs-by-project">Option - Color Tabs by Project<a class="headerlink" href="#option-color-tabs-by-project" title="Permanent link">&para;</a></h2>
 <p>When checked, each document open has a tab with a color indicating its project.</p>
 <ul>
-<li>Tools &gt; Options &gt; Environment &gt; Tabs and Windows</li>
+<li>Tools &gt; Options &gt; Environment &gt; Tabs and Windows<ul>
 <li>Check <strong>Colorize document tabs by project</strong></li>
+</ul>
+</li>
 </ul>
 <h2 id="option-sort-using-statements-with-system-first">Option - Sort using Statements with System First<a class="headerlink" href="#option-sort-using-statements-with-system-first" title="Permanent link">&para;</a></h2>
 <p>When checked, the using statements will be sorted with System first when sorting usings with Edit &gt; IntelliSense &gt; Sort Using (Ctrl-K Ctrl-E).</p>
 <ul>
-<li>Tools &gt; Options &gt; Text Editor &gt; C# &gt; Advanced</li>
+<li>Tools &gt; Options &gt; Text Editor &gt; C# &gt; Advanced<ul>
 <li>Check <strong>Place 'System' directives first when sorting usings</strong> in the <strong>Using Directives</strong> section</li>
+</ul>
+</li>
 </ul>
 <h2 id="option-track-active-document-in-solution-explorer">Option - Track Active Document in Solution Explorer<a class="headerlink" href="#option-track-active-document-in-solution-explorer" title="Permanent link">&para;</a></h2>
 <p>When checked, Solution Explorer will show the location (project/folder) of the currently viewed document and will change as different documents are viewed.</p>
 <ul>
-<li>Tools &gt; Options &gt; Projects and Solutions &gt; General</li>
+<li>Tools &gt; Options &gt; Projects and Solutions &gt; General<ul>
 <li>Check <strong>Track Active Item in Solution Explorer</strong></li>
+</ul>
+</li>
 </ul>
 <h2 id="regular-expressions-for-find">Regular Expressions for Find<a class="headerlink" href="#regular-expressions-for-find" title="Permanent link">&para;</a></h2>
 <table>
@@ -1205,11 +1223,15 @@ See also <a href="https://learn.microsoft.com/en-us/visualstudio/ide/default-key
 <ul>
 <li>Download and install <a href="https://winmerge.org/downloads/?lang=en">WinMerge</a></li>
 <li>Edit the global .gitconfig (typically in %USERPROFILE%\.gitconfig aka C:\Users\username\.gitconfig)</li>
-<li>Use this command to find the location of the global .gitconfig:</li>
+<li>Use this command to find the location of the global .gitconfig:<ul>
 <li><code>git config --global --list --show-origin --show-scope</code></li>
-<li>Use this command to edit the global .gitconfig wherever it is:</li>
+</ul>
+</li>
+<li>Use this command to edit the global .gitconfig wherever it is:<ul>
 <li><code>git config --global --edit</code></li>
 <li>(Warning: If you end up in the VIM text editor, use <code>:q!</code> to exit without saving)</li>
+</ul>
+</li>
 <li>Add these sections:
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[difftool &quot;winmerge&quot;]
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    name = WinMerge
@@ -1255,7 +1277,7 @@ See also <a href="https://learn.microsoft.com/en-us/visualstudio/ide/default-key
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 24, 2026 19:56:41 UTC">February 24, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 25, 2026 20:00:43 UTC">February 25, 2026</span>
   </span>
 
     
