@@ -37,6 +37,10 @@
          <lastmod>2026-02-25</lastmod>
     </url>
     <url>
+         <loc>https://ross-thanscheidt.github.io/Notes/powershell/</loc>
+         <lastmod>2026-02-25</lastmod>
+    </url>
+    <url>
          <loc>https://ross-thanscheidt.github.io/Notes/sql-server/</loc>
          <lastmod>2026-02-25</lastmod>
     </url>
@@ -46,6 +50,10 @@
     </url>
     <url>
          <loc>https://ross-thanscheidt.github.io/Notes/visual-studio/</loc>
+         <lastmod>2026-02-25</lastmod>
+    </url>
+    <url>
+         <loc>https://ross-thanscheidt.github.io/Notes/windows-terminal/</loc>
          <lastmod>2026-02-25</lastmod>
     </url>
 </urlset>
