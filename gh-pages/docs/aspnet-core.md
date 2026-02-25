@@ -50,8 +50,8 @@ In ASP.NET MVC and Web API, apps often refer to the current user using the `Clai
 * `HttpContext.User`
 * Request the User as an argument
 * [Request `IHttpContextAccessor` to get current `HttpContext` (if it exists)](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-context?view=aspnetcore-6.0)
-  * `services.AddHttpContextAccessor()` to make `IHttpContextAccessor` available in the DI container
-  * Use `HttpContextAccessor.HttpContext?.User` to get the current user's `ClaimPrincipal`
+    * `services.AddHttpContextAccessor()` to make `IHttpContextAccessor` available in the DI container
+    * Use `HttpContextAccessor.HttpContext?.User` to get the current user's `ClaimPrincipal`
 
 Source: [Compare authentication and authorization between ASP.NET MVC and ASP.NET Core](https://docs.microsoft.com/en-us/dotnet/architecture/porting-existing-aspnet-apps/authentication-differences)
 
