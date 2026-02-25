@@ -214,41 +214,58 @@ Pasting the same word multiple times (does not work in VsVim)
 - `[N]<C-w>|` - Set active window width to `[N]` columns
 
 ## Vim Plugins
-- [CycleColor](https://github.com/vim-scripts/CycleColor) by Marvin Renich - Cycle through available colorschemes
-    - [Vim.org](https://www.vim.org/scripts/script.php?script_id=1457)
-    - [Windows Fix](https://github.com/xdhmoore/CycleColor/blob/patch-1/plugin/cyclecolor.vim) by Daniel Moore
-    - `<F3>` - Cycle Backward
-    - `<F4>` - Cycle Forward
 
-- [Sparkup](https://github.com/rstacruz/sparkup) by Rico Sta. Cruz - A parser to let you write HTML code faster
+### [CycleColor](https://github.com/vim-scripts/CycleColor)
 
-- [vim-surround](https://github.com/tpope/vim-surround) by Tim Pope - Easily delete/change/add surroundings
-    - [Documentation](https://github.com/tpope/vim-surround/blob/master/doc/surround.txt)
-    - `ds{char}` - Delete Surroundings - `{char}` can be `"')b}B]r>a` or `t` for tag
-    - `cs{char}{replacement}` - Change Surrounding `{char}` with `{replacement}`  
-    (could be tag)
-    - `ys{motion}{char}` - You Surround `{motion}` with `{char}` (could be tag)
-    - `yss{char}` - You Surround - operates on current line (ignores leading whitespace)
-    - `yS{motion}{char}` - You Surround - indents the text and places it on a line of its own
-    - `ySS{char}` - You Surround - indents the current line and places it on a line of its own
-    - `v{motions}S{char}` - wraps the visual selection with `{char}`
-    - `v{motions}gS{char}` - wraps the visual selection on a line of its own with `{char}`
+Cycle through available colorschemes
 
-- [vim-unimpaired](https://github.com/tpope/vim-unimpaired) by Tim Pope - Pairs of handy bracket mappings
-    - [Documentation](https://github.com/tpope/vim-unimpaired/blob/master/doc/unimpaired.txt)
-    - `[a` / `]a` (`:previous` / `:next`) - edit previous / next file in the argument list (fails for unsaved changes)
-    - `[A` / `]A` (`:first` / `:last`) - edit the first / last file in the argument list
-    - `[b` / `]b` (`:bprevious` / `:bnext`) - go to the previous / next buffer in the buffer list
-    - `[B` / `]B` (`:bfirst` / `:blast`) - go to the first / last buffer in the buffer list
-    - `[<Space>` / `]<Space>` - add blank lines above / below the cursor
-    - `[e` / `]e` - exchange the current line with the line above / below it
-    - `[oh` / `]oh` / `yoh` - on/off/toggle `hlsearch`
-    - `[oi` / `]oi` / `yoi` - on/off/toggle `ignorecase`
-    - `[ol` / `]ol` / `yol` - on/off/toggle `list`
-    - `[on` / `]on` / `yon` - on/off/toggle `number`
-    - `[or` / `]or` / `yor` - on/off/toggle `relativenumber`
-    - `[os` / `]os` / `yos` - on/off/toggle `spell`
-    - `[ow` / `]ow` / `yow` - on/off/toggle `wrap`
+- By Marvin Renich
+- [Vim.org](https://www.vim.org/scripts/script.php?script_id=1457)
+- [Windows Fix](https://github.com/xdhmoore/CycleColor/blob/patch-1/plugin/cyclecolor.vim) by Daniel Moore
+- `<F3>` - Cycle Backward
+- `<F4>` - Cycle Forward
+
+### [Sparkup](https://github.com/rstacruz/sparkup)
+
+A parser to let you write HTML code faster
+
+- By Rico Sta. Cruz
+
+### [vim-surround](https://github.com/tpope/vim-surround)
+
+Easily delete/change/add surroundings
+
+- By Tim Pope
+- [Documentation](https://github.com/tpope/vim-surround/blob/master/doc/surround.txt)
+- `ds{char}` - Delete Surroundings - `{char}` can be `"')b}B]r>a` or `t` for tag
+- `cs{char}{replacement}` - Change Surrounding `{char}` with `{replacement}`  
+(could be tag)
+- `ys{motion}{char}` - You Surround `{motion}` with `{char}` (could be tag)
+- `yss{char}` - You Surround - operates on current line (ignores leading whitespace)
+- `yS{motion}{char}` - You Surround - indents the text and places it on a line of its own
+- `ySS{char}` - You Surround - indents the current line and places it on a line of its own
+- `v{motions}S{char}` - wraps the visual selection with `{char}`
+- `v{motions}gS{char}` - wraps the visual selection on a line of its own with `{char}`
+
+### [vim-unimpaired](https://github.com/tpope/vim-unimpaired)
+
+Pairs of handy bracket mappings
+
+- By Tim Pope
+- [Documentation](https://github.com/tpope/vim-unimpaired/blob/master/doc/unimpaired.txt)
+- `[a` / `]a` (`:previous` / `:next`) - edit previous / next file in the argument list
+- `[A` / `]A` (`:first` / `:last`) - edit the first / last file in the argument list
+- `[b` / `]b` (`:bprevious` / `:bnext`) - go to the previous / next buffer in the buffer list
+- `[B` / `]B` (`:bfirst` / `:blast`) - go to the first / last buffer in the buffer list
+- `[<Space>` / `]<Space>` - add blank lines above / below the cursor
+- `[e` / `]e` - exchange the current line with the line above / below it
+- `[oh` / `]oh` / `yoh` - on/off/toggle `hlsearch`
+- `[oi` / `]oi` / `yoi` - on/off/toggle `ignorecase`
+- `[ol` / `]ol` / `yol` - on/off/toggle `list`
+- `[on` / `]on` / `yon` - on/off/toggle `number`
+- `[or` / `]or` / `yor` - on/off/toggle `relativenumber`
+- `[os` / `]os` / `yos` - on/off/toggle `spell`
+- `[ow` / `]ow` / `yow` - on/off/toggle `wrap`
 
 ## Vim Resources
 - [Vim.org](https://www.vim.org/)
