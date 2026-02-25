@@ -2,30 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://ross-thanscheidt.github.io/Notes/</loc>
-         <lastmod>2026-02-24</lastmod>
+         <lastmod>2026-02-25</lastmod>
     </url>
     <url>
          <loc>https://ross-thanscheidt.github.io/Notes/aspnet-core/</loc>
-         <lastmod>2026-02-24</lastmod>
+         <lastmod>2026-02-25</lastmod>
     </url>
     <url>
          <loc>https://ross-thanscheidt.github.io/Notes/dependency-injection/</loc>
-         <lastmod>2026-02-24</lastmod>
+         <lastmod>2026-02-25</lastmod>
     </url>
     <url>
          <loc>https://ross-thanscheidt.github.io/Notes/dotnet/</loc>
-         <lastmod>2026-02-24</lastmod>
+         <lastmod>2026-02-25</lastmod>
+    </url>
+    <url>
+         <loc>https://ross-thanscheidt.github.io/Notes/github-cli/</loc>
+         <lastmod>2026-02-25</lastmod>
+    </url>
+    <url>
+         <loc>https://ross-thanscheidt.github.io/Notes/github/</loc>
+         <lastmod>2026-02-25</lastmod>
+    </url>
+    <url>
+         <loc>https://ross-thanscheidt.github.io/Notes/keyboard-shortcuts/</loc>
+         <lastmod>2026-02-25</lastmod>
+    </url>
+    <url>
+         <loc>https://ross-thanscheidt.github.io/Notes/oh-my-posh/</loc>
+         <lastmod>2026-02-25</lastmod>
     </url>
     <url>
          <loc>https://ross-thanscheidt.github.io/Notes/sql-server/</loc>
-         <lastmod>2026-02-24</lastmod>
+         <lastmod>2026-02-25</lastmod>
     </url>
     <url>
          <loc>https://ross-thanscheidt.github.io/Notes/vim/</loc>
-         <lastmod>2026-02-24</lastmod>
+         <lastmod>2026-02-25</lastmod>
     </url>
     <url>
          <loc>https://ross-thanscheidt.github.io/Notes/visual-studio/</loc>
-         <lastmod>2026-02-24</lastmod>
+         <lastmod>2026-02-25</lastmod>
     </url>
 </urlset>
