@@ -45,6 +45,7 @@ Source: [Security: Cookie name encoding removed](https://docs.microsoft.com/en-u
 ## Current User
 
 In ASP.NET MVC and Web API, apps often refer to the current user using the `ClaimsPrincipal.Current` property. This property isn't set in ASP.NET Core, and any behavior in your app that depends on it will need to [migrate from ClaimsPrincipal.Current](https://docs.microsoft.com/en-us/aspnet/core/migration/claimsprincipal-current) by using:
+
 * `ControllerBase.User`
 * `HttpContext.User`
 * Request the User as an argument
