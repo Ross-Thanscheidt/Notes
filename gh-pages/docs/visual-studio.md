@@ -118,6 +118,7 @@ See Tools > Options > Environment > Keyboard to map commands to keyboard shortcu
 | `Ctrl` + `M`, `Ctrl` + `E`<br />`Ctrl` + `M`, `Ctrl` + `S` | Expand Current Region<br />Collapse Current Region |
 | `Ctrl` + `M`, `Ctrl` + `L`<br />`Ctrl` + `M`, `Ctrl` + `O` | Expand All<br />Collapse All |
 | `Ctrl` + `M`, `Ctrl` + `M`                                 | Toggle Outlining Expansion - Expand/Collapse Current Section |
+| `Ctrl` + `R`, `T`                                          | Run Test for Current Unit Test Method |
 
 Source: [Visual Studio Blog](https://devblogs.microsoft.com/visualstudio/the-visual-studio-editor-can-do-that/)  
 See also [Visual Studio Keyboard Shortcuts](https://learn.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio)
