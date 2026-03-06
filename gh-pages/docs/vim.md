@@ -25,9 +25,9 @@ Pasting the same word multiple times (does not work in VsVim)
 - `"+yiw` - Yank the current word to the Clipboard - `"` register `+` clipboard `y`ank `i`nner `w`ord
 - `:%y+` - Copy the entire buffer to the Clipboard
 - `"+p` - Paste from the Clipboard - `"` register `+` clipboard `p`ut
-- `:pu+' - Paste from the Clipboard - `:` command-line `pu` put `+` clipboard
-- `:0pu+' - Paste at the top of the buffer from the Clipboard
-- `:$pu+' - Paste at the end of the buffer from the Clipboard
+- `:pu+` - Paste from the Clipboard - `:` command-line `pu` put `+` clipboard
+- `:0pu+` - Paste at the top of the buffer from the Clipboard
+- `:$pu+` - Paste at the end of the buffer from the Clipboard
 
 ## Normal Mode
 - `<C-g>` - Prints current filename (`Go To Line` in VsVim)
