@@ -6,9 +6,7 @@
 - [JanDeDobbeleer/oh-my-posh](https://github.com/jandedobbeleer/oh-my-posh)
 - [My Ultimate PowerShell prompt with Oh My Posh and the Windows Terminal](https://www.hanselman.com/blog/my-ultimate-powershell-prompt-with-oh-my-posh-and-the-windows-terminal)
 
-## Installation
-
-### Windows
+## Windows Installation
 
 - Install/Update:
 
@@ -39,7 +37,7 @@
     PS> oh-my-posh enable reload
     ```
 
-### Linux
+## Linux Installation
 
 - Make sure these tools are installed - curl, unzip, realpath, dirname:
 
