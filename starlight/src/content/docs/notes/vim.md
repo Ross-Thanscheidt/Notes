@@ -127,9 +127,9 @@ Pasting the same word multiple times (does not work in VsVim)
 - `:argdo source {file}` - Execute the Ex commands from `{file}` for each argument list file
 
 ## Command-Line Mode
-- `:[range]delete {register}` - Delete specified lines into register `{register}`
-- `:[range]yank {register}` - Yank specified lines into register `{register}`
-- `:[line]put {register}` - Put the text from register `{register}` after the specified line
+- `:[range]delete {register}` - Delete specified lines into `{register}`
+- `:[range]yank {register}` - Yank specified lines into `{register}`
+- `:[line]put {register}` - Put the text from `{register}` after the specified line
 - `:[range]copy {address}` - Copy the specified lines to below the line specified by {address}
 - `:[range]t {address}` - `t` is an alias for `copy` (think of it as *copy* **to**)
 - `:[range]move {address}` - Move the specified lines to below the line specified by {address}
