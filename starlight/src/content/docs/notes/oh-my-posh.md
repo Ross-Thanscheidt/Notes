@@ -69,9 +69,9 @@ title: Oh My Posh Notes
 - Configure the terminal to use MesloLGM Nerd Font:
 
     - Gnome:
-        - Right-Click Terminal in Dash → Preferences → "Unnamed" Profile → Text → ✅ "Custom font" → select "MesloLGM Nerd Font"
+        - Right-Click Terminal in Dash → Preferences → "Unnamed" Profile → Text → ✓ "Custom font" → select "MesloLGM Nerd Font"
     - KDE (Konsole):
-        - `Ctrl-Shift-,` → Profiles → New... → General → "Oh My Posh Profile" → ✅ "Default profile" → Apply → Appearance → Font Choose → "MesloLGM Nerd Font" → OK → OK → restart Konsole
+        - `Ctrl-Shift-,` → Profiles → New... → General → "Oh My Posh Profile" → ✓ "Default profile" → Apply → Appearance → Font Choose → "MesloLGM Nerd Font" → OK → OK → restart Konsole
 
 - Add this to ~/.bashrc:
 
