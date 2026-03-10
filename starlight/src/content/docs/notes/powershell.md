@@ -41,7 +41,7 @@ Source: [SuperUser Question](https://superuser.com/questions/1064417/how-do-i-fi
 
 ```powershell
 Get-ChildItem -Recurse -File -Path 'C:\Your\Folder' | select -ExpandProperty FullName
-dir -Recurse -File -Path . -Filter "*.txt" | select FullName
+dir -Recurse *.txt | select FullName
 ```
 
 ### Sort by Modified Date
