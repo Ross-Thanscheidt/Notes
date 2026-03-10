@@ -80,6 +80,11 @@ Pasting the same word multiple times (does not work in VsVim)
     - `uT`, `dT`, `Tr`, `Tl` for △ ▽ ▷ ◁
 - [Vim Digraphs Cheatsheet](https://devhints.io/vim-digraphs)
 
+### Unicode Characters
+
+- `<C-q>u{4-digits}` - Insert character using its 4-digit hexadecimal Unicode value
+    - `2611`, `2705` for ☑, ✅
+
 ## Formatting
 - `:set expandtab` - Insert space characters whenever the tab key is pressed  
 (use `<C-v><Tab>` to insert a tab character)
