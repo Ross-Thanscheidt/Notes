@@ -9,7 +9,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Ross Notes',
-            pagefind: false,
+            pagefind: true,
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/Ross-Thanscheidt/Notes' }],
 			sidebar: [
 				{
