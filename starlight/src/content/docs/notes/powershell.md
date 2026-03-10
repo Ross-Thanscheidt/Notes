@@ -50,6 +50,13 @@ dir -Recurse *.txt | select FullName
 dir | sort LastWriteTime
 ```
 
+## File Checksum
+
+```powershell
+(Get-FileHash -Algorithm SHA512 filename).Hash -eq "checksum-value"
+(Get-FileHash -Algorithm SHA512 .\dotnet-sdk-11.0.100-preview.2.26159.112-win-x64.exe).Hash -eq "6811b9e4d225d1de5f200a950cd663966b1d809bf171f458a02087d58fa9a95ae61fa3022a8f21cdd4769867f53d2ff4b47bae8c6edd16b403d230d413f7a3cb"
+```
+
 ## PSModulePath
 
 - `[Environment]::GetEnvironmentVariable("PSModulePath", "User")`:
