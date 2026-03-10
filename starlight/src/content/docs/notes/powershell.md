@@ -40,8 +40,8 @@ Source: [SuperUser Question](https://superuser.com/questions/1064417/how-do-i-fi
 ### Recursively
 
 ```powershell
-dir -Path 'C:\Your\Folder' -Recurse -File | select -ExpandProperty FullName
-dir -Path . -Filter "*.txt" -Recurse -File | select -ExpandProperty FullName
+Get-ChildItem -Recurse -File -Path 'C:\Your\Folder' | select -ExpandProperty FullName
+dir -Recurse -File -Path . -Filter "*.txt" | select FullName
 ```
 
 ### Sort by Modified Date
