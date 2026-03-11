@@ -12,13 +12,13 @@ title: Oh My Posh Notes
 
 - Install/Update:
 
-    ```powershell
+    ```powershell frame="none"
     PS> Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://ohmyposh.dev/install.ps1'))
     ```
 
 - Install a [Nerd Font](https://www.nerdfonts.com/):
 
-    ```powershell
+    ```powershell frame="none"
     PS> oh-my-posh font install meslo
     ```
 
@@ -29,13 +29,13 @@ title: Oh My Posh Notes
 
 - Add this line to `$env:UserProfile\Documents\PowerShell\profile.ps1`:
 
-    ```powershell
+    ```powershell frame="none"
     PS> oh-my-posh init pwsh --config "~/.mytheme.omp.json" | Invoke-Expression
     ```
 
 - Enable the reload feature to immediately see changes made to `~/.mytheme.omp.json`:
 
-    ```powershell
+    ```powershell frame="none"
     PS> oh-my-posh enable reload
     ```
 
@@ -43,26 +43,26 @@ title: Oh My Posh Notes
 
 - Make sure these tools are installed - curl, unzip, realpath, dirname:
 
-    ```bash
+    ```bash frame="none"
     sudo apt install curl
     sudo dnf install curl
     ```
 
 - Install the latest version for your system:
 
-    ```bash
+    ```bash frame="none"
     curl -s https://ohmyposh.dev/install.sh | bash -s
     ```
 
 - If it warns that `~/.local/bin` is not in the PATH, add this to `.bashrc`:
 
-    ```bash
+    ```bash frame="none"
     export PATH=$PATH:/home/<username>/.local/bin
     ```
 
 - Install Nerd Fonts:
 
-    ```bash
+    ```bash frame="none"
     oh-my-posh font install meslo
     ```
 
@@ -75,12 +75,12 @@ title: Oh My Posh Notes
 
 - Add this to ~/.bashrc:
 
-    ```bash
+    ```bash frame="none"
     eval "$(oh-my-posh init bash --config '~/.mytheme.omp.json')"
     ```
 
 - (optional) Enable live reloading:
 
-    ```bash
+    ```bash frame="none"
     oh-my-posh enable reload
     ```

@@ -2,23 +2,15 @@
 title: PowerShell Notes
 ---
 
-## Delete Files
+## Delete Empty Files
 
-### Empty Files
-
-Delete all empty files in the current directory
-
-```powershell
+```powershell title="Delete all empty files in the current directory"
 dir -file | where {$_.Length -eq 0} | del [-WhatIf]
 ```
 
-## Find Files
+## Find Hotkey Files
 
-### Shortcut Keys
-
-Find all files with Hotkeys (Shortcut Keys)
-
-```powershell
+```powershell title="Find all files with Hotkeys (Shortcut Keys)"
 $sh = New-Object -ComObject WScript.Shell
 ls -Path `
     $Env:USERPROFILE\Desktop,
@@ -37,22 +29,18 @@ Source: [SuperUser Question](https://superuser.com/questions/1064417/how-do-i-fi
 
 ## List Files
 
-### Recursively
-
-```powershell
+```powershell title="List Files Recursively"
 Get-ChildItem -Recurse -File -Path 'C:\Your\Folder' | select -ExpandProperty FullName
 dir -Recurse *.txt | select FullName
 ```
 
-### Sort by Modified Date
-
-```powershell
+```powershell title="List Files by Modified Date"
 dir | sort LastWriteTime
 ```
 
 ## File Checksum
 
-```powershell
+```powershell title="Validate File with Checksum"
 (Get-FileHash -Algorithm SHA512 filename).Hash -eq "checksum-value"
 (Get-FileHash -Algorithm SHA512 .\dotnet-sdk-11.0.100-preview.2.26159.112-win-x64.exe).Hash -eq "6811b9e4d225d1de5f200a950cd663966b1d809bf171f458a02087d58fa9a95ae61fa3022a8f21cdd4769867f53d2ff4b47bae8c6edd16b403d230d413f7a3cb"
 ```

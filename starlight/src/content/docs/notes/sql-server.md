@@ -139,7 +139,7 @@ DBCC CHECKIDENT ('Article', RESEED, @maxValue);
 ## SSMS Connection Color
 
 When connecting to a Database Engine in SQL Server Management Studio  
-go to `Options >> Connection Properties` to select a custom color  
+go to `Options → Connection Properties` to select a custom color  
 to be the background color of the status bar when connected to that database server.
 
 For example, you could use green for Development, yellow for QA, and red for Production.
