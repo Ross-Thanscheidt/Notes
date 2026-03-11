@@ -6,7 +6,7 @@ title: Git Notes
 
 - Clone a remote repository to a local repository:
 
-    ```shell
+    ```shell frame="none"
     git clone <remote-repository-url> <optional-dir>
     
     git clone https://github.com/Ross-Thanscheidt/Notes.git
@@ -18,7 +18,7 @@ title: Git Notes
 
 - Clone a remote repository using GitHub CLI:
 
-    ```shell
+    ```shell frame="none"
     gh repo list
     gh repo clone Notes
     cd Notes
@@ -26,7 +26,7 @@ title: Git Notes
 
 - Get URL of the remote repository in the local repository:
 
-    ```shell
+    ```shell frame="none"
     git remote get-url origin
     ```
 

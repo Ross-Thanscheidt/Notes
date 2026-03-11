@@ -6,7 +6,7 @@ title: PowerShell Notes
 
 - Delete all empty files in the current directory:
 
-    ```powershell
+    ```powershell frame="none"
     dir -file | where {$_.Length -eq 0} | del [-WhatIf]
     ```
 
@@ -14,7 +14,7 @@ title: PowerShell Notes
 
 - Find all files with Hotkeys (Shortcut Keys):
 
-    ```powershell
+    ```powershell frame="none"
     $sh = New-Object -ComObject WScript.Shell
     ls -Path `
         $Env:USERPROFILE\Desktop,
@@ -35,14 +35,14 @@ title: PowerShell Notes
 
 - List Files Recursively:
 
-    ```powershell
+    ```powershell frame="none"
     Get-ChildItem -Recurse -File -Path 'C:\Your\Folder' | select -ExpandProperty FullName
     dir -Recurse *.txt | select FullName
     ```
 
 - List Files by Modified Date:
 
-    ```powershell
+    ```powershell frame="none"
     dir | sort LastWriteTime
     ```
 
@@ -50,7 +50,7 @@ title: PowerShell Notes
 
 - Validate File with Checksum:
 
-    ```powershell
+    ```powershell frame="none"
     (Get-FileHash -Algorithm SHA512 filename).Hash -eq "checksum-value"
     (Get-FileHash -Algorithm SHA512 .\dotnet-sdk-11.0.100-preview.2.26159.112-win-x64.exe).Hash -eq "6811b9e4d225d1de5f200a950cd663966b1d809bf171f458a02087d58fa9a95ae61fa3022a8f21cdd4769867f53d2ff4b47bae8c6edd16b403d230d413f7a3cb"
     ```
