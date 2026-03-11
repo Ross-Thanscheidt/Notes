@@ -4,25 +4,31 @@ title: Git Notes
 
 ## Repositories
 
-```shell title="Clone a remote repository to a local repository"
-git clone <remote-repository-url> <optional-dir>
+- Clone a remote repository to a local repository:
 
-git clone https://github.com/Ross-Thanscheidt/Notes.git
-cd Notes
+    ```shell
+    git clone <remote-repository-url> <optional-dir>
+    
+    git clone https://github.com/Ross-Thanscheidt/Notes.git
+    cd Notes
+    
+    git clone https://github.com/Ross-Thanscheidt/Example.git MyExample
+    cd MyExample
+    ```
 
-git clone https://github.com/Ross-Thanscheidt/Example.git MyExample
-cd MyExample
-```
+- Clone a remote repository using GitHub CLI:
 
-```shell title="Clone a remote repository using GitHub CLI"
-gh repo list
-gh repo clone Notes
-cd Notes
-```
+    ```shell
+    gh repo list
+    gh repo clone Notes
+    cd Notes
+    ```
 
-```shell title="Get URL of the remote repository in the local repository"
-git remote get-url origin
-```
+- Get URL of the remote repository in the local repository:
+
+    ```shell
+    git remote get-url origin
+    ```
 
 ## Resources
 
