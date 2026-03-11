@@ -30,7 +30,7 @@ title: Git Notes
     git remote get-url origin
     ```
 
-- Update local repostiroy from remote repository
+- Update local repository from remote repository
 
     - Safe - merge commits from remote repository with local master branch
 
