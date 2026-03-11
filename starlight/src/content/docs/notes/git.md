@@ -30,6 +30,21 @@ title: Git Notes
     git remote get-url origin
     ```
 
+- Update local repostiroy from remote repository
+
+    - Safe - merge commits from remote repository with local master branch
+
+        ```shell frame="none"
+        git fetch
+        git rebase
+        ```
+
+    - Aggressive - fetch and rebase without reviewing downloaded changes
+
+        ```shell frame="none"
+        git pull
+        ```
+
 ## Resources
 
 - [git/git: Git Source Code Mirror](https://github.com/git/git)
@@ -42,4 +57,4 @@ title: Git Notes
 - [The Thing About Git](https://tomayko.com/blog/2008/the-thing-about-git)
 - [PeepCode Git Internals PDF by Scott Chacon](https://github.com/pluralsight/git-internals-pdf/releases/download/v2.0/peepcode-git.pdf)
 - [Git for Windows](https://gitforwindows.org/) ([GitHub Repository](https://github.com/git-for-windows/git))
-- [posh-git by Keith Dahlby - A PowerShell environment for Git](https://dahlbyk.github.io/posh-git/) ([GitHub repository](https://github.com/dahlbyk/posh-git))
+- [posh-git by Keith Dahlby - A PowerShell environment for Git](https://dahlbyk.github.io/posh-git/) ([GitHub Repository](https://github.com/dahlbyk/posh-git))
