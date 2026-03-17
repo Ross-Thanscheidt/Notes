@@ -59,7 +59,7 @@ WHERE OBJECT_SCHEMA_NAME(fk.referenced_object_id) = 'Organization'
 
 Source: [Stack Overflow](https://stackoverflow.com/questions/11769172/find-column-dependency)
 
-## MERGE Statement
+## MERGE Statement from Values
 
 ```sql
 SET @handleId = ISNULL(@handleId, newid());
@@ -67,6 +67,36 @@ SET @handleId = ISNULL(@handleId, newid());
 MERGE INTO [Token].[Handle] AS targetTable
 USING (
 	VALUES (@handleId, @typeId, @formatId)
+) AS sourceTable([HandleId], [TypeId], [FormatId])
+ON targetTable.[HandleId] = sourceTable.[HandleId]
+WHEN NOT MATCHED BY TARGET THEN
+	INSERT ([HandleId], [TypeId], [FormatId])
+	VALUES ([HandleId], [TypeId], [FormatId])
+WHEN MATCHED THEN
+	UPDATE
+	SET [TypeId] = sourceTable.[TypeId], 
+		[FormatId] = sourceTable.[FormatId];
+
+EXEC [TokenHandleRepository].[usp_GetToken] @handleId;
+```
+
+## MERGE Statement from SELECT Statement
+
+```sql
+SET @handleId = ISNULL(@handleId, newid());
+  
+MERGE INTO [Token].[Handle] AS targetTable
+USING (
+	SELECT
+        h.[HandleId],
+        t.[TypeId],
+        f.[FormatId]
+    FROM [Handles] h
+    INNER JOIN [Types] t
+        ON t.[TypeId] = h.[TypeId]
+    INNER JOIN [Formats] f
+        ON f.[FormatId] = h.[FormatId]
+    WHERE h.[Name] = 'Handle Name'`
 ) AS sourceTable([HandleId], [TypeId], [FormatId])
 ON targetTable.[HandleId] = sourceTable.[HandleId]
 WHEN NOT MATCHED BY TARGET THEN
