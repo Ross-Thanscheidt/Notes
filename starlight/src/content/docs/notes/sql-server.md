@@ -63,19 +63,19 @@ Source: [Stack Overflow](https://stackoverflow.com/questions/11769172/find-colum
 
 ```sql
 SET @handleId = ISNULL(@handleId, newid());
-  
+
 MERGE INTO [Token].[Handle] AS targetTable
 USING (
-	VALUES (@handleId, @typeId, @formatId)
+    VALUES (@handleId, @typeId, @formatId)
 ) AS sourceTable([HandleId], [TypeId], [FormatId])
 ON targetTable.[HandleId] = sourceTable.[HandleId]
 WHEN NOT MATCHED BY TARGET THEN
-	INSERT ([HandleId], [TypeId], [FormatId])
-	VALUES ([HandleId], [TypeId], [FormatId])
+    INSERT ([HandleId], [TypeId], [FormatId])
+    VALUES ([HandleId], [TypeId], [FormatId])
 WHEN MATCHED THEN
-	UPDATE
-	SET [TypeId] = sourceTable.[TypeId], 
-		[FormatId] = sourceTable.[FormatId];
+    UPDATE
+    SET [TypeId] = sourceTable.[TypeId], 
+        [FormatId] = sourceTable.[FormatId];
 
 EXEC [TokenHandleRepository].[usp_GetToken] @handleId;
 ```
@@ -84,10 +84,10 @@ EXEC [TokenHandleRepository].[usp_GetToken] @handleId;
 
 ```sql
 SET @handleId = ISNULL(@handleId, newid());
-  
+
 MERGE INTO [Token].[Handle] AS targetTable
 USING (
-	SELECT
+    SELECT
         h.[HandleId],
         t.[TypeId],
         f.[FormatId]
@@ -100,12 +100,12 @@ USING (
 ) AS sourceTable([HandleId], [TypeId], [FormatId])
 ON targetTable.[HandleId] = sourceTable.[HandleId]
 WHEN NOT MATCHED BY TARGET THEN
-	INSERT ([HandleId], [TypeId], [FormatId])
-	VALUES ([HandleId], [TypeId], [FormatId])
+    INSERT ([HandleId], [TypeId], [FormatId])
+    VALUES ([HandleId], [TypeId], [FormatId])
 WHEN MATCHED THEN
-	UPDATE
-	SET [TypeId] = sourceTable.[TypeId], 
-		[FormatId] = sourceTable.[FormatId];
+    UPDATE
+    SET [TypeId] = sourceTable.[TypeId], 
+        [FormatId] = sourceTable.[FormatId];
 
 EXEC [TokenHandleRepository].[usp_GetToken] @handleId;
 ```
