@@ -96,7 +96,7 @@ USING (
         ON t.[TypeId] = h.[TypeId]
     INNER JOIN [Formats] f
         ON f.[FormatId] = h.[FormatId]
-    WHERE h.[Name] = 'Handle Name'`
+    WHERE h.[Name] = 'Handle Name'
 ) AS sourceTable([HandleId], [TypeId], [FormatId])
 ON targetTable.[HandleId] = sourceTable.[HandleId]
 WHEN NOT MATCHED BY TARGET THEN
