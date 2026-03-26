@@ -59,6 +59,21 @@ WHERE OBJECT_SCHEMA_NAME(fk.referenced_object_id) = 'Organization'
 
 Source: [Stack Overflow](https://stackoverflow.com/questions/11769172/find-column-dependency)
 
+## Get IDs from INSERT Statement
+
+```sql
+DECLARE @NewIDs TABLE (ID INT);
+
+INSERT INTO dbo.Employees (FirstName, LastName)
+OUTPUT INSERTED.EmployeeID
+INTO @NewIDs
+VALUES
+    ('Jane', 'Smith'),
+    ('Alice', 'Johnson');
+
+SELECT * FROM @NewIDs;
+```
+
 ## MERGE Statement from Values
 
 ```sql
