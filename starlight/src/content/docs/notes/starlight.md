@@ -4,7 +4,7 @@ title: Starlight Notes
 
 ## Installing Starlight
 
-- Install [node](https://nodejs.org/en/download) to get `npm`
+- Install [Node.js](https://nodejs.org/en/download) to get `npm`
 
     ```shell frame="none"
     node -v
