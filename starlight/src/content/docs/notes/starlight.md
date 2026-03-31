@@ -2,24 +2,24 @@
 title: Starlight Notes
 ---
 
-## Installation
+## Installing Starlight
 
 - Install [node](https://nodejs.org/en/download) to get `npm`
 
-    ```shell frame="none"
+    ```
     node -v
     ```
 
 - Update `npm` to the [latest version](https://www.npmjs.com/package/npm)
 
-    ```shell frame="none"
+    ```
     npm -v
     npm install -g npm@latest
     ```
 
 - Create a new Astro + Starlight project
 
-    ```shell frame="none"
+    ```
     npm create astro@latest -- --template starlight
     npm warn "starlight" is being parsed as a normal command line argument.
     npm warn Unknown cli config "--template". This will stop working in the next major version of npm.
@@ -44,6 +44,71 @@ title: Starlight Notes
 
 ## Updating Starlight
 
-    ```shell frame="none"
-    npx @astrojs/upgrade
-    ```
+```
+npx @astrojs/upgrade
+```
+
+## Deploy to GitHub Pages (gh-pages branch)
+
+- Configure Starlight for GitHub Pages
+
+    - Before building. add `site` and `base` settings to `astro.config.mjs`:
+
+        ```json
+        // @ts-check
+        import { defineConfig } from 'astro/config';
+        import starlight from '@astrojs/starlight';
+
+        // https://astro.build/config
+        export default defineConfig({
+            site: 'https://username.github.io',
+            base: '/my-repo',
+            integrations: [
+                starlight({
+                    title: 'My Docs',
+                    social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+                    sidebar: [
+                        {
+                            label: 'Guides',
+                            items: [
+                                // Each item here is one entry in the navigation menu.
+                                { label: 'Example Guide', slug: 'guides/example' },
+                            ],
+                        },
+                        {
+                            label: 'Reference',
+                            autogenerate: { directory: 'reference' },
+                        },
+                    ],
+                }),
+            ],
+        });
+        ```
+
+- Manual Build and Preparation
+
+    - Run `npm run build` to generate the `dist/` folder
+
+    - Create an empty file named `.nojekyll` in the `dist/` folder  
+      (this tells GitHub Pages not to use Jekyll, which can break Astro/Starlight's asset paths)
+
+- Deploy the Build Files
+
+    - Move the contents of the `dist/` folder to a separate GitHub branch
+
+        - Option A
+            - Remove `dist/` from `.gitignore`
+            - `git add dist && git commit -m "Update dist for deployment"`
+            - `git subtree push --prefix dist origin gh-pages`  
+              (this pushes only the `dist/` folder to your `gh-pages` branch)
+        - Option B
+            - Create a new `gh-pages` branch
+            - Delete all of its content
+            - Copy the contents of your local `dist/` folder into it
+            - Commit and push these files
+
+- Update GitHub Settings
+
+    - Go to GitHub > repository > Setting > Pages
+    - Under **Build and deployment** > **Source**, ensure **Deploy from a branch** is selected
+    - Set the **Branch** to `gh-pages` and the folder to `/(root)`
