@@ -112,3 +112,13 @@ npx @astrojs/upgrade
     - Go to GitHub > repository > Setting > Pages
     - Under **Build and deployment** > **Source**, ensure **Deploy from a branch** is selected
     - Set the **Branch** to `gh-pages` and the folder to `/(root)`
+
+## Resources
+
+- [Astro](https://astro.build/)
+    - [Getting Started](https://docs.astro.build/en/getting-started/)
+    - [Configuration Reference](https://docs.astro.build/en/reference/configuration-reference/)
+    - [Tutorial](https://docs.astro.build/en/tutorial/0-introduction/)
+- [Starlight](https://starlight.astro.build/)
+    - [Getting Started](https://starlight.astro.build/getting-started/)
+    - [Frontmatter Reference](https://starlight.astro.build/reference/frontmatter/)
