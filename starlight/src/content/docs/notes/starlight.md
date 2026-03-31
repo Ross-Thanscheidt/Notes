@@ -109,8 +109,8 @@ npx @astrojs/upgrade
 
 - Update GitHub Settings
 
-    - Go to GitHub > repository > Setting > Pages
-    - Under **Build and deployment** > **Source**, ensure **Deploy from a branch** is selected
+    - Go to GitHub > repository > **Settings** > **Pages**
+    - Under **Build and deployment**, select **Deploy from a branch** for **Source**
     - Set the **Branch** to `gh-pages` and the folder to `/(root)`
 
 ## Resources
