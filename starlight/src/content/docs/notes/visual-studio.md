@@ -125,6 +125,14 @@ See Tools > Options > Environment > Keyboard to map commands to keyboard shortcu
 Source: [Visual Studio Blog](https://devblogs.microsoft.com/visualstudio/the-visual-studio-editor-can-do-that/)  
 See also [Visual Studio Keyboard Shortcuts](https://learn.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio)
 
+## Command Shortcuts
+
+Customize in **Tools** → **Options** → **All Settings** → **Environment** → **Keyboard**
+
+| Keyboard Shortcut                                          | Command |
+| :---                                                       | :---|
+| `Shift` + `Alt` + `9`<br /> `Shift` + `Alt` + `0`          | `Edit.PreviousMethod`<br /> `Edit.NextMethod` |
+
 ## My Visual Studio Configuration
 
 These are my configuration tasks after installing or repairing Visual Studio 2022:
