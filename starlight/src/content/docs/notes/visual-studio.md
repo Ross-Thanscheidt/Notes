@@ -8,7 +8,7 @@ Mads Kristensen wrote a [Visual Studio Blog article](https://devblogs.microsoft.
 
 ## Breaking for CLR Exceptions
 
-If you see exceptions in the Output > Debug window in Visual Studio when debugging an application, you can go to Debug > Windows > Exception Settings and check the box next to **Common Language Runtime Exceptions** so that it will break when any CLR exception is thrown.  By default the only **Common Language Runtime Exceptions** checked are:
+If you see exceptions in the Output → Debug window in Visual Studio when debugging an application, you can go to Debug → Windows → Exception Settings and check the box next to **Common Language Runtime Exceptions** so that it will break when any CLR exception is thrown.  By default the only **Common Language Runtime Exceptions** checked are:
 
 * Microsoft.UI.Xaml.Markup.XamlParseException
 * System.NullReferenceException
@@ -18,7 +18,7 @@ If you see exceptions in the Output > Debug window in Visual Studio when debuggi
 
 ## Detect Dead Code
 
-Use `.editorconfig` (Solution > Add > New EditorConfig) to define Code Analysis rules to detect dead code when building ([link](https://stackoverflow.com/questions/30974433/get-list-of-zero-reference-codes-in-visual-studio)).
+Use `.editorconfig` (Solution → Add → New EditorConfig) to define Code Analysis rules to detect dead code when building ([link](https://stackoverflow.com/questions/30974433/get-list-of-zero-reference-codes-in-visual-studio)).
 
 ```
 [*.cs]
@@ -35,12 +35,12 @@ dotnet_diagnostic.C6259.severity = warning   # Dead code in bitwise-OR limited s
 Install the [Customize Visual Studio Window Title](https://github.com/mayerwin/vs-customize-window-title) extension to be able to customize the Window Title that shows up at the top of the Visual Studio windows and on the taskbar.  There are a number of special tags that can be used, including solution file parent directory name, git branch name, git repository name, and environment variable values.
 
 * Install the extension in [Visual Studio 2019](https://marketplace.visualstudio.com/items?itemName=mayerwin.RenameVisualStudioWindowTitle) or [Visual Studio 2022](https://github.com/mayerwin/vs-customize-window-title/releases/tag/5.0.1)
-* Go to **Tools > Options > Environment > General** and check **Use compact menu and search bar (requires restart)**
-* Go to **Tools > Options > Customize VS Window Title > Global rules**
+* Go to **Tools → Options → Environment → General** and check **Use compact menu and search bar (requires restart)**
+* Go to **Tools → Options → Customize VS Window Title → Global rules**
   * Solution in break mode: **[gitRepositoryName] (Debugging) - [ideName]**
   * Solution in design mode: **[gitRepositoryName] - [ideName]**
   * Solution in running mode: **[gitRepositoryName] (Running) - [ideName]**
-* Go to **Tools > Options > Customize VS Window Title > Solution-specific overrides**
+* Go to **Tools → Options → Customize VS Window Title → Solution-specific overrides**
       * Enable solution-specific overrides: **True**
 
 So now when I open `C:\Users\username\Code\MySampleSolution.READONLY\MySampleSolution.sln` my Visual Studio window has **MySampleSolution.READONLY** as its Windows Title.
@@ -61,7 +61,7 @@ If the VS solution is not in a GIT repository, the Windows title will be blank s
 Enclose the selected text in a block surrounded by curly braces in an if/while/for statement.
 
 * Select lines of text
-* Type **Ctrl-K Ctrl-S** (Edit > IntelliSense > Surround With...)
+* Type **Ctrl-K Ctrl-S** (Edit → IntelliSense → Surround With...)
 * Select **if** (or whichever statement is desired)
 
 ## Git - Undo Last Local Commit
@@ -70,14 +70,14 @@ If you entered a Git Commit message and then forgot to stage any changed files b
 thereby accidentally clicking on **Commit All** instead of **Commit Staged**, and you want to undo the last local commit
 (**local** meaning that the commit has not been Pushed and is still listed under **Outgoing** in the **Git Repository** window):
 
- * Go to **View > Git Repository**
+ * Go to **View → Git Repository**
  * Right-click on the the latest commit that you want to keep (either in **Outgoing** or the top commit in **Local History**)
- * Click on **Reset** > **Keep Changes (--mixed)**
+ * Click on **Reset** → **Keep Changes (--mixed)**
 
 This will delete any commits under **Outgoing** that were committed after the selected commit
 and will show the files with their changes from the deleted local commits under **Changes** in the **Git Changes** window.
 
-Use **Reset** > **Delete Changes (--hard)** if you want to delete the local commits and discard their changes.
+Use **Reset** → **Delete Changes (--hard)** if you want to delete the local commits and discard their changes.
 
 **Moral:** Never click on **Commit All** (only **Commit Staged**)
 
@@ -99,7 +99,7 @@ Select the **Current Document** filter in the **Error List** window if you only 
 **F8** and **Shift-F8** also work for **Search Results** and **Find All References**.
 **Ctrl-Shift-F12** can also be used to view the next error (View.NextError).
 
-See Tools > Options > Environment > Keyboard to map commands to keyboard shortcuts.
+See Tools → Options → Environment → Keyboard to map commands to keyboard shortcuts.
 
 ## Keyboard Shortcuts
 
@@ -127,7 +127,7 @@ See also [Visual Studio Keyboard Shortcuts](https://learn.microsoft.com/en-us/vi
 
 ## My Command Shortcuts
 
-Customize in **Tools** → **Options** → **All Settings** → **Environment** → **Keyboard**
+Customize in **Tools → Options → All Settings → Environment → Keyboard**
 
 | Keyboard Shortcut                                          | Command |
 | :---                                                       | :---|
@@ -137,10 +137,10 @@ Customize in **Tools** → **Options** → **All Settings** → **Environment** 
 
 These are my configuration tasks after installing or repairing Visual Studio 2022:
 
-* **Tools > Import and Export Settings > Import selected environment settings**
+* **Tools → Import and Export Settings → Import selected environment settings**
     * \\\\server\\userfiles\\*username*\\Backups\\Visual Studio\\team-settings.vssettings
-* Check **Colorize document tabs by Project** in **Tools > Options > Environment > Tabs and Windows**
-* Check **Place 'System' directives first when sorting usings** in **Tools > Options > Text Editor > C# > Advanced**
+* Check **Colorize document tabs by Project** in **Tools → Options → Environment → Tabs and Windows**
+* Check **Place 'System' directives first when sorting usings** in **Tools → Options → Text Editor → C# → Advanced**
 * Install Extensions:
     * [Add New File (64-bit)](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.AddNewFile64)
     * [Extensibility Essentials 2022](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.ExtensibilityEssentials2022)
@@ -152,39 +152,39 @@ These are my configuration tasks after installing or repairing Visual Studio 202
     * [VSColorOutput64](https://marketplace.visualstudio.com/items?itemName=MikeWard-AnnArbor.VSColorOutput64)
     * [Visual Studio Color Theme Designer 2022](https://marketplace.visualstudio.com/items?itemName=idex.colorthemedesigner2022)
     * [Customize Visual Studio Window Title](https://marketplace.visualstudio.com/items?itemName=mayerwin.RenameVisualStudioWindowTitle)
-        * Check **Use compact menu and search bar (requires restart)** in **Tools > Options > Environment > General**
-        * Go to **Tools > Options > Customize VS Window Title > Global rules**
+        * Check **Use compact menu and search bar (requires restart)** in **Tools → Options → Environment → General**
+        * Go to **Tools → Options → Customize VS Window Title → Global rules**
             * Solution in break mode: **[gitRepositoryName] (Debugging) - [ideName]**
             * Solution in design mode: **[gitRepositoryName] - [ideName]**
             * Solution in running mode: **[gitRepositoryName] (Running) - [ideName]**
-        * Go to **Tools > Options > Customize VS Window Title > Solution-specific overrides**
+        * Go to **Tools → Options → Customize VS Window Title → Solution-specific overrides**
             * Enable solution-specific overrides: **True**
 * Install Themes:
     * [Marvel Theme](https://marketplace.visualstudio.com/items?itemName=GuvenSezginKurt.marvel239)
     * [MarvelFixed](https://githubserver/username/MarvelFixed)
         * Build and run **bin\Debug\MarvelFixed.vsix**
-* **Tools > Import and Export Settings > Export selected environment settings**
+* **Tools → Import and Export Settings → Export selected environment settings**
     * \\\\server\\userfiles\\*username*\\Backups\\Visual Studio\\2022-10-19-Export.vssettings
 
 ## Option - Color Tabs by Project
 
 When checked, each document open has a tab with a color indicating its project.
 
-* Tools > Options > Environment > Tabs and Windows
+* Tools → Options → Environment → Tabs and Windows
     * Check **Colorize document tabs by project**
 
 ## Option - Sort using Statements with System First
 
-When checked, the using statements will be sorted with System first when sorting usings with Edit > IntelliSense > Sort Using (Ctrl-K Ctrl-E).
+When checked, the using statements will be sorted with System first when sorting usings with Edit → IntelliSense → Sort Using (Ctrl-K Ctrl-E).
 
-* Tools > Options > Text Editor > C# > Advanced
+* Tools → Options → Text Editor → C# → Advanced
     * Check **Place 'System' directives first when sorting usings** in the **Using Directives** section
 
 ## Option - Track Active Document in Solution Explorer
 
 When checked, Solution Explorer will show the location (project/folder) of the currently viewed document and will change as different documents are viewed.
 
-* Tools > Options > Projects and Solutions > General
+* Tools → Options → Projects and Solutions → General
     * Check **Track Active Item in Solution Explorer**
 
 ## Regular Expressions for Find
