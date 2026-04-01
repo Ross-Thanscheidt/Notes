@@ -125,7 +125,7 @@ See Tools > Options > Environment > Keyboard to map commands to keyboard shortcu
 Source: [Visual Studio Blog](https://devblogs.microsoft.com/visualstudio/the-visual-studio-editor-can-do-that/)  
 See also [Visual Studio Keyboard Shortcuts](https://learn.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio)
 
-## Command Shortcuts
+## My Command Shortcuts
 
 Customize in **Tools** → **Options** → **All Settings** → **Environment** → **Keyboard**
 
