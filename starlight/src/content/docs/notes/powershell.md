@@ -52,7 +52,12 @@ title: PowerShell Notes
 
     ```powershell frame="none"
     (Get-FileHash -Algorithm SHA512 filename).Hash -eq "checksum-value"
-    (Get-FileHash -Algorithm SHA512 .\dotnet-sdk-11.0.100-preview.2.26159.112-win-x64.exe).Hash -eq "6811b9e4d225d1de5f200a950cd663966b1d809bf171f458a02087d58fa9a95ae61fa3022a8f21cdd4769867f53d2ff4b47bae8c6edd16b403d230d413f7a3cb"
+    ```
+
+- Example:
+
+    ```powershell frame="none"
+    (Get-FileHash -Algorithm SHA512 .\dotnet-sdk-11.0.100-preview.3.26207.106-win-x64.exe).Hash -eq "3e839e2d28797bb77e0e8a5859b03441c87d578efe5ec3d713aa58d1f6dbfcd22e8393cb1c0ba6417a0397c09d68a299a8afe5ef1f545e1d57c21e4ae1dc7ca3"
     ```
 
 ## PSModulePath
