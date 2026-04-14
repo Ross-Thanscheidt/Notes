@@ -113,6 +113,8 @@ Pasting the same word multiple times (does not work in VsVim)
 - `zug` / `zuw` - **U**ndo **G**ood / **U**ndo **W**ord - Remove the word from the dictionary
 - `zw` - **W**oops! - Mark the word as a wrong (bad) word
 - `:set ft=text` - Force text-like spell checking by setting the filetype to text
+- `:%s/\r//g` - Remove `^M` when editing `en.utf-8.add`
+- `:sort ui` - Sort words when editing `en.utf-8.add`
 - `:mkspell! $MYVIMDIR/spell/en.utf-8.add` - Generate a Vim spell file (`*.spl`) from the word list
 
 ## Complex Repeat (Macro)
