@@ -1,5 +1,7 @@
 ---
 title: .NET Notes
+sidebar:
+  order: 1
 ---
 
 ## Convert to Central Time
