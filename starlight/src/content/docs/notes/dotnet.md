@@ -2,7 +2,7 @@
 title: .NET Notes
 ---
 
-## Convert String to Central Time
+## Convert to Central Time
 
 ```csharp
 public static DateTime ToCentralTime(this string dateTimeString)
