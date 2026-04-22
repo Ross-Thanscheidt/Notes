@@ -91,6 +91,7 @@ Pasting the same word multiple times (does not work in VsVim)
 - `:set tabstop=4` - Number of spaces to be inserted when the tab key is pressed
 - `:set shiftwidth=4` - Number of space characters inserted for indentation
 - `:retab` - Change all the existing tab characters to match the current tab settings
+- `:%!python -m json.tool` - Format JSON using Python and its built-in JSON tool
 
 ## Display
 - `:set listchars=eol:$,space:-,tab:>#,trail:~` - Use in `list` mode & `:list` command
