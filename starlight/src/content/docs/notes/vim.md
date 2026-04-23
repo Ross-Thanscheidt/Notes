@@ -93,6 +93,16 @@ Pasting the same word multiple times (does not work in VsVim)
 - `:retab` - Change all the existing tab characters to match the current tab settings
 - `:%!python -m json.tool` - Format JSON using Python and its built-in JSON tool
 
+### UPPERCASE/lowercase
+- `~` - Switch case of the current character and move right
+- `{count}~` - Switch case of `{count}` characters and move right
+- `g~{motion}` - Switch case of `{motion}` text
+- `g~~` - Switch case of current line
+- `gu{motion}` - Make `{motion}` text lowercase
+- `guu` - Make current line lowercase
+- `gU{motion}` - Make `{motion}` text uppercase
+- `gUU` - Make current line uppercase
+
 ## Display
 - `:set listchars=eol:$,space:-,tab:>#,trail:~` - Use in `list` mode & `:list` command
 - `:set listchars=multispace:---+` - Characters to show for multiple consecutive spaces
