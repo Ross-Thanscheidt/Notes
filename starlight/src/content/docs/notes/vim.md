@@ -98,10 +98,13 @@ Pasting the same word multiple times (does not work in VsVim)
 - `{count}~` - Switch case of `{count}` characters and move right
 - `g~{motion}` - Switch case of `{motion}` text
 - `g~~` - Switch case of current line
+- `{Visual}~` - Switch case of highlighted text
 - `gu{motion}` - Make `{motion}` text lowercase
 - `guu` - Make current line lowercase
+- `{Visual}u` - Make highlighted text lowercase
 - `gU{motion}` - Make `{motion}` text uppercase
 - `gUU` - Make current line uppercase
+- `{Visual}U` - Make highlighted text uppercase
 
 ## Display
 - `:set listchars=eol:$,space:-,tab:>#,trail:~` - Use in `list` mode & `:list` command
