@@ -39,6 +39,8 @@ title: PowerShell Notes
     Get-ChildItem -Recurse -File -Path 'C:\Your\Folder' | select -ExpandProperty FullName
     ```
 
+  Simpler version:
+
     ```powershell frame="none"
     dir -Recurse *.txt | select FullName
     ```
