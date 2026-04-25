@@ -37,6 +37,9 @@ title: PowerShell Notes
 
     ```powershell frame="none"
     Get-ChildItem -Recurse -File -Path 'C:\Your\Folder' | select -ExpandProperty FullName
+    ```
+
+    ```powershell frame="none"
     dir -Recurse *.txt | select FullName
     ```
 
@@ -60,7 +63,7 @@ title: PowerShell Notes
     (Get-FileHash -Algorithm SHA512 .\dotnet-sdk-11.0.100-preview.3.26207.106-win-x64.exe).Hash -eq "3e839e2d28797bb77e0e8a5859b03441c87d578efe5ec3d713aa58d1f6dbfcd22e8393cb1c0ba6417a0397c09d68a299a8afe5ef1f545e1d57c21e4ae1dc7ca3"
     ```
 
-## PSModulePath
+## PSModulePath Environment Variable
 
 - `[Environment]::GetEnvironmentVariable("PSModulePath", "User")`:
     - `$env:UserProfile\Documents\PowerShell\Modules`
