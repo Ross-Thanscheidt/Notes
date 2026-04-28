@@ -10,6 +10,12 @@ title: Vim Notes
 - `;` - repeat the latest `f`, `F`, `t`, or `T` move
 - `,` - repeat the latest `f`, `F`, `t`, or `T` move in the opposite direction
 
+## Black Hole Register
+
+- `"_d{motion}` - Deletes without storing the deleted text in any register
+- `"_dd` - Deletes the current line without storing the deleted text in any register
+- `"_diw` - Deletes the current word without storing the deleted text in any register
+
 ## Copy/Paste within Vim
 
 Pasting the word once
