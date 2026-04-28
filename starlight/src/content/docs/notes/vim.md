@@ -10,12 +10,6 @@ title: Vim Notes
 - `;` - repeat the latest `f`, `F`, `t`, or `T` move
 - `,` - repeat the latest `f`, `F`, `t`, or `T` move in the opposite direction
 
-## Black Hole Register
-
-- `"_d{motion}` - Deletes without storing the deleted text in any register
-- `"_dd` - Deletes the current line without storing the deleted text in any register
-- `"_diw` - Deletes the current word without storing the deleted text in any register
-
 ## Copy/Paste within Vim
 
 Pasting the word once
@@ -206,6 +200,32 @@ Pasting the same word multiple times (does not work in VsVim)
 - `:first` - Edit the first file in the argument list (same as `:rewind`)
 - `:last` - Edit the last file in the argument list
 - `:argdo {cmd}` - Execute the `{cmd}` Ex command for each file in the argument list
+
+## Registers
+
+- There are 10 types of registers:
+    - `""` - The **unnamed** register (yanked/deleted text from last used register)
+    - `"0` to `"9` - 10 **numbered** registers (stack of yanked/deleted text)
+    - `"-` - The **small delete** register (deleted text less than one line)
+    - `"a` to `"z` - 26 **named** registers (lowercase to replace, uppercase to append)
+    - 3 **read-only** registers:
+        - `":` - Contains the most recent executed command-line
+        - `".` - Contains the last inserted text
+        - `"%` - Contains the name of the current file
+    - `"#` - **Alternate buffer** register (has name of the alternate file for the current window)
+    - `"=` - The **expression** register (enter an expression in the command-line to evaluate)
+    - The **selection and drop** registers:
+        - `"*` - Windows clipboard
+        - `"+` - Windows clipboard
+        - `"~` - read-only register has the dropped text from the last drag-n-drop operation
+    - `"_` - The **black hole** register (delete text without affecting the normal registers)
+    - `"/` - **Last search pattern** register (has most recent search pattern used for `n`)
+
+### Black Hole Register
+
+- `"_d{motion}` - Deletes without storing the deleted text in any register
+- `"_dd` - Deletes the current line without storing the deleted text in any register
+- `"_diw` - Deletes the current word without storing the deleted text in any register
 
 ## Buffers
 - `:ls` - List all of the buffers that have been loaded into memory
