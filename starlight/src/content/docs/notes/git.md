@@ -6,25 +6,29 @@ tableOfContents:
 
 ## Repositories
 
-### Cloning
+### Clone Remote Repository
 
-- Clone a remote repository to a local repository:
+- Clone a remote repository to create a local repository:
 
   ```shell frame="none"
   git clone <remote-repository-url> <optional-dir>
   ```
+
+  Create a subdirectory with the same name as the remote repository URL:
     
   ```shell frame="none"
   git clone https://github.com/Ross-Thanscheidt/Notes.git
   cd Notes
   ```
     
+  Create a subdirectory with a different name than the remote repository URL:
+
   ```shell frame="none"
   git clone https://github.com/Ross-Thanscheidt/Example.git MyExample
   cd MyExample
   ```
 
-- Clone a remote repository using GitHub CLI:
+- Clone a remote repository to a local repository using GitHub CLI:
 
   ```shell frame="none"
   gh repo list
@@ -32,7 +36,7 @@ tableOfContents:
   cd Notes
   ```
 
-### Updating Local Repository from Remote
+### Update Local Repository from Remote
 
 #### Merge vs Rebase
 
