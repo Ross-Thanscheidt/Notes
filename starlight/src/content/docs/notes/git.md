@@ -160,6 +160,14 @@ title: Git Notes
   git fetch -p
   ```
 
+### Compare Branches
+
+- To list files that have been Added, Modified, or Deleted between 2 branches:
+
+  ```shell frame="none"
+  git diff --name-status branch1..branch2
+  ```
+
 ## Resources
 
 - [git/git: Git Source Code Mirror](https://github.com/git/git)
