@@ -4,6 +4,8 @@ title: Git Notes
 
 ## Repositories
 
+### Cloning
+
 - Clone a remote repository to a local repository:
 
     ```shell frame="none"
@@ -24,26 +26,139 @@ title: Git Notes
     cd Notes
     ```
 
-- Get URL of the remote repository in the local repository:
+### Get Remote URL
+
+- Get the URL of the remote repository in the local repository:
 
     ```shell frame="none"
     git remote get-url origin
     ```
 
-- Update local repository from remote repository
+### Updating Local Repository
 
-    - Safe - merge commits from remote repository with local master branch
+- Update the local repository from its remote repository
+
+    - Safe - merge commits from remote repository with local master branch:
 
         ```shell frame="none"
         git fetch
         git rebase
         ```
 
-    - Aggressive - fetch and rebase without reviewing downloaded changes
+    - Aggressive - fetch and rebase without reviewing downloaded changes:
 
         ```shell frame="none"
         git pull
         ```
+
+## Branches
+
+### List Branches
+
+- List local branches:
+
+  ```shell frame="none"
+  git branch
+  ```
+
+- List remote branches:
+
+  ```shell frame="none"
+  git branch -r
+  ```
+
+- List local and remote branches:
+
+  ```shell frame="none"
+  git branch -a
+  ```
+
+### List Branches by Last Commit
+
+- List each branch along with the date of its last commit
+
+    - Local branches (relative dates):
+
+      ```shell frame="none"
+      git branch --sort=-committerdate --format="%(committerdate:relative) - %(refname:short)"
+      ```
+
+    - Local branches (exact timestamps):
+
+      ```shell frame="none"
+      git branch --sort=-committerdate --format="%(committerdate:iso8601) %(refname:short)"
+      ```
+
+    - Remote branches (relative dates):
+
+      ```shell frame="none"
+      git branch -r --sort=-committerdate --format="%(committerdate:relative) - %(refname:short)"
+      ```
+
+    - Remote branches (exact timestamps):
+
+      ```shell frame="none"
+      git branch -r --sort=-committerdate --format="%(committerdate:iso8601) %(refname:short)"
+      ```
+
+### Create Branch
+
+- Create and check out a new branch locally:
+
+  ```shell frame="none"
+  git checkout -b new-branch-name
+  ```
+
+- Push a new branch to the remote repository:
+
+  ```shell frame="none"
+  git push -u origin new-branch-name
+  ```
+
+### Rename Branch
+
+- Rename a local branch:
+
+  ```shell frame="none"
+  git switch old-branch-name
+  git branch -m new-branch-name
+  ```
+
+- If the old branch exists in the remote repository:
+
+  ```shell frame="none"
+  git push -u origin new-branch-name
+  git push origin -d old-branch-name
+  ```
+
+### Delete Branch
+
+- Delete a local branch (you cannot delete the branch you're currently on):
+
+  ```shell frame="none"
+  git switch main
+  git branch -d branch-name
+  ```
+
+- Force a delete for a local branch that has unmerged changes:
+
+  ```shell frame="none"
+  git branch -D branch-name
+  ```
+
+- Delete a remote branch:
+
+  ```shell frame="none"
+  git push origin -d branch-name
+  ```
+
+### Prune Branches
+
+- To remove the remote-tracking branches for branches that have been deleted remotely:
+
+  ```shell frame="none"
+  git fetch -p
+  ```
 
 ## Resources
 
