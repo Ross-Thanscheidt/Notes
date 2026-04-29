@@ -1,5 +1,7 @@
 ---
 title: Git Notes
+tableOfContents:
+  maxHeadingLevel: 4
 ---
 
 ## Repositories
@@ -8,48 +10,142 @@ title: Git Notes
 
 - Clone a remote repository to a local repository:
 
-    ```shell frame="none"
-    git clone <remote-repository-url> <optional-dir>
+  ```shell frame="none"
+  git clone <remote-repository-url> <optional-dir>
+  ```
     
-    git clone https://github.com/Ross-Thanscheidt/Notes.git
-    cd Notes
+  ```shell frame="none"
+  git clone https://github.com/Ross-Thanscheidt/Notes.git
+  cd Notes
+  ```
     
-    git clone https://github.com/Ross-Thanscheidt/Example.git MyExample
-    cd MyExample
-    ```
+  ```shell frame="none"
+  git clone https://github.com/Ross-Thanscheidt/Example.git MyExample
+  cd MyExample
+  ```
 
 - Clone a remote repository using GitHub CLI:
 
+  ```shell frame="none"
+  gh repo list
+  gh repo clone Notes
+  cd Notes
+  ```
+
+### Updating Local Repository from Remote
+
+#### Merge vs Rebase
+
+- **Merge** when you want to preserve history as it actually happened and are working on public/shared branches
+
+- **Rebase** for your own private, local feature branches to keep a clean, linear history before you merge them back into the main project
+
+#### Merge
+
+- Safe - merge commits from remote repository with local branch:
+
+  ```shell frame="none"
+  git fetch
+  git merge
+  ```
+
+  If no new local commits, Git does a Fast-Forward Merge with no merge commit  
+  If local and remote branches have new & different commits, Git creates a merge commit  
+
+- Aggressive - fetch and merge in one step without reviewing downloaded changes first:
+
+  ```shell frame="none"
+  git pull
+  ```
+
+- To abort merging during merge conflicts and go back to where it was before the merge:
+
+  ```shell frame="none"
+  git merge --abort
+  ```
+
+#### Rebase
+
+- Use rebase to avoid merge commits and re-apply commits on top of the target branch:
+
+  ```shell frame="none"
+  git fetch origin main
+  git switch feature-branch
+  git rebase origin/main
+  ```
+
+  Conflicts are resolved commit-by-commit as they are re-applied, commit IDs are rewritten.
+  Resolve any conflicts that come up, fix conflicts in your editor, stage them, then continue:
+
+  ```shell frame="none"
+  git add .
+  git rebase --continue
+  ```
+
+  To safely cancel the entire rebase operation:
+
+  ```shell frame="none"
+  git rebase --abort
+  ```
+
+  Since rebasing rewrites history by creating new commit IDs, you must force push your changes:
+
+  ```shell frame="none"
+  git push origin feature-branch --force-with-lease
+  ```
+
+  Use Interactive Rebase (`git rebase -i`) to squash or rename commits before sharing them  
+
+- Aggressive - Fetch and rebase in one step without reviewing downloaded changes first:
+
+  ```shell frame="none"
+  git pull --rebase
+  ```
+
+#### Change Default for Pull
+
+- To change the default for `git pull` to **rebase** instead of **merge**:
+
+  - For all repositories:
+
     ```shell frame="none"
-    gh repo list
-    gh repo clone Notes
-    cd Notes
+    git config --global pull.rebase true
     ```
 
-### Get Remote URL
+  - For the current repository:
+
+    ```shell frame="none"
+    git config pull.rebase true
+    ```
+  - For the current `git pull`:
+
+    ```shell frame="none"
+    git pull --rebase
+    ```
+
+### Get URL of Remote Repository
 
 - Get the URL of the remote repository in the local repository:
 
-    ```shell frame="none"
-    git remote get-url origin
-    ```
+  ```shell frame="none"
+  git remote get-url origin
+  ```
 
-### Updating Local Repository
+### Get Root Directory of Local Repository
 
-- Update the local repository from its remote repository
+- Get the absolute path of the repository's top-level directory:
 
-    - Safe - merge commits from remote repository with local master branch:
+  ```shell frame="none"
+  git rev-parse --show-toplevel
+  ```
 
-        ```shell frame="none"
-        git fetch
-        git rebase
-        ```
+### List All Tracked Files
 
-    - Aggressive - fetch and rebase without reviewing downloaded changes:
+- See all of the tracked files in the repository with their paths relative to the repository root:
 
-        ```shell frame="none"
-        git pull
-        ```
+  ```shell frame="none"
+  git ls-files --full-name
+  ```
 
 ## Branches
 
@@ -75,31 +171,15 @@ title: Git Notes
 
 ### List Branches by Last Commit
 
-- List each branch along with the date of its last commit
+- List each local branch along with the date of its last commit:
 
-    - Local branches (relative dates):
+  ```shell frame="none"
+  git branch --sort=-committerdate --format="%(committerdate:relative) - %(refname:short)"
+  ```
 
-      ```shell frame="none"
-      git branch --sort=-committerdate --format="%(committerdate:relative) - %(refname:short)"
-      ```
-
-    - Local branches (exact timestamps):
-
-      ```shell frame="none"
-      git branch --sort=-committerdate --format="%(committerdate:iso8601) %(refname:short)"
-      ```
-
-    - Remote branches (relative dates):
-
-      ```shell frame="none"
-      git branch -r --sort=-committerdate --format="%(committerdate:relative) - %(refname:short)"
-      ```
-
-    - Remote branches (exact timestamps):
-
-      ```shell frame="none"
-      git branch -r --sort=-committerdate --format="%(committerdate:iso8601) %(refname:short)"
-      ```
+  Add `-r` to list remote branches instead of local branches  
+  Add `-a` to list both local and remote branches  
+  Use `--format="%(committerdate:iso8601)` for exact timestamps instead of relative dates  
 
 ### Create Branch
 
@@ -154,7 +234,7 @@ title: Git Notes
 
 ### Prune Branches
 
-- To remove the remote-tracking branches for branches that have been deleted remotely:
+- To update the local list of remote branches when remote branches have been deleted:
 
   ```shell frame="none"
   git fetch -p
@@ -165,7 +245,7 @@ title: Git Notes
 - To list files that have been Added, Modified, or Deleted between 2 branches:
 
   ```shell frame="none"
-  git diff --name-status branch1..branch2
+  git diff --name-status branch-one..branch-two
   ```
 
 ## Resources
