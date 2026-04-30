@@ -51,6 +51,12 @@ title: PowerShell Notes
     dir | sort LastWriteTime
     ```
 
+- List Files created today:
+
+    ```powershell frame="none"
+    dir | where { $_.CreationTime -ge (Get-Date).Date }
+    ```
+
 ## File Checksum
 
 - Validate File with Checksum:
