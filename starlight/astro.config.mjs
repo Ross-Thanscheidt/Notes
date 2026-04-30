@@ -11,6 +11,9 @@ export default defineConfig({
 			title: 'Ross Notes',
             pagefind: true,
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/Ross-Thanscheidt/Notes' }],
+            customCss: [
+                './src/styles/custom.css',
+            ],
 			sidebar: [
 				{
 					label: 'Notes',
