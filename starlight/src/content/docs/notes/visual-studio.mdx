@@ -32,16 +32,17 @@ dotnet_diagnostic.C6259.severity = warning   # Dead code in bitwise-OR limited s
 
 ## Custom Visual Studio Windows Title
 
-Install the [Customize Visual Studio Window Title](https://github.com/mayerwin/vs-customize-window-title) extension to be able to customize the Window Title that shows up at the top of the Visual Studio windows and on the taskbar.  There are a number of special tags that can be used, including solution file parent directory name, git branch name, git repository name, and environment variable values.
+Install the [Customize Visual Studio Window Title](https://marketplace.visualstudio.com/items?itemName=mayerwin.RenameVisualStudioWindowTitle) extension to be able to customize the Window Title that shows up at the top of the Visual Studio windows and on the taskbar.  There are a number of special tags that can be used, including solution file parent directory name, git branch name, git repository name, and environment variable values.
 
-* Install the extension in [Visual Studio 2019](https://marketplace.visualstudio.com/items?itemName=mayerwin.RenameVisualStudioWindowTitle) or [Visual Studio 2022](https://github.com/mayerwin/vs-customize-window-title/releases/tag/5.0.1)
-* Go to **Tools → Options → Environment → General** and check **Use compact menu and search bar (requires restart)**
-* Go to **Tools → Options → Customize VS Window Title → Global rules**
+* Install the extension in Visual Studio 2026
+* **Tools → Options → Environment → General**
+  * Check **Use compact menu and search bar (requires restart)**
+* **Tools → Options → Customize VS Window Title → Global rules**
   * Solution in break mode: **[gitRepositoryName] (Debugging) - [ideName]**
   * Solution in design mode: **[gitRepositoryName] - [ideName]**
   * Solution in running mode: **[gitRepositoryName] (Running) - [ideName]**
-* Go to **Tools → Options → Customize VS Window Title → Solution-specific overrides**
-      * Enable solution-specific overrides: **True**
+* **Tools → Options → Customize VS Window Title → Solution-specific overrides**
+  * Enable solution-specific overrides: **True**
 
 So now when I open `C:\Users\username\Code\MySampleSolution.READONLY\MySampleSolution.sln` my Visual Studio window has **MySampleSolution.READONLY** as its Windows Title.
 
@@ -99,7 +100,7 @@ Select the **Current Document** filter in the **Error List** window if you only 
 **F8** and **Shift-F8** also work for **Search Results** and **Find All References**.
 **Ctrl-Shift-F12** can also be used to view the next error (View.NextError).
 
-See Tools → Options → Environment → Keyboard to map commands to keyboard shortcuts.
+See **Tools → Options → Environment → Keyboard** to map commands to keyboard shortcuts.
 
 ## Keyboard Shortcuts
 
@@ -135,34 +136,46 @@ Customize in **Tools → Options → All Settings → Environment → Keyboard**
 
 ## My Visual Studio Configuration
 
-These are my configuration tasks after installing or repairing Visual Studio 2022:
+These are my configuration tasks after installing or repairing Visual Studio 2026:
 
 * **Tools → Import and Export Settings → Import selected environment settings**
-    * \\\\server\\userfiles\\*username*\\Backups\\Visual Studio\\team-settings.vssettings
-* Check **Colorize document tabs by Project** in **Tools → Options → Environment → Tabs and Windows**
-* Check **Place 'System' directives first when sorting usings** in **Tools → Options → Text Editor → C# → Advanced**
+  * \\\\server\\userfiles\\*username*\\Backups\\Visual Studio\\team-settings.vssettings
+* **Tools → Options → Environment → Tabs and Windows**
+  * Check **Colorize document tabs by Project**
+* **Tools → Options → Text Editor → C# → Advanced**
+  * Check **Place 'System' directives first when sorting usings**
 * Install Extensions:
+  * [Bookmark Studio [Mads Kristensen]](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.BookmarkStudio)
+  * [Customize Visual Studio Window Title [Erwin Mayer]](https://marketplace.visualstudio.com/items?itemName=mayerwin.RenameVisualStudioWindowTitle)
+    <details>
+    <summary>Custom Settings</summary>
+        
+    * **Tools → Options → Environment → General**
+      * Check **Use compact menu and search bar (requires restart)**
+    * **Tools → Options → Customize VS Window Title → Global rules**
+      * Solution in break mode: **[gitRepositoryName] (Debugging) - [ideName]**
+      * Solution in design mode: **[gitRepositoryName] - [ideName]**
+      * Solution in running mode: **[gitRepositoryName] (Running) - [ideName]**
+    * **Tools → Options → Customize VS Window Title → Solution-specific overrides**
+      * Enable solution-specific overrides: **True**
+    </details>
+  * [JwtTools [Tim Heuer]](https://marketplace.visualstudio.com/items?itemName=TimHeuer.JwtTools)
+  * [Single-project MSIX Packaging Tools for VS 2022-26 [Microsoft]](https://marketplace.visualstudio.com/items?itemName=ProjectReunion.MicrosoftSingleProjectMSIXPackagingToolsDev17)
+  * [Solution Colors [Mads Kristensen]](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.SolutionColors)
+  * [Spell Check My Code (VS2022 and Later) [EW Software]](https://marketplace.visualstudio.com/items?itemName=EWoodruff.VisualStudioSpellCheckerVS2022andLater)
+  * [Visual Studio Color Theme Designer 2022 [Microsoft DevLabs]](https://marketplace.visualstudio.com/items?itemName=idex.colorthemedesigner2022)
+  * [VsVim 2022 [Jared Parsons]](https://marketplace.visualstudio.com/items?itemName=JaredParMSFT.VsVim2022Preview)
+  * Optional Extensions:
     * [Add New File (64-bit)](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.AddNewFile64)
     * [Extensibility Essentials 2022](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.ExtensibilityEssentials2022)
     * [File Differ](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.FileDiffer)
-    * [Markdown Editor v2](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.MarkdownEditor2)
     * [Rainbow Braces](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.RainbowBraces)
-    * [Roslynator 2022](https://marketplace.visualstudio.com/items?itemName=josefpihrt.Roslynator2022)
-    * [SonarLint for Visual Studio 2022](https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2022)
+    * [SonarQube for Visual Studio](https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2022)
     * [VSColorOutput64](https://marketplace.visualstudio.com/items?itemName=MikeWard-AnnArbor.VSColorOutput64)
-    * [Visual Studio Color Theme Designer 2022](https://marketplace.visualstudio.com/items?itemName=idex.colorthemedesigner2022)
-    * [Customize Visual Studio Window Title](https://marketplace.visualstudio.com/items?itemName=mayerwin.RenameVisualStudioWindowTitle)
-        * Check **Use compact menu and search bar (requires restart)** in **Tools → Options → Environment → General**
-        * Go to **Tools → Options → Customize VS Window Title → Global rules**
-            * Solution in break mode: **[gitRepositoryName] (Debugging) - [ideName]**
-            * Solution in design mode: **[gitRepositoryName] - [ideName]**
-            * Solution in running mode: **[gitRepositoryName] (Running) - [ideName]**
-        * Go to **Tools → Options → Customize VS Window Title → Solution-specific overrides**
-            * Enable solution-specific overrides: **True**
-* Install Themes:
-    * [Marvel Theme](https://marketplace.visualstudio.com/items?itemName=GuvenSezginKurt.marvel239)
-    * [MarvelFixed](https://githubserver/username/MarvelFixed)
-        * Build and run **bin\Debug\MarvelFixed.vsix**
+  * Install Themes:
+    * [Marvel Theme [Guven Sezgin Kurt]](https://marketplace.visualstudio.com/items?itemName=GuvenSezginKurt.marvel239)
+    * [OLED Black Theme [Mads Kristensen]](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.VantaBlack)
+    * [Vim VSTheme [Vital]](https://marketplace.visualstudio.com/items?itemName=Vital.VimVSTheme)
 * **Tools → Import and Export Settings → Export selected environment settings**
     * \\\\server\\userfiles\\*username*\\Backups\\Visual Studio\\2022-10-19-Export.vssettings
 
@@ -172,22 +185,22 @@ These are my configuration tasks after installing or repairing Visual Studio 202
 
 When checked, each document open has a tab with a color indicating its project.
 
-* Tools → Options → Environment → Tabs and Windows
-    * Check **Colorize document tabs by project**
+* **Tools → Options → Environment → Tabs and Windows**
+  * Check **Colorize document tabs by project**
 
 ### Sort using Statements
 
 When checked, the using statements will be sorted with System first when sorting usings with Edit → IntelliSense → Sort Using (Ctrl-K Ctrl-E).
 
-* Tools → Options → Text Editor → C# → Advanced
-    * Check **Place 'System' directives first when sorting usings** in the **Using Directives** section
+* **Tools → Options → Text Editor → C# → Advanced**
+  * Check **Place 'System' directives first when sorting usings** in the **Using Directives** section
 
 ### Track Active Document
 
 When checked, Solution Explorer will show the location (project/folder) of the currently viewed document and will change as different documents are viewed.
 
-* Tools → Options → Projects and Solutions → General
-    * Check **Track Active Item in Solution Explorer**
+* **Tools → Options → Projects and Solutions → General**
+  * Check **Track Active Item in Solution Explorer**
 
 ## Regular Expressions for Find
 
@@ -202,10 +215,10 @@ This is how you configure Git in Windows to use [WinMerge](https://winmerge.org/
 * Download and install [WinMerge](https://winmerge.org/downloads/?lang=en)
 * Edit the global .gitconfig (typically in %USERPROFILE%\\.gitconfig aka C:\\Users\\username\\.gitconfig)
 * Use this command to find the location of the global .gitconfig:
-    * `git config --global --list --show-origin --show-scope`
+  * `git config --global --list --show-origin --show-scope`
 * Use this command to edit the global .gitconfig wherever it is:
-    * `git config --global --edit`
-    * (Warning: If you end up in the VIM text editor, use `:q!` to exit without saving)
+  * `git config --global --edit`
+  * (Warning: If you end up in the VIM text editor, use `:q!` to exit without saving)
 * Add these sections:
 ```
 [difftool "winmerge"]
