@@ -6,20 +6,20 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
     site: 'https://Ross-Thanscheidt.github.io',
     base: '/Notes',
-	integrations: [
-		starlight({
-			title: 'Ross Notes',
+    integrations: [
+        starlight({
+            title: 'Ross Notes',
             pagefind: true,
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/Ross-Thanscheidt/Notes' }],
+            social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/Ross-Thanscheidt/Notes' }],
             customCss: [
                 './src/styles/custom.css',
             ],
-			sidebar: [
-				{
-					label: 'Notes',
-					autogenerate: { directory: 'notes' },
-				},
-			],
-		}),
-	],
+            sidebar: [
+                {
+                    label: 'Notes',
+                    autogenerate: { directory: 'notes' },
+                },
+            ],
+        }),
+    ],
 });
