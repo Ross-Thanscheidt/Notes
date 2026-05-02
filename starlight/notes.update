@@ -1,0 +1,4 @@
+npm install -g npm@latest
+npx @astrojs/upgrade
+npm update
+npm install
