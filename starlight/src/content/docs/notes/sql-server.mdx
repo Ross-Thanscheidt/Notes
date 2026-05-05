@@ -190,3 +190,34 @@ to be the background color of the status bar when connected to that database ser
 For example, you could use green for Development, yellow for QA, and red for Production.
 
 Source: [SQLShack](https://www.sqlshack.com/how-to-set-custom-colors-in-the-ssms-status-bar/)
+
+## Install VsVim into SSMS 22
+
+These are my notes for installing the VsVim extension in SQL Server Management Studio 22.
+
+The latest version of [VsVim 2022](https://marketplace.visualstudio.com/items?itemName=JaredParMSFT.VsVim2022Preview) in Visual Studio Marketplace is `2.10.0.6` (updated 11/3/2022).  
+This version does not install in [SSMS 22](https://learn.microsoft.com/en-us/ssms/install/install?view=sql-server-ver15).
+The latest version in [GitHub](https://github.com/VsVim/VsVim) does install in SSMS 22, but you have to build it in order to create the `VsVim.vsix` installation file.
+
+This worked for me using Visual Studio 2026, but not with Visual Studio 2026 Insiders.  
+Is this because of breaking changes in version 18.6 of the VSIX Packaging Tools (`VsixUtil.exe`)?
+
+- In Visual Studio Installer:
+  - Modify Visual Studio 2026:
+    - Check the **.NET desktop development** workload
+    - Check the **Visual Studio extension development** workload
+    - Check the **.NET Framework 4.7.2 targeting pack** individual component
+- `git clone https://github.com/VsVim/VsVim.git`
+- Open `VsVim.sln` in Visual Studio 2026
+- Remove these projects:
+  - `VimCoreTest2019`
+  - `VimCoreTest2022`
+  - `VsVim2019`
+  - `VsVimTest2019`
+- Build the solution
+- Open the `Binaries\Debug\VsVim2022\net472\VsVim.vsix` file:
+  - Check **SQL Server Management Studio 22**
+  - Click the **Install** button
+
+I need to write instructions for how to update or remove the VsVim extension from SSMS.  
+It's not listed under the **Extensions** menu in SSMS.
