@@ -165,7 +165,7 @@ public static DateTime ToCentralTime(this DateTimeOffset dateTime)
 
 ##### Installing/Updating
 
-- Install/Update .NET SDK 11 (pre-release version) using the installation script files
+- Install/Update .NET SDK 11 (latest release or pre-release version) using the installation scripts
 
   ```bash frame="none"
   ./update-dotnet-11.sh
@@ -174,5 +174,26 @@ public static DateTime ToCentralTime(this DateTimeOffset dateTime)
 
 ### Windows
 
-Download and run Windows Installer from [Download .NET](https://dotnet.microsoft.com/en-us/download/dotnet).  
-See [.NET Releases](https://github.com/dotnet/core/blob/main/releases.md) for more information.
+#### Install .NET SDK 10
+
+- Download and run the appropriate Windows Installer (**x64** or **Arm64**) from [Download .NET](https://dotnet.microsoft.com/en-us/download/dotnet).  
+  The installer will automatically uninstall any previously installed versions of .NET SDK 10.  
+  See [.NET Releases](https://github.com/dotnet/core/blob/main/releases.md) for more information.
+
+- Update the .NET workloads
+
+  ```powershell frame="none"
+  dotnet workload update
+  ```
+
+#### Install .NET SDK 11
+
+- Download and run the appropriate Windows Installer (**x64** or **Arm64**) from [Download .NET](https://dotnet.microsoft.com/en-us/download/dotnet).  
+  The installer will automatically uninstall any previously installed versions of .NET SDK 11.  
+  See [.NET Releases](https://github.com/dotnet/core/blob/main/releases.md) for more information.
+
+- Update the .NET workloads
+
+  ```powershell frame="none"
+  dotnet workload update
+  ```
