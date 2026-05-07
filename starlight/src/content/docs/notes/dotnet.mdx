@@ -64,7 +64,7 @@ public static DateTime ToCentralTime(this DateTimeOffset dateTime)
 
 #### Install .NET SDK 11
 
-- Install or update .NET SDK 11 (pre-release version)
+- Install or update .NET SDK 11 (pre-release version) after adding script files shown below
 
   ```bash frame="none"
   ./update-dotnet-11.sh
@@ -104,7 +104,7 @@ fi
 
 #### Script - Update .NET SDK 11
 
-```bash
+```bash {16-17} {19-20} {22-23}
 # update-dotnet-11.sh
 
 #!/bin/bash
