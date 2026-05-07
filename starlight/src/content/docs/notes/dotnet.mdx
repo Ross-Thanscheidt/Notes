@@ -2,6 +2,8 @@
 title: .NET Notes
 sidebar:
   order: 1
+tableOfContents:
+  maxHeadingLevel: 4
 ---
 
 ## Convert to Central Time
@@ -39,3 +41,123 @@ public static DateTime ToCentralTime(this DateTimeOffset dateTime)
 | IndexOf(T)       |             |                |                |    X     |
 | Insert(idx, T)   |             |                |                |    X     |
 | RemoveAt(idx)    |             |                |                |    X     |
+
+## Install .NET SDK
+
+### Linux
+
+#### Install .NET SDK 10
+
+- Fedora
+
+  ```bash frame="none"
+  sudo dnf install dotnet-sdk-10.0
+  ```
+
+- Debian / Ubuntu
+
+  ```bash frame="none"
+  sudo apt install dotnet-sdk-10.0
+  ```
+
+#### Install .NET SDK 11
+
+- Install or update .NET SDK 11 (pre-release version)
+
+  ```bash frame="none"
+  ./update-dotnet-11.sh
+  sudo dotnet workload update
+  ```
+
+#### Script - Remove .NET SDK 11
+
+```bash
+# remove-dotnet-11.sh
+
+#!/bin/bash
+
+install_dir=
+
+read -ra dirs <<<$(whereis dotnet)
+
+for dir in "${dirs[@]:1}"; do
+    if [ -d "${dir}/sdk" ]; then
+        install_dir="${dir}"
+    fi
+done
+
+if [[ $install_dir ]]; then
+    echo "Removing old versions of .NET 11 in ${install_dir}"
+
+    dir_pattern=11*
+
+    sudo rm -rf $install_dir/host/fxr/$dir_pattern
+    sudo rm -rf $install_dir/packs/*/$dir_pattern
+    sudo rm -rf $install_dir/sdk/$dir_pattern
+    sudo rm -rf $install_dir/sdk-manifests/$dir_pattern
+    sudo rm -rf $install_dir/shared/*/$dir_pattern
+    sudo rm -rf $install_dir/templates/$dir_pattern
+fi
+```
+
+#### Script - Update .NET SDK 11
+
+```bash
+# update-dotnet-11.sh
+
+#!/bin/bash
+
+install_dir=
+
+read -ra dirs <<<$(whereis dotnet)
+
+for dir in "${dirs[@]:1}"; do
+        if [ -d "${dir}/sdk" ]; then
+                install_dir="${dir}"
+        fi
+done
+
+if [[ -z $install_dir ]]; then
+    # Arch Linux / Debian
+    install_dir=/usr/share/dotnet
+
+    # Fedora
+    install_dir=/usr/lib64/dotnet/sdk
+
+    # Ubuntu
+    install_dir=/usr/lib/dotnet/sdk
+fi
+
+if [[ $install_dir ]]; then
+        echo -e "\nInstalling gpg"
+        if [[ ! -z $(which apt 2> /dev/null) ]]; then
+                sudo apt install gpg
+        elif [[ ! -z $(which dnf 2> /dev/null) ]]; then
+                sudo dnf install gpg
+        fi
+
+        echo -e "\nDownloading latest dotnet-install.asc"
+        wget https://dot.net/v1/dotnet-install.asc -O dotnet-install.asc
+
+        echo -e "\nImporting signature into gpg"
+        gpg --import dotnet-install.asc
+
+        echo -e "\nDownloading latest dotnet-install.sh"
+        wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
+        wget https://dot.net/v1/dotnet-install.sig -O dotnet-install.sig
+        gpg --verify dotnet-install.sig dotnet-install.sh
+        chmod u+x dotnet-install.sh
+
+        ./remove-dotnet-11.sh
+
+        echo -e "\nInstalling latest version of .NET 11 in ${install_dir}"
+        sudo ./dotnet-install.sh --channel 11.0 --install-dir $install_dir --no-path
+fi
+
+echo "Done."
+```
+
+### Windows
+
+Download and run Windows Installer from [Download .NET](https://dotnet.microsoft.com/en-us/download/dotnet).  
+See [.NET Releases](https://github.com/dotnet/core/blob/main/releases.md) for more information.
