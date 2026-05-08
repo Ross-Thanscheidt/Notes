@@ -5,6 +5,7 @@ tableOfContents:
 ---
 
 ## Current Line (Left-Right) Motions
+
 - `f{char}` - move the cursor to the `{char}` to the right
 - `F{char}` - move the cursor to the `{char}` to the left
 - `t{char}` - move the cursor to before the `{char}` to the right
@@ -34,6 +35,7 @@ Pasting the same word multiple times (does not work in VsVim)
 - `:$pu+` - Paste at the end of the buffer from the Clipboard
 
 ## Normal Mode
+
 - `<C-g>` - Prints current filename (`Go To Line` in VsVim)
 - `1<C-g>` - Prints current filename with full path (`Go To Line` in VsVim)
 - `2<C-g>` - Prints current filename with full path and buffer number (`Go To Line` in VsVim)
@@ -41,16 +43,19 @@ Pasting the same word multiple times (does not work in VsVim)
 - `gx` - Opens the URL under the cursor using the web browser
 
 ## Normal Mode to Visual Mode
+
 - `v` - Enable character-wise Visual Mode
 - `V` - Enable line-wise Visual Mode
 - `<C-v>` - Supposed to enable block-wise Visual Mode (`Paste` in VsVim)
 - `gv` - Reselect the last visual selection
 
 ## Normal Mode to Command-Line Window
+
 - `q/` - Open the Command-Line Window with history of searches
 - `q:` - Open the Command-Line Window with history of Ex commands
 
 ## Visual Mode
+
 - `<C-g>` - Toggle between Visual Mode and Select Mode (`Go To Line` in VsVim)
 - `o` - Go to other end of highlighted text
 
@@ -88,6 +93,7 @@ Pasting the same word multiple times (does not work in VsVim)
     - `2611`, `2705` for ☑, ✅
 
 ## Formatting
+
 - `:set expandtab` - Insert space characters whenever the tab key is pressed  
 (use `<C-v><Tab>` to insert a tab character)
 - `:set tabstop=4` - Number of spaces to be inserted when the tab key is pressed
@@ -96,19 +102,24 @@ Pasting the same word multiple times (does not work in VsVim)
 - `:%!python -m json.tool` - Format JSON using Python and its built-in JSON tool
 
 ### UPPERCASE/lowercase
-- `~` - Switch case of the current character and move right
-- `{count}~` - Switch case of `{count}` characters and move right
-- `g~{motion}` - Switch case of `{motion}` text
-- `g~~` - Switch case of current line
-- `{Visual}~` - Switch case of highlighted text
-- `gu{motion}` - Make `{motion}` text lowercase
-- `guu` - Make current line lowercase
-- `{Visual}u` - Make highlighted text lowercase
-- `gU{motion}` - Make `{motion}` text uppercase
-- `gUU` - Make current line uppercase
-- `{Visual}U` - Make highlighted text uppercase
+
+- Uppercase
+  - `gU{motion}` - Make `{motion}` text uppercase
+  - `gUU` - Make current line uppercase
+  - `{Visual}U` - Make highlighted text uppercase
+- Lowercase
+  - `gu{motion}` - Make `{motion}` text lowercase
+  - `guu` - Make current line lowercase
+  - `{Visual}u` - Make highlighted text lowercase
+- Switch Case
+  - `~` - Switch case of the current character and move right
+  - `{count}~` - Switch case of `{count}` characters and move right
+  - `g~{motion}` - Switch case of `{motion}` text
+  - `g~~` - Switch case of current line
+  - `{Visual}~` - Switch case of highlighted text
 
 ## Display
+
 - `:set listchars=eol:$,space:-,tab:>#,trail:~` - Use in `list` mode & `:list` command
 - `:set listchars=multispace:---+` - Characters to show for multiple consecutive spaces
 - `:set [no|inv]list` - Turn on `list mode` to display listchar strings (show spaces, tabs, etc)
@@ -118,6 +129,7 @@ Pasting the same word multiple times (does not work in VsVim)
 - `:set [no|inv]relativenumber` - Show the line number for each line relative to the cursor
 
 ## Spell Check
+
 - `set [no|inv]spell` - Turn on spell checking
 - `setlocal spell spelllang=en_us` - Turn on spell checking for U.S. English
 - `]s` - Go to the next misspelled word
@@ -134,6 +146,7 @@ Pasting the same word multiple times (does not work in VsVim)
 - `:mkspell! $MYVIMDIR/spell/en.utf-8.add` - Generate a Vim spell file (`*.spl`) from the word list
 
 ## Complex Repeat (Macro)
+
 - `q{register}{characters}q` - Records typed characters into the register  
 (use uppercase register to append)
 - `@{register}` - Execute the contents of the register
@@ -146,6 +159,7 @@ Pasting the same word multiple times (does not work in VsVim)
 - `:argdo source {file}` - Execute the Ex commands from `{file}` for each argument list file
 
 ## Command-Line Mode
+
 - `:[range]delete {register}` - Delete specified lines into `{register}`
 - `:[range]yank {register}` - Yank specified lines into `{register}`
 - `:[line]put {register}` - Put the text from `{register}` after the specified line
@@ -159,12 +173,14 @@ Pasting the same word multiple times (does not work in VsVim)
 - `<C-f>` - Switch to the Command-Line Window (move to line and hit `<CR>` to execute command, `:q` to quit)
 
 ## Command-Line Completion
+
 - `:{pattern}<C-d>` - List names that match the pattern in front of the cursor
 - `:set wildmode=longest,list` - Complete to longest common substring, list all multiple matches
 - `:set wildmode=full` - Complete the next full match, cycles through all matches
 - `:set wildmenu` - Provide navigable list of suggestions
 
 ## Range
+
 - `1` - The first line
 - `$` - The last line
 - `0` - Virtual line above the first line
@@ -175,6 +191,7 @@ Pasting the same word multiple times (does not work in VsVim)
 - `%` - The entire file (same as `1,$`)
 
 ## Substitute
+
 - `:s/old/new/` - Replace the first occurrence on the current line
 - `:s/old/new/{flags}` - Substitute Flags:
     - `:s/old/new/i` - Ignore case for the pattern search
@@ -189,6 +206,7 @@ Pasting the same word multiple times (does not work in VsVim)
 - `:&&` - Repeat the last `:s` with the flags
 
 ## Shell
+
 - `:shell` - Start a shell (return to Vim with `exit`)
 - `:!{cmd}` - Execute `{cmd}` with the shell
 - `:read !{cmd}` - Execute `{cmd}` in the shell and insert its standard output below the cursor
@@ -196,6 +214,7 @@ Pasting the same word multiple times (does not work in VsVim)
 - `:[range]!{filter}` - Filter the specified `[range]` through the external program `{filter}`
 
 ## Arguments
+
 - `:args` - Display the current files in the argument list, with the current file in square brackets.
 - `:next` - Edit the next file in the argument list
 - `:previous` - Edit the previous file in the argument list
@@ -230,6 +249,7 @@ Pasting the same word multiple times (does not work in VsVim)
 - `"_diw` - Deletes the current word without storing the deleted text in any register
 
 ## Buffers
+
 - `:ls` - List all of the buffers that have been loaded into memory
     - `%` - Buffer in the current window
     - `#` - Alternate buffer for `:e #` and `<CTRL-^>`
@@ -251,6 +271,7 @@ Pasting the same word multiple times (does not work in VsVim)
 - `:set nohidden` - A buffer is unloaded when it is abandoned
 
 ## Windows
+
 - `<C-w>s` - Split the current window horizontally
 - `<C-w>v` - Split the current window vertically
 - `:split {file}` - Split the current window horizontally, loading `{file}` into the new window
@@ -331,6 +352,7 @@ Pairs of handy bracket mappings
 - `[ow` / `]ow` / `yow` - on/off/toggle `wrap`
 
 ## Vim Resources
+
 - [Vim.org](https://www.vim.org/)
 - [The official Vim repository](https://github.com/vim/vim)
 - [Vim Help Files](https://vimhelp.org/)
