@@ -1,5 +1,7 @@
 ---
 title: Vim Notes
+tableOfContents:
+  maxHeadingLevel: 4
 ---
 
 ## Current Line (Left-Right) Motions
@@ -268,23 +270,21 @@ Pasting the same word multiple times (does not work in VsVim)
 
 ## Vim Plugins
 
-### [CycleColor](https://github.com/vim-scripts/CycleColor)
+### Global Plugins
 
-Cycle through available colorschemes
+Global plugins go in the `$MYVIMDIR/plugin` directory.
 
-- By Marvin Renich
-- [Vim.org](https://www.vim.org/scripts/script.php?script_id=1457)
-- [Windows Fix](https://github.com/xdhmoore/CycleColor/blob/patch-1/plugin/cyclecolor.vim) by Daniel Moore
-- `<F3>` - Cycle Backward
-- `<F4>` - Cycle Forward
+#### [CycleColor](https://github.com/vim-scripts/CycleColor)
 
-### [Sparkup](https://github.com/rstacruz/sparkup)
+- Cycle through available colorschemes
 
-A parser to let you write HTML code faster
+  - By Marvin Renich
+  - [Vim.org](https://www.vim.org/scripts/script.php?script_id=1457)
+  - [Windows Fix](https://github.com/xdhmoore/CycleColor/blob/patch-1/plugin/cyclecolor.vim) by Daniel Moore
+  - `<F3>` - Cycle Backward
+  - `<F4>` - Cycle Forward
 
-- By Rico Sta. Cruz
-
-### [vim-surround](https://github.com/tpope/vim-surround)
+#### [vim-surround](https://github.com/tpope/vim-surround)
 
 Easily delete/change/add surroundings
 
@@ -300,7 +300,7 @@ Easily delete/change/add surroundings
 - `v{motions}S{char}` - wraps the visual selection with `{char}`
 - `v{motions}gS{char}` - wraps the visual selection on a line of its own with `{char}`
 
-### [vim-unimpaired](https://github.com/tpope/vim-unimpaired)
+#### [vim-unimpaired](https://github.com/tpope/vim-unimpaired)
 
 Pairs of handy bracket mappings
 
@@ -319,6 +319,16 @@ Pairs of handy bracket mappings
 - `[or` / `]or` / `yor` - on/off/toggle `relativenumber`
 - `[os` / `]os` / `yos` - on/off/toggle `spell`
 - `[ow` / `]ow` / `yow` - on/off/toggle `wrap`
+
+### Filetype Plugins
+
+Filetype plugins go in the `$MYVIMDIR/ftplugin` directory.
+
+#### [Sparkup](https://github.com/rstacruz/sparkup)
+
+A parser to let you write HTML code faster
+
+- By Rico Sta. Cruz
 
 ## Vim Resources
 - [Vim.org](https://www.vim.org/)
