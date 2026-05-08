@@ -270,6 +270,16 @@ Pasting the same word multiple times (does not work in VsVim)
 
 ## Vim Plugins
 
+### Filetype Plugins
+
+Filetype plugins go in the `$MYVIMDIR/ftplugin` directory.
+
+#### [Sparkup](https://github.com/rstacruz/sparkup)
+
+A parser to let you write HTML code faster
+
+- By Rico Sta. Cruz
+
 ### Global Plugins
 
 Global plugins go in the `$MYVIMDIR/plugin` directory.
@@ -319,16 +329,6 @@ Pairs of handy bracket mappings
 - `[or` / `]or` / `yor` - on/off/toggle `relativenumber`
 - `[os` / `]os` / `yos` - on/off/toggle `spell`
 - `[ow` / `]ow` / `yow` - on/off/toggle `wrap`
-
-### Filetype Plugins
-
-Filetype plugins go in the `$MYVIMDIR/ftplugin` directory.
-
-#### [Sparkup](https://github.com/rstacruz/sparkup)
-
-A parser to let you write HTML code faster
-
-- By Rico Sta. Cruz
 
 ## Vim Resources
 - [Vim.org](https://www.vim.org/)
