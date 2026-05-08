@@ -1,5 +1,7 @@
 ---
 title: ASP.NET Core Notes
+tableOfContents:
+  maxHeadingLevel: 4
 ---
 
 ## Attribute AND Conventional Routing
@@ -28,6 +30,32 @@ Sources:
 
 * [Routing to controller actions in ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/routing?view=aspnetcore-6.0#routing-mixed-ref-label)
 * [Conventional vs Attribute Routing In ASP.NET Core Apps](https://thecodeblogger.com/2021/05/29/conventional-vs-attribute-routing-in-asp-net-core-apps/)
+
+## Code Analysis
+
+### Global Suppressions
+
+#### Project-Level
+
+Place this `GlobalSuppressions.cs` file with selected messages to suppress in the project folder  
+(same folder as the `.csproj` file):
+
+```csharp
+// GlobalSuppressions.cs
+
+// This file is used by Code Analysis to maintain SuppressMessage
+// attributes that are applied to this project.
+// Project-level suppressions either have no target or are given
+// a specific target and scoped to a namespace, type, member, etc.
+
+using System.Diagnostics.CodeAnalysis;
+
+[assembly: SuppressMessage("Style", "IDE0090:Use 'new(...)'", Scope = "module")]
+[assembly: SuppressMessage("Style", "IDE0063:Use simple using statement", Scope = "module")]
+[assembly: SuppressMessage("Style", "IDE0028:Simplify collection initialization", Scope = "module")]
+[assembly: SuppressMessage("Style", "IDE0130:Namespace does not match folder structure", Scope = "module")]
+[assembly: SuppressMessage("Style", "IDE0290:Use primary constructor", Scope = "module")]
+```
 
 ## Cookie Names
 
