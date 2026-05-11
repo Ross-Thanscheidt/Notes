@@ -76,6 +76,7 @@ Pasting the same word multiple times (does not work in VsVim)
 - `<C-k>{char}{char}` - Insert character using a digraph (`:digraphs` to list digraphs) (!VsVim)
     - `12` for ½
     - `.P`, `.M`, `Ob`, `0m`, `sB`, `Db`, `Dw`, `*2`, `*1` for ⋅ · ∘ ○ ▪ ◆ ◇ ★ ☆
+    - `Co`, `Rg`, `TM` for © ® ™
     - `OK`, `XX` for ✓ ✗
     - `!=`, `/\`, `-:` for ≠ × ÷
     - `A*`, `a*`, `B*`, `b*` for Α α Β β (generate Greek letters with letter followed by `*`)
