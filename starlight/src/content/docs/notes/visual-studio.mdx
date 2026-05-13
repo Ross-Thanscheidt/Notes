@@ -6,7 +6,7 @@ tableOfContents:
 
 ## Breaking for CLR Exceptions
 
-If you see exceptions in the Output → Debug window in Visual Studio when debugging an application, you can go to Debug → Windows → Exception Settings and check the box next to **Common Language Runtime Exceptions** so that it will break when any CLR exception is thrown.  By default the only **Common Language Runtime Exceptions** checked are:
+If you see exceptions in the **Output → Debug** window in Visual Studio when debugging an application, you can go to **Debug → Windows → Exception Settings** and check the box next to **Common Language Runtime Exceptions** so that it will break when any CLR exception is thrown.  By default the only **Common Language Runtime Exceptions** checked are:
 
 * Microsoft.UI.Xaml.Markup.XamlParseException
 * System.NullReferenceException
@@ -16,7 +16,7 @@ If you see exceptions in the Output → Debug window in Visual Studio when debug
 
 ## Detect Dead Code
 
-Use `.editorconfig` (Solution → Add → New EditorConfig) to define Code Analysis rules to detect dead code when building ([link](https://stackoverflow.com/questions/30974433/get-list-of-zero-reference-codes-in-visual-studio)).
+Use `.editorconfig` (**Solution → Add → New EditorConfig**) to define Code Analysis rules to detect dead code when building ([link](https://stackoverflow.com/questions/30974433/get-list-of-zero-reference-codes-in-visual-studio)).
 
 ```
 [*.cs]
@@ -33,7 +33,7 @@ dotnet_diagnostic.C6259.severity = warning   # Dead code in bitwise-OR limited s
 Enclose the selected text in a block surrounded by curly braces in an if/while/for statement.
 
 * Select lines of text
-* Type **Ctrl-K Ctrl-S** (Edit → IntelliSense → Surround With...)
+* Type **Ctrl-K Ctrl-S** (**Edit → IntelliSense → Surround With...**)
 * Select **if** (or whichever statement is desired)
 
 ## Visual Studio Extensions
@@ -78,12 +78,12 @@ thereby accidentally clicking on **Commit All** instead of **Commit Staged**, an
 
  * Go to **View → Git Repository**
  * Right-click on the the latest commit that you want to keep (either in **Outgoing** or the top commit in **Local History**)
- * Click on **Reset** → **Keep Changes (--mixed)**
+ * Click on **Reset → Keep Changes (--mixed)**
 
 This will delete any commits under **Outgoing** that were committed after the selected commit
 and will show the files with their changes from the deleted local commits under **Changes** in the **Git Changes** window.
 
-Use **Reset** → **Delete Changes (--hard)** if you want to delete the local commits and discard their changes.
+Use **Reset → Delete Changes (--hard)** if you want to delete the local commits and discard their changes.
 
 **Moral:** Never click on **Commit All** (only **Commit Staged**)
 
@@ -195,7 +195,7 @@ When checked, each document open has a tab with a color indicating its project.
 
 ### Sort `using` Statements
 
-When checked, the using statements will be sorted with System first when sorting usings with Edit → IntelliSense → Sort Using (Ctrl-K Ctrl-E).
+When checked, the using statements will be sorted with System first when sorting usings with **Edit → IntelliSense → Sort Usings** (Ctrl-K Ctrl-E).
 
 * **Tools → Options → Text Editor → C# → Advanced**
   * **Using Directives** section
