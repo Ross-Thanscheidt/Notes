@@ -12,12 +12,12 @@ export default defineConfig({
             pagefind: true,
             social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/Ross-Thanscheidt/Notes' }],
             customCss: [
-                './src/styles/custom.css',
+                './src/styles/custom.css'
             ],
             sidebar: [
                 {
                     label: 'Notes',
-                    autogenerate: { directory: 'notes' },
+                    items: [{ autogenerate: { directory: 'notes' } }]
                 },
             ],
         }),
