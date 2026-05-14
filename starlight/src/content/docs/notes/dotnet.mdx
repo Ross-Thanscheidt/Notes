@@ -22,26 +22,6 @@ public static DateTime ToCentralTime(this DateTimeOffset dateTime)
 }
 ```
 
-## System.Collections.Generic Interface Properties and Methods
-
-|                  | IEnumerable | IEnumerable&lt;T&gt; | ICollection&lt;T&gt; | IList&lt;T&gt; |
-| :---             | :---:       | :---:          | :---:          | :---:    |
-| Current          |     X       |       X        |       X        |    X     |
-| MoveNext()       |     X       |       X        |       X        |    X     |
-| Reset()          |     X       |       X        |       X        |    X     |
-| GetEnumerator()  |     X       |       X        |       X        |    X     |
-| Count            |             |                |       X        |    X     |
-| IsReadOnly       |             |                |       X        |    X     |
-| Add(T)           |             |                |       X        |    X     |
-| Clear()          |             |                |       X        |    X     |
-| Contains(T)      |             |                |       X        |    X     |
-| CopyTo(T[], idx) |             |                |       X        |    X     |
-| Remove(T)        |             |                |       X        |    X     |
-| this[idx]        |             |                |                |    X     |
-| IndexOf(T)       |             |                |                |    X     |
-| Insert(idx, T)   |             |                |                |    X     |
-| RemoveAt(idx)    |             |                |                |    X     |
-
 ## Install .NET SDK
 
 ### Linux
@@ -197,3 +177,53 @@ public static DateTime ToCentralTime(this DateTimeOffset dateTime)
   ```powershell frame="none"
   dotnet workload update
   ```
+
+## NuGet
+
+### Clear Local NuGet Cache
+
+- All
+
+  ```powershell frame="none"
+  dotnet nuget locals all --clear
+  ```
+
+  - Global Packages (expanded packages folder) in `$env:UserProfile\.nuget\packages`
+  
+    ```powershell frame="none"
+    dotnet nuget locals global-packages --clear
+    ```
+  
+  - HTTP Cache (cached down load information) in `$env:LocalAppData\NuGet\v3-cache`
+
+    ```powershell frame="none"
+    dotnet nuget locals http-cache --clear
+    ```
+  
+  - Temp Cache in `$env:LocalAppData\Temp\NuGetScratch`
+
+    ```powershell frame="none"
+    dotnet nuget locals temp --clear
+    ```
+
+## System.Collections.Generic
+
+### Interface Properties and Methods
+
+|                  | IEnumerable | IEnumerable&lt;T&gt; | ICollection&lt;T&gt; | IList&lt;T&gt; |
+| :---             | :---:       | :---:          | :---:          | :---:    |
+| Current          |     X       |       X        |       X        |    X     |
+| MoveNext()       |     X       |       X        |       X        |    X     |
+| Reset()          |     X       |       X        |       X        |    X     |
+| GetEnumerator()  |     X       |       X        |       X        |    X     |
+| Count            |             |                |       X        |    X     |
+| IsReadOnly       |             |                |       X        |    X     |
+| Add(T)           |             |                |       X        |    X     |
+| Clear()          |             |                |       X        |    X     |
+| Contains(T)      |             |                |       X        |    X     |
+| CopyTo(T[], idx) |             |                |       X        |    X     |
+| Remove(T)        |             |                |       X        |    X     |
+| this[idx]        |             |                |                |    X     |
+| IndexOf(T)       |             |                |                |    X     |
+| Insert(idx, T)   |             |                |                |    X     |
+| RemoveAt(idx)    |             |                |                |    X     |
