@@ -80,21 +80,29 @@ import { Icon } from '@astrojs/starlight/components';
     ```
 
   - Edit the files to choose which changes to keep,  
-    removing the conflict marks (`<<<<<<<`, `=======`, `>>>>>>>`)
+    removing the conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`)
 
-  - Mark each file as resolved (use `git add .` to mark all files as resolved at once):
+  - Mark the files as resolved
 
-    ```shell frame="none"
-    git add <filename>
-    ```
+    - Mark each file one at a time:
 
-  - To abort merging during merge conflicts and go back to where it was before the merge:
+      ```shell frame="none"
+      git add <filename>
+      ```
+
+    - Mark all files at once:
+
+      ```shell frame="none"
+      git add .
+      ```
+
+  - To abort merging and go back to where it was before the merge:
 
     ```shell frame="none"
     git merge --abort
     ```
 
-  - Finalize the process by committing the changes to complete the merge:
+  - Finalize the merging process by committing the changes:
 
     ```shell frame="none"
     git commit -m "Merge branch 'main' into develop"
