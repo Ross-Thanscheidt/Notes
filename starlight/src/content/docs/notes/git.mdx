@@ -102,6 +102,75 @@ import { Icon } from '@astrojs/starlight/components';
     git merge --abort
     ```
 
+    Tries to reset your working directory and index back to how they were before the merge started
+
+  - To stop merging but keep the file changes:
+
+    ```shell frame="none"
+    git merge --quit
+    ```
+
+    Clears the `merge in progress` state without cleaning up any of the modified files
+
+  - Finalize the merging process by committing the changes:
+
+    ```shell frame="none"
+    git commit -m "Merge branch 'main' into develop"
+    ```
+
+#### Rebase
+
+- Use rebase to avoid merge commits and re-apply commits on top of the target branch:
+
+  ```shell frame="none"
+  git fetch origin main
+  git switch feature-branch
+  git rebase origin/main
+  ```
+
+  Conflicts are resolved commit-by-commit as they are re-applied, commit IDs are rewritten.
+  Resolve any conflicts that come up, fix conflicts in your editor, stage them, then continue:
+
+  ```shell frame="none"
+  git add .
+  git rebase --continue
+  ```
+
+  To safely cancel the entire rebase operation:
+
+  ```shell frame="none"
+  git rebase --abort
+  ```
+
+  Since rebasing rewrites history by creating new commit IDs, you must force push your changes:
+
+  ```shell frame="none"
+  git push origin feature-branch --force-with-lease
+  ```
+
+  Use Interactive Rebase (`git rebase -i`) to squash or rename commits before sharing them  
+
+- Aggressive - Fetch and rebase in one step without reviewing downloaded changes first:
+
+  ```shell frame="none"
+  git pull --rebase
+  ```
+
+#### Change Default for Pull
+
+- To change the default for `git pull` to **rebase** instead of **merge**:
+
+  - For all repositories:
+
+    ```shell frame="none"
+    git config --global pull.rebase true
+    ```
+
+  - For the current repository:
+
+    ```shell frame="none"
+    git config pull.rebase true
+    ```
   - Finalize the merging process by committing the changes:
 
     ```shell frame="none"
