@@ -1,7 +1,7 @@
 ---
 title: Git Notes
 tableOfContents:
-  maxHeadingLevel: 4
+  maxHeadingLevel: 5
 ---
 
 import { Icon } from '@astrojs/starlight/components';
@@ -64,11 +64,41 @@ import { Icon } from '@astrojs/starlight/components';
   git pull
   ```
 
-- To abort merging during merge conflicts and go back to where it was before the merge:
+- Merge a parent branch (like `main`) into a child branch (like `develop`):
 
   ```shell frame="none"
-  git merge --abort
+  git switch develop
+  git merge main
   ```
+
+##### Merge Conflict Resolution
+
+  - Identify conflicted files (files listed under `Unmerged paths`):
+
+    ```shell frame="none"
+    git status
+    ```
+
+  - Edit the files to choose which changes to keep,  
+    removing the conflict marks (`<<<<<<<`, `=======`, `>>>>>>>`)
+
+  - Mark each file as resolved (use `git add .` to mark all files as resolved at once):
+
+    ```shell frame="none"
+    git add <filename>
+    ```
+
+  - To abort merging during merge conflicts and go back to where it was before the merge:
+
+    ```shell frame="none"
+    git merge --abort
+    ```
+
+  - Finalize the process by committing the changes to complete the merge:
+
+    ```shell frame="none"
+    git commit -m "Merge branch 'main' into develop"
+    ```
 
 #### Rebase
 
