@@ -64,13 +64,6 @@ import { Icon } from '@astrojs/starlight/components';
   git pull
   ```
 
-- Merge a parent branch (like `main`) into a child branch (like `develop`):
-
-  ```shell frame="none"
-  git switch develop
-  git merge main
-  ```
-
 ##### Merge Conflict Resolution
 
   - Identify conflicted files (files listed under `Unmerged paths`):
@@ -359,6 +352,27 @@ import { Icon } from '@astrojs/starlight/components';
 
   ```shell frame="none"
   git diff --name-status branch-one..branch-two
+  ```
+
+### Update Branch
+
+#### From Remote Branch
+
+- Merge the remote branch (like `origin/develop`) into the local branch (like `develop`):
+
+  ```shell frame="none"
+  git switch develop
+  git fetch
+  git merge
+  ```
+
+#### From Local Branch
+
+- Merge a local parent branch (like `main`) into a local child branch (like `develop`):
+
+  ```shell frame="none"
+  git switch develop
+  git merge main
   ```
 
 ## Resources
