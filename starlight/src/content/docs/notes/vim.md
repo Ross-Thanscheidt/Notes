@@ -290,6 +290,14 @@ Pasting the same word multiple times (does not work in VsVim)
 - `[N]<C-w>_` - Set active window height to `[N]` rows
 - `[N]<C-w>|` - Set active window width to `[N]` columns
 
+## Latest Signed Release
+
+- Find the latest release that has signed executable asset files using GitHub CLI:
+
+  ```powershell frame="none"
+  gh -R vim/vim-win32-installer release list --json tagName | ConvertFrom-Json | ForEach-Object { gh -R vim/vim-win32-installer release view $_.tagName --json assets --jq '.assets[].name' | Select-String -Pattern '_signed.exe' -NoEmphasis } | Select-Object -First 3
+  ```
+
 ## Vim Plugins
 
 ### Filetype Plugins
