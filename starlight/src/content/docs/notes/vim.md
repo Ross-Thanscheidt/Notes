@@ -91,7 +91,9 @@ Pasting the same word multiple times (does not work in VsVim)
 ### Unicode Characters
 
 - `<C-q>u{4-digits}` - Insert character using its 4-digit hexadecimal Unicode value
-    - `2611`, `2705` for ☑, ✅
+    - `2611`, `2705`, `274e` for ☑ ✅ ❎
+    - `26d4`, `274c` for ⛔ ❌
+    - `23f0` for ⏰
 
 ## Formatting
 
