@@ -318,13 +318,19 @@ Global plugins go in the `$MYVIMDIR/plugin` directory.
 
 #### [CycleColor](https://github.com/vim-scripts/CycleColor)
 
-- Cycle through available colorschemes
+Cycle through available colorschemes
 
-  - By Marvin Renich
-  - [Vim.org](https://www.vim.org/scripts/script.php?script_id=1457)
-  - [Windows Fix](https://github.com/xdhmoore/CycleColor/blob/patch-1/plugin/cyclecolor.vim) by Daniel Moore
-  - `<F3>` - Cycle Backward
-  - `<F4>` - Cycle Forward
+- By Marvin Renich
+- [Vim.org](https://www.vim.org/scripts/script.php?script_id=1457)
+- [Windows Fix](https://github.com/xdhmoore/CycleColor/blob/patch-1/plugin/cyclecolor.vim) by Daniel Moore
+- `<F3>` - Cycle Backward
+- `<F4>` - Cycle Forward
+
+#### [vim-jsbeautify](https://github.com/maksimr/vim-jsbeautify)
+
+Format JavaScript files using [js-beautify](http://jsbeautifier.org/)
+
+- By Maksim Ryzhikov
 
 #### [vim-surround](https://github.com/tpope/vim-surround)
 
