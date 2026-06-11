@@ -1,5 +1,7 @@
 ---
 title: Starlight Notes
+tableOfContents:
+  maxHeadingLevel: 4
 ---
 
 ## Installing Starlight
@@ -50,11 +52,14 @@ title: Starlight Notes
     npx @astrojs/upgrade
     ```
 
-## Deploy to GitHub Pages (gh-pages branch)
+## Deploy to GitHub Pages
 
-### Initial Configuration
+### Configure Starlight for GitHub Pages
 
-- Configure Starlight for GitHub Pages by adding `site` and `base` to `astro.config.mjs`:
+- Add `site` and `base` settings to `astro.config.mjs`
+
+    <details>
+    <summary>astro.config.mjs</summary>
 
     ```diff
     // @ts-check
@@ -86,15 +91,94 @@ title: Starlight Notes
         ],
     });
     ```
+    </details>
 
-- Configure the GitHub Repository to deploy GitHub Pages from the `gh-pages` branch
+### Deployment Method: GitHub Actions
+
+Use this method to update GitHub Pages automatically whenever repository content is updated.  
+See [Deploy your Astro Site to GitHub Pages](https://docs.astro.build/en/guides/deploy/github/) for more information.
+
+#### Initial Configuration
+
+- Create the `.github/workflows/deploy.yml` file in your Starlight repository
+
+    <details>
+    <summary>deploy.yml</summary>
+    
+    ```yaml
+    # deploy.yml
+    name: Deploy to GitHub Pages
+    
+    on:
+      # Trigger the workflow every time you push to the `main` branch
+      # Using a different branch name? Replace `main` with your branch’s name
+      push:
+        branches: [ main ]
+      # Allows you to run this workflow manually from the Actions tab on GitHub.
+      workflow_dispatch:
+    
+    # Allow this job to clone the repo and create a page deployment
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout your repository using git
+            uses: actions/checkout@v6
+          - name: Install, build, and upload your site
+            uses: withastro/action@v6
+            with:
+              path: starlight # The root location of your Astro project inside the repository. (optional)
+              # node-version: 24 # The specific version of Node that should be used to build your site. Defaults to 24. (optional)
+              package-manager: npm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
+              build-cmd: npm run build # The command to run to build your site. Runs the package build script/task by default. (optional)
+              # out-dir: dist # The output directory created by the build command. Defaults to dist. (optional)
+            # env:
+              # PUBLIC_POKEAPI: 'https://pokeapi.co/api/v2' # Use single quotation marks for the variable value. (optional)
+    
+      deploy:
+        needs: build
+        runs-on: ubuntu-latest
+        environment:
+          name: github-pages
+          url: ${{ steps.deployment.outputs.page_url }}
+        steps:
+          - name: Deploy to GitHub Pages
+            id: deployment
+            uses: actions/deploy-pages@v5
+    ```
+    </details>
+
+- Configure the repository to use GitHub Actions to update GitHub Pages content
+
+    - Go to GitHub > repository > **Settings** > **Pages**
+    - Under **Build and deployment**, select **GitHub Actions** for **Source**
+
+#### Update Content
+
+- Update content in your local repository (typically under `src/content/docs`)
+- Use `git` to commit and push changes to the remote GitHub repository
+- To watch the workflow automatically run to build and deploy the content:
+    - Go to GitHub > repository > **Actions**
+
+### Deployment Method: `gh-pages` branch
+
+Use the `gh-pages` branch method to update GitHub Pages manually after updating content.
+
+#### Initial Configuration
+
+- Configure the repository to use the `gh-pages` branch as the content source for GitHub Pages
 
     - Go to GitHub > repository > **Settings** > **Pages**
     - Under **Build and deployment**, select **Deploy from a branch** for **Source**
     - Set the **Branch** to `gh-pages` and the folder to `/(root)`
         - If the `gh-pages` branch does not exist, then do [Update Content](#update-content) to create it
 
-### Update Content
+#### Update Content
 
 - Run `npm run build` to generate the `dist/` folder
 
