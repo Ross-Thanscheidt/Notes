@@ -52,6 +52,8 @@ title: Starlight Notes
 
 ## Deploy to GitHub Pages (gh-pages branch)
 
+### Initial Configuration
+
 - Configure Starlight for GitHub Pages by adding `site` and `base` to `astro.config.mjs`:
 
     ```diff
@@ -85,6 +87,15 @@ title: Starlight Notes
     });
     ```
 
+- Configure the GitHub Repository to deploy GitHub Pages from the `gh-pages` branch
+
+    - Go to GitHub > repository > **Settings** > **Pages**
+    - Under **Build and deployment**, select **Deploy from a branch** for **Source**
+    - Set the **Branch** to `gh-pages` and the folder to `/(root)`
+        - If the `gh-pages` branch does not exist, then do [Update Content](#update-content) to create it
+
+### Update Content
+
 - Run `npm run build` to generate the `dist/` folder
 
 - Create an empty file named `dist/.nojekyll`  
@@ -95,12 +106,6 @@ title: Starlight Notes
     - Remove `dist/` from `.gitignore`
     - `git add dist && git commit -m "Update dist for deployment" && git push`
     - `git subtree push --prefix dist origin gh-pages`
-
-- Configure the GitHub Repository to deploy GitHub Pages from the `gh-pages` branch
-
-    - Go to GitHub > repository > **Settings** > **Pages**
-    - Under **Build and deployment**, select **Deploy from a branch** for **Source**
-    - Set the **Branch** to `gh-pages` and the folder to `/(root)`
 
 ## Resources
 
