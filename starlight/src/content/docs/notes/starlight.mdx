@@ -171,6 +171,48 @@ Use the `gh-pages` branch method to update GitHub Pages manually after updating 
 
 #### Initial Configuration
 
+- Add the npm dependencies needed for deployment:
+
+    ```shell frame="none"
+    npm install gh-pages --save-dev
+    npm install shx --save-dev
+    ```
+
+- Add the `deploy` npm script to the `package.json` file:
+
+    ```json {13,27-28}
+    # package.json
+
+    {
+      "name": "starlight",
+      "type": "module",
+      "version": "0.0.1",
+      "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro",
+        "deploy": "astro build && shx touch dist/.nojekyll && gh-pages -d dist --dotfiles"
+      },
+      "dependencies": {
+        "@astrojs/internal-helpers": "^0.10.0",
+        "@astrojs/starlight": "^0.38.3",
+        "@pasqal-io/starlight-client-mermaid": "^0.1.0",
+        "astro": "^6.1.8",
+        "sharp": "^0.34.5"
+      },
+      "allowScripts": {
+        "esbuild": true,
+        "sharp": true
+      },
+      "devDependencies": {
+        "gh-pages": "^6.3.0",
+        "shx": "^0.4.0"
+      }
+    }
+    ```
+
 - Configure the repository to use the `gh-pages` branch as the content source for GitHub Pages
 
     - Go to GitHub > repository > **Settings** > **Pages**
@@ -180,16 +222,11 @@ Use the `gh-pages` branch method to update GitHub Pages manually after updating 
 
 #### Update Content
 
-- Run `npm run build` to generate the `dist/` folder
+- Build the content to the `dist` directory and push to the remote `gh-pages` branch:
 
-- Create an empty file named `dist/.nojekyll`  
-  (this tells GitHub Pages not to use Jekyll, which can break Astro/Starlight's asset paths)
-
-- Deploy the contents of the `dist/` folder to the `gh-pages` branch
-
-    - Remove `dist/` from `.gitignore`
-    - `git add dist && git commit -m "Update dist for deployment" && git push`
-    - `git subtree push --prefix dist origin gh-pages`
+    ```shell frame="none"
+    npm run deploy
+    ```
 
 ## Resources
 
