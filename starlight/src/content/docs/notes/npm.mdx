@@ -1,0 +1,51 @@
+---
+title: NPM Notes
+---
+
+## allowScripts
+
+- `allowScripts` defaults to `off`
+
+    - `npm install` will no longer execute `preinstall`, `install`, or `postinstall` scripts from dependencies unless they are explicitly allowed in your project.
+
+- To see what would be blocked:
+
+    ```bash frame="none"
+    npm approve-scripts --allow-scripts-pending
+    ```
+
+- To allow scripts for a specific version of a package:
+
+    ```bash frame="none"
+    npm approve-scripts esbuild
+    ```
+
+    This adds the package with its version in the `allowScripts` section in the `package.json` file:
+
+    ```json frame="none"
+  "devDependencies": {
+      "esbuild": "^0.19.2"
+  },
+  "allowScripts": {
+      "esbuild@0.19.2": true
+  }
+    ```
+
+- To allow scripts for any version of a package:
+
+    ```bash frame="none"
+    npm approve-scripts --no-allow-scripts-pin esbuild
+    ```
+
+    This adds the package without its version in the `allowScripts` section in the `package.json` file:
+
+    ```json frame="none"
+  "devDependencies": {
+      "esbuild": "^0.19.2"
+  },
+  "allowScripts": {
+      "esbuild": true
+  }
+    ```
+
+- Reference: [GitHub Changelog - Upcoming breaking changes for npm v12](https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-for-npm-v12/)
