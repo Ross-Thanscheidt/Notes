@@ -94,6 +94,7 @@ Pasting the same word multiple times (does not work in VsVim)
     - `2611`, `2705`, `274e` for ☑ ✅ ❎
     - `26d4`, `274c` for ⛔ ❌
     - `23f0` for ⏰
+    - `2328` for ⌨
 
 ## Formatting
 
