@@ -10,7 +10,7 @@ USE [master];
 DECLARE @name VARCHAR(200);
 DECLARE @SQL AS VARCHAR(1000);
 
-DECLARE dbCursor CURSOR FOR SELECT [name] FROM [sys].[databases] WHERE NAME LIKE 'Temp-%';
+DECLARE dbCursor CURSOR FOR SELECT [name] FROM [sys].[databases] WHERE [name] LIKE 'Temp-%';
 
 OPEN dbCursor;
 
