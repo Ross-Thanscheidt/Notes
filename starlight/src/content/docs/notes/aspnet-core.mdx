@@ -16,7 +16,7 @@ Attribute routing and conventional routing use the same routing engine.
 | :---                               | :---: | :---: |
 | endpoints.MapControllerRoute()     | Yes   | Yes   |
 | endpoints.MapAreaControllerRoute() | Yes   | Yes   |
-| endpoints.MapControllers()         | [![](https://img.shields.io/badge/No-red?style=for-the-badge)]() | Yes |
+| endpoints.MapControllers()         | No    | Yes   |
 
 If you don't need conventionally-routed controllers, use `endpoints.MapControllers()` and routing attributes.
 
@@ -133,19 +133,19 @@ app.UseEndpoints();
 ## MVC Method Features
 |                   | AddMvc() | AddControllersWithViews() | AddController() | AddRazorPages() |
 | :---              | :---:    | :---:                     | :---:           | :---:           |
-| Controllers       | Yes | Yes    | Yes    | Yes    |
-| Model Binding     | Yes | Yes    | Yes    | Yes    |
-| API Explorer      | Yes | Yes    | Yes    | [![](https://img.shields.io/badge/No-red?style=for-the-badge)]() |
-| Authorization     | Yes | Yes    | Yes    | Yes    |
-| CORS              | Yes | Yes    | Yes    | [![](https://img.shields.io/badge/No-red?style=for-the-badge)]() |
-| Validations       | Yes | Yes    | Yes    | Yes    |
-| Formatter Mapping | Yes | Yes    | Yes    | [![](https://img.shields.io/badge/No-red?style=for-the-badge)]() |
-| Antiforgery       | Yes | Yes    | [![](https://img.shields.io/badge/No-red?style=for-the-badge)]() | Yes    |
-| TempData          | Yes | Yes    | [![](https://img.shields.io/badge/No-red?style=for-the-badge)]() | Yes    |
-| Views             | Yes | Yes    | [![](https://img.shields.io/badge/No-red?style=for-the-badge)]() | Yes    |
-| Pages             | Yes | [![](https://img.shields.io/badge/No-red?style=for-the-badge)]() | [![](https://img.shields.io/badge/No-red?style=for-the-badge)]() | Yes    |
-| Tag Helpers       | Yes | Yes    | [![](https://img.shields.io/badge/No-red?style=for-the-badge)]() | Yes    |
-| Memory Cache      | Yes | Yes    | [![](https://img.shields.io/badge/No-red?style=for-the-badge)]() | Yes    |
+| Controllers       | Yes      | Yes                       | Yes             | Yes             |
+| Model Binding     | Yes      | Yes                       | Yes             | Yes             |
+| API Explorer      | Yes      | Yes                       | Yes             | No              |
+| Authorization     | Yes      | Yes                       | Yes             | Yes             |
+| CORS              | Yes      | Yes                       | Yes             | No              |
+| Validations       | Yes      | Yes                       | Yes             | Yes             |
+| Formatter Mapping | Yes      | Yes                       | Yes             | No              |
+| Antiforgery       | Yes      | Yes                       | No              | Yes             |
+| TempData          | Yes      | Yes                       | No              | Yes             |
+| Views             | Yes      | Yes                       | No              | Yes             |
+| Pages             | Yes      | No                        | No              | Yes             |
+| Tag Helpers       | Yes      | Yes                       | No              | Yes             |
+| Memory Cache      | Yes      | Yes                       | No              | Yes             |
   
   Source: [Dot Net Tutorials](https://dotnettutorials.net/lesson/difference-between-addmvc-and-addmvccore-method/)
 
