@@ -375,6 +375,14 @@ import { Icon } from '@astrojs/starlight/components';
   git merge main
   ```
 
+## Changes
+
+- List changes but exclude files matching patterns:
+
+  ```shell frame="none"
+  git diff branch-name -- . ':(exclude)**/*Feature.cs' ':(exclude)*Tests/**'
+  ```
+
 ## Resources
 
 - [git/git: Git Source Code Mirror](https://github.com/git/git)
