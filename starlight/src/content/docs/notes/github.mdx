@@ -76,12 +76,12 @@ https://github.com/Ross-Thanscheidt/Notes/compare/main..develop
 ## Viewing Issues
 
 Use these JavaScript commands to simulate mouse clicks to show more content when viewing a GitHub page (Issue, Discussion, Pull Request, etc).
-You can paste it in the Address Bar of the browser while viewing the page, but you might have to type `javascript:` at the beginning after pasting
+You can paste it in the Address Bar of the browser while viewing the page, but you may have to type `javascript:` at the beginning after pasting
 if the browser strips it off when you paste it.  You can create bookmarks in your browser with these URL's and use them while viewing a GitHub page.
 
 ### Load More
 
-Click on all of the **Load more...** button links on the page to load all of the hidden conversations:
+Click on all of the **Load more...** links on the page to load all of the hidden conversations:
 
 ```JavaScript
 javascript:function ShowHiddenConversations(){if(document.querySelectorAll('.ajax-pagination-btn').length){document.querySelector('.ajax-pagination-btn').click(); window.setTimeout(ShowHiddenConversations, 100);}} ShowHiddenConversations();
@@ -89,7 +89,7 @@ javascript:function ShowHiddenConversations(){if(document.querySelectorAll('.aja
 
 ### Show Previous Replies
 
-Click on all of the **Show # previous replies** button links on the page to load all of the reply comments:
+Click on all of the **Show previous replies** links on the page to load all of the reply comments:
 
 ```JavaScript
 javascript:document.querySelectorAll('.TimelineItem--condensed .Button--link').forEach(ch => { ch.click() })
@@ -97,7 +97,7 @@ javascript:document.querySelectorAll('.TimelineItem--condensed .Button--link').f
 
 ### Show Comments
 
-Click on all of the **Show comment** button links on the page to toggle show/hide all of the closed comments:
+Click on all of the **Show comment** links on the page to toggle show/hide all of the closed comments:
 
 ```JavaScript
 javascript:document.querySelectorAll('.Details-content--closed').forEach(ch => { ch.click() })
