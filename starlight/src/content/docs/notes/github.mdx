@@ -67,8 +67,36 @@ tableOfContents:
 
 #### Compare Branches
 
-- Show changes between two branches of the same repository:
+Show changes between two branches of the same repository:
 
-  ```
-  https://github.com/Ross-Thanscheidt/Notes/compare/main..develop
-  ```
+```
+https://github.com/Ross-Thanscheidt/Notes/compare/main..develop
+```
+
+## Viewing Issues
+
+Use these JavaScript commands simulate mouse clicks to show more content for an Issue, Discussion, or Pull Request page:
+
+### Load More
+
+Click all of the **Load more...** button links on the page to load all hidden conversations:
+
+```JavaScript
+javascript:function ShowHiddenConversations(){if(document.querySelectorAll('.ajax-pagination-btn').length){document.querySelector('.ajax-pagination-btn').click(); window.setTimeout(ShowHiddenConversations, 100);}} ShowHiddenConversations();
+```
+
+### Show Previous Replies
+
+Click all of the **Show # previous replies** button links on the page to list all reply comments:
+
+```JavaScript
+javascript:document.querySelectorAll('.TimelineItem--condensed .Button--link').forEach(ch => { ch.click() })
+```
+
+### Show Comments
+
+Click on all of the **Show comment** button links on the page to show all comments:
+
+```JavaScript
+javascript:document.querySelectorAll('.Details-content--closed').forEach(ch => { ch.click() })
+```
