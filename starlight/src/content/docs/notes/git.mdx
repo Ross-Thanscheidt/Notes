@@ -377,10 +377,44 @@ import { Icon } from '@astrojs/starlight/components';
 
 ## Changes
 
+### Exclude Files
+
 - List changes but exclude files matching patterns:
 
   ```shell frame="none"
   git diff branch-name -- . ':(exclude)**/*Feature.cs' ':(exclude)*Tests/**'
+  ```
+
+## Stash
+
+- Stash all tracked, uncommitted changes (both staged and unstaged):
+
+  ```shell frame="none"
+  git stash push -m "WIP"
+  ```
+
+- Display all stashed entries on the stack:
+
+  ```shell frame="none"
+  git stash list
+  ```
+
+- Reapply the most recent stash and keep it safely on the stash stack:
+
+  ```shell frame="none"
+  git stash apply
+  ```
+
+- Reapply the most recent stash and delete it from the stash stack:
+
+  ```shell frame="none"
+  git stash pop
+  ```
+
+- Delete a specific stash entry from the history stack without applying it:
+
+  ```shell frame="none"
+  git stash drop stash@{0}
   ```
 
 ## Resources
