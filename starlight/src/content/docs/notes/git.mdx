@@ -399,7 +399,13 @@ import { Icon } from '@astrojs/starlight/components';
   git stash list
   ```
 
-- Reapply the most recent stash and keep it safely on the stash stack:
+- Show the changes of the latest stash:
+
+  ```shell frame="none"
+  git stash show -p
+  ```
+
+- Reapply the most recent stash and keep it on the stash stack:
 
   ```shell frame="none"
   git stash apply
