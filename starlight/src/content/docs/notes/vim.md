@@ -293,6 +293,11 @@ Pasting the same word multiple times (does not work in VsVim)
 - `[N]<C-w>_` - Set active window height to `[N]` rows
 - `[N]<C-w>|` - Set active window width to `[N]` columns
 
+## Predefined Vim Variables
+
+- `:echo v:progpath` - Shows the command with which Vim was invoked
+- `:echo exepath(v:progpath)` - Shows the full path
+
 ## Latest Signed Release
 
 - Find the latest release that has signed executable asset files using GitHub CLI:
