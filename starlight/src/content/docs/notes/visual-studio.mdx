@@ -178,6 +178,20 @@ These are my custom keyboard shortcuts in Visual Studio:
   |                                             | `Ctrl`+`Shift`+`K`<br />`Ctrl`+`Shift`+`L` | Clear bookmarks in document |
   </details>
 
+  <details>
+      <summary>Notes</summary>
+
+  Bookmark Studio looks for the `.bookmarks.json` file in this order:
+
+  1. Solution root  
+  2. Repository root  
+  3. `.vs` folder (default)  
+
+  **Global** uses absolute document paths and is stored in `%USERPROFILE%  
+  **User** uses relative paths relative to the solution directory and is stored in the `.vs` folder  
+  **Workspace** is for sharing with the team and is stored in the solution root or repository root  
+  </details>
+
 * [Customize Visual Studio Window Title [Erwin Mayer]](https://marketplace.visualstudio.com/items?itemName=mayerwin.RenameVisualStudioWindowTitle)
   * See [Custom Visual Studio Windows Title](#custom-visual-studio-windows-title) for configuration settings
 * [JwtTools [Tim Heuer]](https://marketplace.visualstudio.com/items?itemName=TimHeuer.JwtTools)
