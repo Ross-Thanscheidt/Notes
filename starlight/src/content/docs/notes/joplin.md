@@ -15,20 +15,20 @@ A Joplin plugin to provide table rendering and table editing in the Markdown edi
 - To use the **Rich Tables** plugin:
     - Go to **Tools → Options → Editor**
     - Uncheck **Markdown editor: Interactive table editing**
-<details>
-    <summary>Keyboard Shortcuts</summary>
-
-| Keyboard Shortcut            | Description |
-| :---                         | :---|
-| `Alt`+`Shift`+`T`            | Insert Table |
-| `Alt`+`Shift`+ ↑ / ↓         | Insert Row Above/Below |
-| `Alt`+`Shift`+ ←/→           | Insert Column Left/Right |
-| `Alt`+`Shift`+`D`/`C`        | Delete/Clear Row |
-| `Ctrl`+`Alt`+`Shift`+`D`/`C` | Delete/Clear Column |
-| `Ctrl`+`Alt`+ ↑ / ↓          | Move Row Up/Down |
-| `Ctrl`+`Alt`+ ←/→            | Move Column Left/Right |
-| `Alt`+`Shift`+ `Q`/`W`/`E`   | Align Left/Center/Right |
-</details>
+  <details>
+      <summary>Keyboard Shortcuts</summary>
+  
+  | Keyboard Shortcut            | Description |
+  | :---                         | :---|
+  | `Alt`+`Shift`+`T`            | Insert Table |
+  | `Alt`+`Shift`+ ↑ / ↓         | Insert Row Above/Below |
+  | `Alt`+`Shift`+ ←/→           | Insert Column Left/Right |
+  | `Alt`+`Shift`+`D`/`C`        | Delete/Clear Row |
+  | `Ctrl`+`Alt`+`Shift`+`D`/`C` | Delete/Clear Column |
+  | `Ctrl`+`Alt`+ ↑ / ↓          | Move Row Up/Down |
+  | `Ctrl`+`Alt`+ ←/→            | Move Column Left/Right |
+  | `Alt`+`Shift`+ `Q`/`W`/`E`   | Align Left/Center/Right |
+  </details>
 
 ## Joplin Resources
 
