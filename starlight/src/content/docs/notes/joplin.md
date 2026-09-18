@@ -15,6 +15,7 @@ A Joplin plugin to provide table rendering and table editing in the Markdown edi
 - To use the **Rich Tables** plugin:
     - Go to **Tools → Options → Editor**
     - Uncheck **Markdown editor: Interactive table editing**
+
   <details>
       <summary>Keyboard Shortcuts</summary>
   
