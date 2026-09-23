@@ -206,6 +206,7 @@ Pasting the same word multiple times (does not work in VsVim)
     - `:s/old/new/&` - Use same flags from previous substitute command - must be first flag
 - `:%s/old/new/g` - All lines (`%` is equivalent to `1,$`)
 - `:5,10s/old/new/g` - Lines 5 through 10
+- `:s/.*/"&"/` - Wrap every line in the file with double quotes
 - `:&` - Repeat the last `:s` without the flags
 - `:&&` - Repeat the last `:s` with the flags
 
