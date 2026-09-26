@@ -83,7 +83,7 @@ if the browser strips it off when you paste it.  You can create bookmarks in you
 
 Click on all of the **Load more...** links on the page to load all of the hidden conversations:
 
-```JavaScript
+```js
 javascript:function ShowHiddenConversations(){if(document.querySelectorAll('.ajax-pagination-btn').length){document.querySelector('.ajax-pagination-btn').click(); window.setTimeout(ShowHiddenConversations, 100);}} ShowHiddenConversations();
 ```
 
@@ -91,7 +91,7 @@ javascript:function ShowHiddenConversations(){if(document.querySelectorAll('.aja
 
 Click on all of the **Show previous replies** links on the page to load all of the reply comments:
 
-```JavaScript
+```js
 javascript:document.querySelectorAll('.TimelineItem--condensed .Button--link').forEach(ch => { ch.click() })
 ```
 
@@ -99,6 +99,6 @@ javascript:document.querySelectorAll('.TimelineItem--condensed .Button--link').f
 
 Click on all of the **Show comment** links on the page to toggle show/hide all of the closed comments:
 
-```JavaScript
+```js
 javascript:document.querySelectorAll('.Details-content--closed').forEach(ch => { ch.click() })
 ```
