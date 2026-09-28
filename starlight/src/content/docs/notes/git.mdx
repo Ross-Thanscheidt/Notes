@@ -227,15 +227,29 @@ import { Icon } from '@astrojs/starlight/components';
 
 ### List Branches by Last Commit
 
-- List each local branch along with the date of its last commit:
+- List each **local** branch along with the date of its last commit:
 
   ```shell frame="none"
   git branch --sort=-committerdate --format="%(committerdate:relative) - %(refname:short)"
   ```
 
-  Add `-r` to list remote branches instead of local branches  
-  Add `-a` to list both local and remote branches  
-  Use `--format="%(committerdate:iso8601)` for exact timestamps instead of relative dates  
+- Add `-r` to list **remote** branches instead of local branches  
+
+  ```shell frame="none"
+  git branch -r --sort=-committerdate --format="%(committerdate:relative) - %(refname:short)"
+  ```
+
+- Add `-a` to list **both** local and remote branches  
+
+  ```shell frame="none"
+  git branch -a --sort=-committerdate --format="%(committerdate:relative) - %(refname:short)"
+  ```
+
+- Use `--format="%(committerdate:iso8601)` for **exact timestamps** instead of relative dates  
+
+  ```shell frame="none"
+  git branch -a --sort=-committerdate --format="%(committerdate:iso8601) - %(refname:short)"
+  ```
 
 ### Create Branch
 
