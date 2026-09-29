@@ -19,6 +19,24 @@ tableOfContents:
 - `gh release view --repo vim/vim-win32-installer --json body --jq ".body"`
 - Set `GH_HOST` environment variable to `github.com` or FQDN of GitHub Enterprise server
 
+### Get All Files Changed in PR
+
+- Get a list of all the files changed in a pull request for the current branch:
+
+  ```powershell
+  gh pr diff --name-only
+  ```
+
+- Get a list of all the files changed on one line with full paths:
+
+  ```powershell
+  gh pr diff --name-only | ForEach-Object { """$pwd\$_""" -replace '/', '\' } | Join-String -Separator ' '
+  ```
+
+  This can be used to open all the files at once in Visual Studio:
+    - Go to **View → Other Windows → Command Window** (`Ctrl`+`Alt`+`A`)
+    - `File.Open "C:\filepath\file 1" "C:\filepath\file 2" "C:\filepath\file 3"`
+
 ## GitHub Markdown
 
 ```
