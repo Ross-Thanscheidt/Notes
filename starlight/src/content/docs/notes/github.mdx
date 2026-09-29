@@ -23,13 +23,13 @@ tableOfContents:
 
 - Get a list of all the files changed in a pull request for the current branch:
 
-  ```powershell
+  ```powershell frame="none"
   gh pr diff --name-only
   ```
 
 - Get a list of all the files changed on one line with full paths:
 
-  ```powershell
+  ```powershell frame="none"
   gh pr diff --name-only | ForEach-Object { """$pwd\$_""" -replace '/', '\' } | Join-String -Separator ' '
   ```
 
