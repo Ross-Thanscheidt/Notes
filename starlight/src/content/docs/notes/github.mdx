@@ -120,3 +120,25 @@ Click on all of the **Show comment** links on the page to toggle show/hide all o
 ```js
 javascript:document.querySelectorAll('.Details-content--closed').forEach(ch => { ch.click() })
 ```
+
+## Reviewing Pull Requests
+
+Use this JavaScript command to mark files matching a specified filename pattern as viewed when reviewing a GitHub pull request.
+You can paste it in the Address Bar of the browser while viewing the page, but you may have to type `javascript:` at the beginning after pasting
+if the browser strips it off when you paste it.  You can create bookmarks in your browser with these URL's and use them while viewing a GitHub page.
+
+### Mark All KB Files as Viewed
+
+Click the **Viewed** checkbox for all changed files starting with `kb/`:
+
+```js
+javascript:document.querySelectorAll('.file').forEach(fileElement => { const textContent = fileElement.querySelector('a.Link--primary').getAttribute('title') || ''; const checkbox = fileElement.querySelector('input[type=checkbox]:not([checked]).js-reviewed-checkbox'); if (textContent.startsWith('kb/') && checkbox) { checkbox.click(); }});
+```
+
+ (use `.includes(str)` instead of `.startsWith(str)` for the filename containing a string)
+
+For newer versions of GitHub that have a button instead of a checkbox:
+
+```js
+javascript:document.querySelectorAll('.file').forEach(fileElement => { const textContent = fileElement.innerText || ''; const button = fileElement.querySelector('button[class*="MarkAsViewedButton"][aria-pressed="false"]'); if (textContent.startsWith('kb/') && button) { button.click(); }});
+```
