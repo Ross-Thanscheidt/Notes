@@ -349,6 +349,24 @@ import { Icon } from '@astrojs/starlight/components';
   git diff branch-name -- . ':(exclude)**/*Feature.cs' ':(exclude)*Tests/**'
   ```
 
+## Commits
+
+### Commit History
+
+- List commits from all branches and tags, showing branches, tags, and `(HEAD)`:
+
+  ```shell frame="none"
+  git log --oneline --graph --decorate --all
+  ```
+
+### Detached Commits
+
+- If you ever lose track of a commit you made while detached and it disappears from the standard `git log`, you can find it using the Git reference log:
+
+  ```shell frame="none"
+  git reflog
+  ```
+
 ## Stash
 
 - Stash all tracked, uncommitted changes (both staged and unstaged):
