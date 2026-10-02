@@ -36,3 +36,4 @@ A Joplin plugin to provide table rendering and table editing in the Markdown edi
 
 - [JoplinApp.org](https://www.joplinapp.org/)
 - [Joplin Plugins](https://www.joplinapp.org/plugins/)
+- [Getting started with plugin development](https://joplinapp.org/help/api/get_started/plugins)
