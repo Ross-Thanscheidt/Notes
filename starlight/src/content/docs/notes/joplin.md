@@ -29,6 +29,7 @@ A Joplin plugin to provide table rendering and table editing in the Markdown edi
 | `Ctrl`+`Alt`+ ↑ / ↓          | Move Row Up/Down |
 | `Ctrl`+`Alt`+ ←/→            | Move Column Left/Right |
 | `Alt`+`Shift`+ `Q`/`W`/`E`   | Align Left/Center/Right |
+| `Alt`+`Shift`+ `/`           | Toggle Table Source Mode<br />(**Tools → Options → Keyboard Shortcuts → Rich Tables - Toggle table source mode**) |
 </details>
 
 ## Joplin Resources
