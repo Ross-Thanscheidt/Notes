@@ -55,7 +55,7 @@ Node.js v24.15.0
 </details>
 
 <details>
-<summary>Files to Add to Yaak Plugin Directory</summary>
+<summary>Files to Add to the Yaak Plugin Directory</summary>
 
 ```dockerfile title="Dockerfile"
 FROM node:26
@@ -89,16 +89,16 @@ docker run --rm -v .:/app:Z yaak-plugin-builder
 
 - Build the `yaak-plugin-builder` container image:
 
-  ```powershell
+  ```powershell frame="none"
   .\build-image.ps1
   ```
 
-  This should be done initially, and after change have been made to `Dockerfile` or `package.json`.
+  This should be done initially, and after changes have been made to `Dockerfile` or `package.json`.
 
 - Build the Yaak Plugin:
 
-  ```powershell
-  .\yaak-plugin.build.ps1
+  ```powershell frame="none"
+  .\yaak-plugin-build.ps1
   ```
 
   This should be done initially, and after changes have been made to the plugin's `src\*` files.
@@ -112,7 +112,7 @@ docker run --rm -v .:/app:Z yaak-plugin-builder
   - Click on the **Add Plugin** button
   - Exit Settings
 
-Whenever you build a new version of your plugin, you may need to restart Yaak.
+  Whenever you build a new version of your plugin, you may need to restart Yaak.
 
 ## Yaak Resources
 
