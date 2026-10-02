@@ -4,17 +4,17 @@ tableOfContents:
   maxHeadingLevel: 4
 ---
 
-## Yaak Plugins
+## Yaak Plugin Development
 
 ### Install the Yaak CLI
 
-```powershell
+```powershell frame="none"
 npm install -g @yaakapp/cli
 ```
 
 ### Generate a New Plugin
 
-```powershell
+```powershell frame="none"
 yaak plugin generate
 ```
 
@@ -87,7 +87,10 @@ docker run --rm -v .:/app:Z yaak-plugin-builder
 ```
 </details>
 
-- Build the `yaak-plugin-builder` container image:
+<details>
+<summary>Building the Plugin</summary>
+
+- Build the `yaak-plugin-builder` Docker image:
 
   ```powershell frame="none"
   .\build-image.ps1
@@ -95,13 +98,14 @@ docker run --rm -v .:/app:Z yaak-plugin-builder
 
   This should be done initially, and after changes have been made to `Dockerfile` or `package.json`.
 
-- Build the Yaak Plugin:
+- Build the Yaak Plugin by running a Docker container created from the `yaak-plugin-builder` image:
 
   ```powershell frame="none"
   .\yaak-plugin-build.ps1
   ```
 
   This should be done initially, and after changes have been made to the plugin's `src\*` files.
+</details>
 
 ### Install the Plugin in Yaak
 
