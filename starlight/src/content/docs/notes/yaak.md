@@ -96,7 +96,7 @@ docker run --rm -v .:/app:Z yaak-plugin-builder
   .\build-image.ps1
   ```
 
-  This should be done initially, and after changes have been made to `Dockerfile` or `package.json`.
+  Do this initially and after changes have been made to `Dockerfile` or `package.json`.
 
 - Build the Yaak Plugin by running a Docker container created from the `yaak-plugin-builder` image:
 
@@ -104,7 +104,7 @@ docker run --rm -v .:/app:Z yaak-plugin-builder
   .\yaak-plugin-build.ps1
   ```
 
-  This should be done initially, and after changes have been made to the plugin's `src\*` files.
+  Do this initially and after changes have been made to the plugin's `src\*` files.
 </details>
 
 ### Install the Plugin in Yaak
@@ -116,7 +116,7 @@ docker run --rm -v .:/app:Z yaak-plugin-builder
   - Click on the **Add Plugin** button
   - Exit Settings
 
-  Whenever you build a new version of your plugin, you may need to restart Yaak.
+- Whenever you build a new version of your plugin, you may need to restart Yaak.
 
 ## Yaak Resources
 
