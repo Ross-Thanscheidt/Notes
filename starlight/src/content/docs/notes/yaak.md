@@ -6,6 +6,18 @@ tableOfContents:
 
 ## Yaak Plugins
 
+### Install the Yaak CLI
+
+```powershell
+npm install -g @yaakapp/cli
+```
+
+### Generate a New Plugin
+
+```powershell
+yaak plugin generate
+```
+
 ### Use Docker Container to Build Plugin
 
 <details>
@@ -74,6 +86,33 @@ docker build -t yaak-plugin-builder .
 docker run --rm -v .:/app:Z yaak-plugin-builder
 ```
 </details>
+
+- Build the `yaak-plugin-builder` container image:
+
+  ```powershell
+  .\build-image.ps1
+  ```
+
+  This should be done initially, and after change have been made to `Dockerfile` or `package.json`.
+
+- Build the Yaak Plugin:
+
+  ```powershell
+  .\yaak-plugin.build.ps1
+  ```
+
+  This should be done initially, and after changes have been made to the plugin's `src\*` files.
+
+### Install the Plugin in Yaak
+
+- Go to **Settings** (`Ctrl`+`,`) **→ Plugins → Installed**
+  - Click on the **Select Plugin** button
+  - Navigate to the plugin directory that contains the `package.json` file
+  - Click on the **Select Folder** button
+  - Click on the **Add Plugin** button
+  - Exit Settings
+
+Whenever you build a new version of your plugin, you may need to restart Yaak.
 
 ## Yaak Resources
 
