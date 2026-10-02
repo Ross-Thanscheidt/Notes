@@ -8,6 +8,9 @@ tableOfContents:
 
 ### Use Docker Container to Build Plugin
 
+<details>
+<summary>Why use a Docker Container to Build a Yaak Plugin?</summary>
+
 Normally you would use `yaak plugin build` to build the plugin and create the `build` subdirectory.
 
 Due to a [known issue](https://github.com/nodejs/node/issues/61165) with Node.js v22 and higher, I get this error when running `yaak plugin build` on Windows:
@@ -37,12 +40,12 @@ Error: EISDIR: illegal operation on a directory, lstat 'C:'
 
 Node.js v24.15.0
 ```
+</details>
 
 <details>
 <summary>Files to Add to Yaak Plugin Directory</summary>
 
-```dockerfile
-# Dockerfile
+```dockerfile title="Dockerfile"
 FROM node:26
 
 RUN apt-get update && apt-get install -y libdbus-1-3 && rm -rf /var/lib/apt/lists/*
@@ -62,14 +65,12 @@ RUN npm install
 CMD ["yaak", "plugin", "build"]
 ```
 
-```powershell
-# build-image.ps1
+```powershell title="build-image.ps1"
 docker rmi -f yaak-plugin-builder
 docker build -t yaak-plugin-builder .
 ```
 
-```powershell
-# yaak-plugin-build.ps1
+```powershell title="yaak-plugin-build.ps1"
 docker run --rm -v .:/app:Z yaak-plugin-builder
 ```
 </details>
