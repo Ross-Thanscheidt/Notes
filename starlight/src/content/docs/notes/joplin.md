@@ -4,6 +4,39 @@ tableOfContents:
   maxHeadingLevel: 4
 ---
 
+## Appearance
+
+### Customize Vim Cursor Color
+
+The default cursor color in Vim (Normal mode) is green.  This is how you can change the color to the purple (`#744da9`) matching the Dracula Theme.
+
+<details>
+    <summary>Customize Vim Cursor Color</summary>
+
+- Go to **Tools → Options → Appearance → Show Advanced Settings → Custom stylesheet for Joplin-wide app styles**
+
+```js title="userchrome.css"
+/* For styling the entire Joplin app (except the rendered Markdown, which is defined in `userstyle.css`) */
+
+/* Vim Normal/Visual Mode Block Cursor (CodeMirror 6 - Modern Joplin) */
+.cm-fat-cursor {
+    background-color: #744da9 !important;
+        color: #ffffff !important; /* Color of the text character inside the block */
+}
+
+/* Vim Insert Mode Thin Line Cursor (CodeMirror 6 - Modern Joplin) */
+.cm-cursor {
+    border-left-color: #744da9 !important;
+}
+
+/* Fallback for older Joplin versions (CodeMirror 5) */
+.cm-fat-cursor .CodeMirror-cursor,
+.cm-animate-fat-cursor {
+    background-color: #744da9 !important;
+}
+```
+</details>
+
 ## Joplin Plugins
 
 ### [CodeMirror Options](https://joplinapp.org/plugins/plugin/joplin.plugin.cmoptions/)
