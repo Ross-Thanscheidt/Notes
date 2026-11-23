@@ -49,7 +49,7 @@ A Joplin plugin to provide table rendering and table editing in the Markdown edi
 
 - Go to **Tools → Options → Editor**
 - Uncheck **Markdown editor: Interactive table editing**
-- Go to **Tools → Editor**
+- Go to **Tools → Options → Editor → Show Advanced Settings**
 - Select **Default** for **Keyboard Mode**
 </details>
 
