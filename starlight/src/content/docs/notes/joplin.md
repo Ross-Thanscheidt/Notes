@@ -37,6 +37,8 @@ This is how you can change the color to the purple (`#744da9`) matching the Drac
     background-color: #744da9 !important;
 }
 ```
+
+- Fully restart Joplin to load custom CSS on startup (go to **File → Quit** or `Ctrl`+`Q` in Windows)
 </details>
 
 ## Joplin Plugins
