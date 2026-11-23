@@ -30,6 +30,7 @@ Line numbers, code folding, space highlighting, word count, and other options fo
     <summary>My Plugin Settings Preferences</summary>
 
 - Go to **Tools → Options → Extra editor settings**
+- Uncheck **Show line numbers** (use **CodeMirror Options** for relative line numbers)
 - Check **Highlight the gutter for the active line**
 - Check **Highlight active line**
 - Check **Highlight trailing spaces**
