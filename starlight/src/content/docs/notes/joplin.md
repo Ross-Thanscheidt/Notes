@@ -8,12 +8,14 @@ tableOfContents:
 
 ### Customize Vim Cursor Color
 
-The default cursor color in Vim (Normal mode) is green.  This is how you can change the color to the purple (`#744da9`) matching the Dracula Theme.
+The default cursor color in Vim (Normal mode) is green.  
+This is how you can change the color to the purple (`#744da9`) matching the Dracula Theme.
 
 <details>
     <summary>Customize Vim Cursor Color</summary>
 
-- Go to **Tools → Options → Appearance → Show Advanced Settings → Custom stylesheet for Joplin-wide app styles**
+- Go to **Tools → Options → Appearance → Show Advanced Settings**
+- Click on **Custom stylesheet for Joplin-wide app styles** to edit `userchrome.css` (`~/.config/joplin-desktop/userchrome.css`)
 
 ```js title="userchrome.css"
 /* For styling the entire Joplin app (except the rendered Markdown, which is defined in `userstyle.css`) */
