@@ -44,7 +44,15 @@ This is how you can change the color to the purple (`#744da9`) matching the Drac
 
 ## Joplin Plugins
 
-### [CodeMirror Options](https://joplinapp.org/plugins/plugin/joplin.plugin.cmoptions/)
+### CodeMirror 5 Markdown Editor
+
+Some Joplin Plugins were written for CodeMirror 5 and are not compatible with CodeMirror 6, which has been the default since Joplin 3.1.x.
+
+Enable the Legacy Markdown Editor to use Joplin Plugins written for CodeMirror 5 by enabling this setting:
+- Go to **Tools → Options → Editor → Show Advanced Settings**
+- Check **Use the legacy Markdown editor**
+
+#### [CodeMirror Options](https://joplinapp.org/plugins/plugin/joplin.plugin.cmoptions/)
 
 Adds some CodeMirror options to Joplin's settings, such as line numbers and line wrapping.
 
@@ -58,7 +66,15 @@ Adds some CodeMirror options to Joplin's settings, such as line numbers and line
 - Check **Relative line numbers**
 </details>
 
-### [Extra Markdown editor settings](https://joplinapp.org/plugins/plugin/io.github.personalizedrefrigerator.codemirror6-settings/)
+### CodeMirror 6 Markdown Editor
+
+These Joplin Plugins are compatible with CodeMirror 6, which has been the default since Joplin 3.1.x.
+
+Disable the Legacy Markdown Editor to use Joplin Plugins written for CodeMirror 6 by disabling this setting:
+- Go to **Tools → Options → Editor → Show Advanced Settings**
+- Uncheck **Use the legacy Markdown editor**
+
+#### [Extra Markdown editor settings](https://joplinapp.org/plugins/plugin/io.github.personalizedrefrigerator.codemirror6-settings/)
 
 Line numbers, code folding, space highlighting, word count, and other options for the CodeMirror 6 editor.
 
@@ -68,7 +84,7 @@ Line numbers, code folding, space highlighting, word count, and other options fo
     <summary>My Plugin Settings Preferences</summary>
 
 - Go to **Tools → Options → Extra editor settings**
-- Uncheck **Show line numbers** (use **CodeMirror Options** for relative line numbers)
+- Check **Show line numbers**
 - Check **Highlight the gutter for the active line**
 - Check **Highlight active line**
 - Check **Highlight trailing spaces**
@@ -76,7 +92,7 @@ Line numbers, code folding, space highlighting, word count, and other options fo
 - Check **Highlight matching brackets**
 </details>
 
-### [Rich Tables](https://joplinapp.org/plugins/plugin/com.bwat47.rich-tables/?from-tab=editor)
+#### [Rich Tables](https://joplinapp.org/plugins/plugin/com.bwat47.rich-tables/?from-tab=editor)
 
 A Joplin plugin to provide table rendering and table editing in the Markdown editor.
 
