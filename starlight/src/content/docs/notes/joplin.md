@@ -44,11 +44,9 @@ This is how you can change the color to the purple (`#744da9`) matching the Drac
 
 ## Joplin Plugins
 
-### CodeMirror 5 Markdown Editor
+### Legacy Editor Plugins
 
-Some Joplin Plugins were written for CodeMirror 5 and are not compatible with CodeMirror 6, which has been the default since Joplin 3.1.x.
-
-Enable the Legacy Markdown Editor to use Joplin Plugins written for CodeMirror 5 by enabling this setting:
+These Joplin Plugins were written for CodeMirror 5 and are not compatible with CodeMirror 6, which has been the default since Joplin 3.1.x:
 - Go to **Tools → Options → Editor → Show Advanced Settings**
 - Check **Use the legacy Markdown editor**
 
@@ -66,11 +64,9 @@ Adds some CodeMirror options to Joplin's settings, such as line numbers and line
 - Check **Relative line numbers**
 </details>
 
-### CodeMirror 6 Markdown Editor
+### Current Editor Plugins
 
-These Joplin Plugins are compatible with CodeMirror 6, which has been the default since Joplin 3.1.x.
-
-Disable the Legacy Markdown Editor to use Joplin Plugins written for CodeMirror 6 by disabling this setting:
+These Joplin Plugins are compatible with CodeMirror 6 or later:
 - Go to **Tools → Options → Editor → Show Advanced Settings**
 - Uncheck **Use the legacy Markdown editor**
 
