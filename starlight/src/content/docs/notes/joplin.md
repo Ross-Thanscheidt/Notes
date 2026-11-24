@@ -44,35 +44,9 @@ This is how you can change the color to the purple (`#744da9`) matching the Drac
 
 ## Joplin Plugins
 
-### Legacy Editor Plugins
+### [Extra Markdown editor settings](https://joplinapp.org/plugins/plugin/io.github.personalizedrefrigerator.codemirror6-settings/)
 
-These Joplin Plugins were written for CodeMirror 5 and are not compatible with CodeMirror 6, which has been the default since Joplin 3.1.x:
-- Go to **Tools → Options → Editor → Show Advanced Settings**
-- Check **Use the legacy Markdown editor**
-
-#### [CodeMirror Options](https://joplinapp.org/plugins/plugin/joplin.plugin.cmoptions/)
-
-Adds some CodeMirror options to Joplin's settings, such as line numbers and line wrapping.
-
-- By [FelisDiligens](https://joplinapp.org/plugins/plugin/joplin.plugin.cmoptions/?search=author%3D%22FelisDiligens%22%20max-results%3D20)
-
-<details>
-    <summary>My Plugin Settings Preferences</summary>
-
-- Go to **Tools → Options → CodeMirror Options**
-- Check **Show line numbers**
-- Check **Relative line numbers**
-</details>
-
-### Current Editor Plugins
-
-These Joplin Plugins are compatible with CodeMirror 6 or later:
-- Go to **Tools → Options → Editor → Show Advanced Settings**
-- Uncheck **Use the legacy Markdown editor**
-
-#### [Extra Markdown editor settings](https://joplinapp.org/plugins/plugin/io.github.personalizedrefrigerator.codemirror6-settings/)
-
-Line numbers, code folding, space highlighting, word count, and other options for the CodeMirror 6 editor.
+Line numbers, code folding, space highlighting, word count, and other options for the editor.
 
 - By [Henry Heino](https://joplinapp.org/plugins/plugin/io.github.personalizedrefrigerator.codemirror6-settings/?search=author%3D%22Henry%20Heino%22%20max-results%3D20)
 
@@ -88,7 +62,7 @@ Line numbers, code folding, space highlighting, word count, and other options fo
 - Check **Highlight matching brackets**
 </details>
 
-#### [Rich Tables](https://joplinapp.org/plugins/plugin/com.bwat47.rich-tables/?from-tab=editor)
+### [Rich Tables](https://joplinapp.org/plugins/plugin/com.bwat47.rich-tables/?from-tab=editor)
 
 A Joplin plugin to provide table rendering and table editing in the Markdown editor.
 
@@ -118,6 +92,26 @@ A Joplin plugin to provide table rendering and table editing in the Markdown edi
 | `Ctrl`+`Alt`+ ←/→            | Move Column Left/Right |
 | `Alt`+`Shift`+ `Q`/`W`/`E`   | Align Left/Center/Right |
 | `Alt`+`Shift`+ `/`           | Toggle Table Source Mode<br />(**Tools → Options → Keyboard Shortcuts**) |
+</details>
+
+### Legacy Editor Plugins
+
+These Joplin Plugins were written for CodeMirror 5 and are not compatible with CodeMirror 6, which has been the default since Joplin 3.1.x:
+- Go to **Tools → Options → Editor → Show Advanced Settings**
+- Check **Use the legacy Markdown editor**
+
+#### [CodeMirror Options](https://joplinapp.org/plugins/plugin/joplin.plugin.cmoptions/)
+
+Adds some markdown editor options to Joplin's settings, such as line numbers and line wrapping.
+
+- By [FelisDiligens](https://joplinapp.org/plugins/plugin/joplin.plugin.cmoptions/?search=author%3D%22FelisDiligens%22%20max-results%3D20)
+
+<details>
+    <summary>My Plugin Settings Preferences</summary>
+
+- Go to **Tools → Options → CodeMirror Options**
+- Check **Show line numbers**
+- Check **Relative line numbers**
 </details>
 
 ## Joplin Resources
